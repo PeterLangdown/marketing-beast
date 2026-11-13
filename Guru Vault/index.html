@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Guru Vault — Business Model Library</title>
+<meta name="description" content="A literature review of business-guru frameworks: concise reports plus a side-by-side comparison, built one guru at a time." />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🗝️</text></svg>" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div class="wrap">
+
+  <header class="site-header">
+    <div class="brand">
+      <div class="brand-mark">🗝️</div>
+      <div>
+        <h1>Guru Vault</h1>
+        <p>Business model literature review — one guru's playbook at a time, read against the same questions.</p>
+      </div>
+    </div>
+    <button class="theme-toggle" id="themeToggle" type="button">🌙 Dark mode</button>
+  </header>
+
+  <div class="toolbar">
+    <nav class="tabs" id="tabs">
+      <button class="tab-btn active" data-tab="overview">Overview</button>
+      <button class="tab-btn" data-tab="framework">Framework</button>
+      <button class="tab-btn" data-tab="compare">Compare Gurus</button>
+      <button class="tab-btn" data-tab="vault">Source Vault</button>
+    </nav>
+    <div class="guru-pills" id="guruPills"></div>
+  </div>
+
+  <main id="panels">
+    <section class="panel active" id="panel-overview"></section>
+    <section class="panel" id="panel-framework">
+      <div class="search-box"><input type="text" id="frameworkSearch" placeholder="Search tactics, quotes, frameworks…" /></div>
+      <div id="frameworkContent"></div>
+    </section>
+    <section class="panel" id="panel-compare"></section>
+    <section class="panel" id="panel-vault"></section>
+  </main>
+
+  <footer class="site-footer">
+    Private research tool for Pete's own venture planning. Content is summarised from purchased course material for personal study and critique — not affiliated with, endorsed by, or redistributing the original PDFs.
+  </footer>
+
+</div>
+
+<script src="data.js"></script>
+<script src="synthesis.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "updated": "2026-11-20",
+  "streams": {
+    "LAW": "Trust and law",
+    "TRK": "Tracking",
+    "FUN": "Funnel",
+    "UI": "Page and speed",
+    "SAL": "Sales",
+    "CUS": "Customer",
+    "ADS": "Paid traffic",
+    "SEO": "Google search (organic)"
+  },
+  "modules": {
+    "core": "Applies to every project",
+    "booked-experience": "Stays and experiences sold by date (Hooga)",
+    "membership": "Recurring membership plus paid events (Danger Club)",
+    "course": "Considered, higher-priced education purchases (RGC)"
+  },
+  "rules": []
+}

@@ -29,10 +29,9 @@ conversion) are being built in `Conversion Blueprint/`. **Start at
 `Conversion Blueprint/START-HERE.md`**: it has the ground rules, the task list (T1–T8) and
 the status. Hooga Retreats is launch #1 and Danger Club is launch #2.
 
-`Guru Vault` is deliberately scoped to layer 1 only. Per this repo's own `apps/README.md`
-convention, it's a standalone app (own git repo, no reach-back into sibling folders), so
-layers 2–4 should become separate apps that *consume* Guru Vault's `data.js` as input,
-not features bolted onto Guru Vault itself.
+`Guru Vault` is deliberately scoped to layer 1 only. Layers 2–4 *consume* Guru Vault's
+`data.js` as input rather than being bolted onto Guru Vault itself. The Conversion
+Blueprint follows this: it reads Guru Vault and never edits it.
 
 ## Folder structure
 
@@ -41,9 +40,11 @@ not features bolted onto Guru Vault itself.
   chapter notes, not a verbatim copy). The book's full text arrived via a pasted chat
   attachment rather than a stored PDF, so there's no original file to keep here —
   the extraction notes are the provenance record instead.
-- `Guru Vault/` — the actual site. Own git repo (`git init`'d), **nothing committed yet** —
-  only commit on explicit request. See its own `README.md` for structure and how to add
+- `Guru Vault/` — the actual site. It's committed as part of this repo (`marketing-beast`)
+  and has no git repo of its own. See its own `README.md` for structure and how to add
   a guru.
+- `Conversion Blueprint/` — layers 3 and 4 for website conversion: the rules ledger, the
+  per-project requirements lists and the agents. Start at its `START-HERE.md`.
 - `RGC Literature Review/RGC-Online-Sales-Practices-Literature-Review.md` — Pete's own
   commissioned research doc on online sales practices for his separate Relationship Growth
   Centre venture. **Not a guru** — filed here for reference, kept out of `Guru Vault/`
@@ -97,7 +98,9 @@ reproduction without asking first.
       version lives in this conversation's history).
 - [ ] Decide guru #3: resolve the Jay Topp question one way or the other, or pick a
       different guru to profile next.
-- [ ] `Guru Vault`'s git repo has never been committed to. Ask before committing.
+- [x] ~~`Guru Vault`'s git repo has never been committed to.~~ Resolved: Guru Vault was
+      committed as part of `marketing-beast` in `e1c3e8b` and has no separate repo
+      (checked 20 Nov 2026).
 - [ ] No live/visual check of the Priestley addition has been done in a browser — this
       environment has no browser tooling (chromium-cli, browser MCP, jsdom all
       unavailable as of the last check). `node --check` passed on `data.js`, `synthesis.js`

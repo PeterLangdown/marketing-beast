@@ -60,7 +60,7 @@ Pete's three decisions (20 Nov 2026):
 
 | Task | Status | Date | Note |
 |---|---|---|---|
-| T1 | not started | | |
+| T1 | done | 2026-11-20 | `ledger.json` (empty), `CHANGELOG.md`, `README.md`, `tools/validate-ledger.mjs`. The checker passes on the empty ledger and caught all 12 errors planted in a test ledger, including a removed rule. |
 | T2 | not started | | |
 | T3 | not started | | |
 | T4 | not started | | |

@@ -1,0 +1,814 @@
+{
+  "project": "hooga-retreats",
+  "ledgerUpdated": "2026-11-20",
+  "items": {
+    "LAW-01": {
+      "status": "fail",
+      "here": "All 10 reviews in couples-site-v3/src/content/reviews.js are placeholder: true. ReviewWall.jsx labels each \"Sample review\", so none is shown as real, but every one must be replaced with a genuine review before launch.",
+      "checked": "2026-11-20",
+      "by": "ai"
+    },
+    "LAW-02": {
+      "status": "not-checked",
+      "here": "In place in the code: a \"Good to know before you book\" panel per retreat, one tap away (StayDetails.jsx, from retreats.js goodToKnow), covering self-heated tubs, bus ceiling heights, city and wedding-venue sounds and the unheated wagon. The 48-hour line sits beside every button. Can't pass until the all-in price is settled (LAW-03).",
+      "checked": null,
+      "by": null
+    },
+    "LAW-03": {
+      "status": "not-checked",
+      "here": "The site shows \"From £240 a night\" (pricing.js NIGHTLY_FROM, V1's base rate). Unknown whether Hospitable Direct adds a cleaning or service fee (brief §10 Q7); if it does, every \"from\" price must include it. Also confirm £240 is the lowest bookable rate (brief §10 Q6).",
+      "checked": null,
+      "by": null
+    },
+    "LAW-04": {
+      "status": "pass",
+      "here": "Searched V3's src for urgency and scarcity wording (only N left, hurry, limited time, countdown, selling fast, last chance): none found.",
+      "checked": "2026-11-20",
+      "by": "ai"
+    },
+    "LAW-05": {
+      "status": "not-checked",
+      "here": "Nothing is pre-selected on V3's own pages (the nights choice is a product choice, not an extra). Can't be checked yet: the voucher checkout isn't built and Hospitable's upsells aren't set up.",
+      "checked": null,
+      "by": null
+    },
+    "LAW-06": {
+      "status": "fail",
+      "here": "Two objective claims about guests have no evidence in the facts files: the Slow Stay badge \"Most guests choose this\" (pricing.js EXTRAS.slowStay.badge, shown in StayDetails.jsx) and \"Most loved\" on the 2-night option and voucher (ConversionFork.jsx, pricing.js VOUCHERS tag). Back them with booking data or remove them (brief §10 Q13).",
+      "checked": "2026-11-20",
+      "by": "ai"
+    },
+    "LAW-07": {
+      "status": "fail",
+      "here": "retreats.js and pricing.js record sources and keep toConfirm lists, but the FAQ shows the unconfirmed train time (\"under an hour on the high-speed train from London St Pancras\", TRAVEL.toConfirm) in LandingFaq.jsx. The /gift page's \"Any Amount: From £100\" voucher lives in data/siteStructureData.js, not pricing.js.",
+      "checked": "2026-11-20",
+      "by": "ai"
+    },
+    "LAW-08": {
+      "status": "not-checked",
+      "here": "Nothing to check yet: no tags and no consent tool are installed (index.html). attribution.js already holds click IDs in memory until setAdConsent(true) is called.",
+      "checked": null,
+      "by": null
+    },
+    "LAW-09": {
+      "status": "fail",
+      "here": "ContactView.jsx has a form with no privacy information, and the gift button currently ends there (FUN-10). The paid landing pages have no forms. The privacy and terms panels are still to build (LandingChrome.jsx comment; CONVERSION-PLAN §10 launch checklist).",
+      "checked": "2026-11-20",
+      "by": "ai"
+    },
+    "LAW-10": {
+      "status": "not-checked",
+      "here": "No marketing sign-up exists yet. Latent issue: HoogaInquiryModal.jsx pre-ticks its \"stay availability updates\" consent box (useState(true)). V3 never opens that modal, but untick it if it is ever reused.",
+      "checked": null,
+      "by": null
+    },
+    "LAW-11": {
+      "status": "not-checked",
+      "here": "The hero posters and videos are footage of the real retreats; per CONVERSION-PLAN §0 the guests are AI-edited. Not compared image by image with the retreats.",
+      "checked": null,
+      "by": null
+    },
+    "LAW-12": {
+      "status": "pass",
+      "here": "Searched V3's src for \"Harry Potter\" and \"Hogwarts\": none found. No ads exist yet to check.",
+      "checked": "2026-11-20",
+      "by": "ai"
+    },
+    "LAW-13": {
+      "status": "not-checked",
+      "here": "The site says \"No-hassle cancellation within 48 hours of booking\" (pricing.js POLICIES.cancelLine, plus \"No questions asked\" in ConversionFork.jsx). The policy isn't set in Hospitable yet (Pete's Hospitable to-do 3).",
+      "checked": null,
+      "by": null
+    },
+    "LAW-14": {
+      "status": "not-checked",
+      "here": "V3 doesn't say that the statutory 14-day right doesn't apply to dated stays. Whether Hospitable's checkout says it hasn't been checked. If it doesn't, add a line before the hand-off.",
+      "checked": null,
+      "by": null
+    },
+    "LAW-15": {
+      "status": "fail",
+      "here": "Before purchase the site states only validity (12 months) and \"they choose the retreat and the date\" (ConversionFork.jsx, LandingFaq.jsx). Missing: how a voucher is redeemed, what it doesn't cover (Hospitable codes don't cover fees), and refund terms. Vouchers can't be bought yet either (FUN-10).",
+      "checked": "2026-11-20",
+      "by": "ai"
+    },
+    "TRK-01": {
+      "status": "fail",
+      "here": "No GTM, GA4 or Meta Pixel in index.html. analytics.js already pushes named events to window.dataLayer (occasion_landing_view, fork_view, select_retreat, select_conversion_path, booking_handoff), so installing the container is the missing step.",
+      "checked": "2026-11-20",
+      "by": "ai"
+    },
+    "TRK-02": {
+      "status": "gap",
+      "here": "attribution.js carries gclid, gbraid, wbraid, fbclid, msclkid and utm_* onto /booking and /gift; the Hooga session tested /anniversary?gclid=TEST123 → /booking?gclid=TEST123&… (CONVERSION-PLAN §10). Hospitable's widget keeps utm_* but drops gclid, fbclid and _gl, and checkout ends on booking.hospitable.com. Workaround: CONVERSION-PLAN §11 (UTMs on every ad, optimise on booking_handoff, test the source parameter: TRK-08).",
+      "checked": "2026-11-19",
+      "by": "ai",
+      "gapAcceptedByPete": false
+    },
+    "TRK-03": {
+      "status": "fail",
+      "here": "attribution.js writes a 90-day first-party cookie once setAdConsent(true) is called, but nothing calls it (no consent tool), so return visits aren't credited yet.",
+      "checked": "2026-11-20",
+      "by": "ai"
+    },
+    "TRK-04": {
+      "status": "not-checked",
+      "here": "No purchase events exist yet. Stays: Hospitable's own GA4 purchase event (transaction_id not documented). Vouchers: the checkout isn't built (Phase 3: \"make sure the purchase event fires only once per transaction\").",
+      "checked": null,
+      "by": null
+    },
+    "TRK-05": {
+      "status": "fail",
+      "here": "No consent mode: neither GTM nor a consent tool is installed (index.html).",
+      "checked": "2026-11-20",
+      "by": "ai"
+    },
+    "TRK-06": {
+      "status": "not-checked",
+      "here": "Hospitable's analytics settings aren't configured, and the widget IDs aren't in hospitable.js yet.",
+      "checked": null,
+      "by": null
+    },
+    "TRK-07": {
+      "status": "n/a",
+      "here": "No A/B tests are planned for launch. This applies to the Phase 7 experiments (CONVERSION-PLAN §6), whose test list doesn't yet give sample sizes.",
+      "checked": "2026-11-20",
+      "by": "ai"
+    },
+    "TRK-09": {
+      "status": "not-checked",
+      "here": "Applies only to Hooga's own voucher checkout (Hooga never sees stay-checkout personal data), which isn't built yet.",
+      "checked": null,
+      "by": null
+    },
+    "TRK-11": {
+      "status": "not-checked",
+      "here": "No checkout is live yet. Run once the Hospitable widget IDs and the voucher checkout are in.",
+      "checked": null,
+      "by": null
+    },
+    "TRK-12": {
+      "status": "pass",
+      "here": "V3's events follow CONVERSION-PLAN §7 (analytics.js header comment), which is the schema later projects extend.",
+      "checked": "2026-11-20",
+      "by": "ai"
+    },
+    "FUN-01": {
+      "status": "not-checked",
+      "here": "One landing page per occasion and per retreat, each with its own H1 (landings.js). No ads are written yet, so ad-to-headline match can't be checked.",
+      "checked": null,
+      "by": null
+    },
+    "FUN-09": {
+      "status": "pass",
+      "here": "Landing pages show the offer, prices and both actions with no form before them (IntentLandingPage.jsx). V1's name gate wasn't ported.",
+      "checked": "2026-11-20",
+      "by": "ai"
+    },
+    "FUN-10": {
+      "status": "fail",
+      "here": "The gift path is a dead end: the fork's \"Give this gift\" goes to /gift (GiftView.jsx), whose \"Purchase gift voucher\" button goes to /contact?subject=gift-voucher. The /gift page also brings back the site header and footer. Fixed by the Phase 3 voucher checkout.",
+      "checked": "2026-11-20",
+      "by": "ai"
+    },
+    "UI-01": {
+      "status": "pass",
+      "here": "index.html's viewport tag is \"width=device-width, initial-scale=1.0, viewport-fit=cover\": no user-scalable=no and no maximum-scale. V2's zoom block is gone. Not tried on a phone.",
+      "checked": "2026-11-20",
+      "by": "ai"
+    },
+    "UI-02": {
+      "status": "not-checked",
+      "here": "Not measured. The LCP image is a 400–1200w WebP poster loaded eagerly at high priority (LandingHero.jsx, Img.jsx). The hero videos are 11.8–25.2 MB (public/assets/videos), and / still runs the 15.5 MB background video. Pete deferred the speed pass (CONVERSION-PLAN §0).",
+      "checked": null,
+      "by": null
+    },
+    "UI-04": {
+      "status": "not-checked",
+      "here": "Not done yet.",
+      "checked": null,
+      "by": null
+    },
+    "UI-05": {
+      "status": "fail",
+      "here": "The hero video autoplays and loops with no pause control (LandingHero.jsx), and so does the background video on / (FunnelEntryView.jsx). The landing hero does skip video when reduced motion or Save-Data is requested.",
+      "checked": "2026-11-20",
+      "by": "ai"
+    },
+    "UI-06": {
+      "status": "not-checked",
+      "here": "The main buttons are full-width and about 52 px tall. The smaller chips (review filters, retreat tabs) weren't measured.",
+      "checked": null,
+      "by": null
+    },
+    "UI-08": {
+      "status": "fail",
+      "here": "HospitableBookingWidget.jsx has no error or timeout handling: if Hospitable's loader is blocked, the visitor sees an empty white box. The existing fallback (BookingView.jsx) only covers missing widget IDs, not a failed load.",
+      "checked": "2026-11-20",
+      "by": "ai"
+    },
+    "SAL-05": {
+      "status": "pass",
+      "here": "No premium or decoy tier on the site: one stay price (\"from £240\"), two named vouchers and the extras.",
+      "checked": "2026-11-20",
+      "by": "ai"
+    },
+    "SAL-11": {
+      "status": "not-checked",
+      "here": "Extras are filtered by retreat (pricing.js extrasFor), and the yurt's pool and sauna is labelled May–September but still listed all year. Extras are sold through Hospitable after booking, which isn't set up yet.",
+      "checked": null,
+      "by": null
+    },
+    "CUS-03": {
+      "status": "not-checked",
+      "here": "No review-request process yet. The site shows only labelled sample reviews (LAW-01).",
+      "checked": null,
+      "by": null
+    },
+    "ADS-01": {
+      "status": "not-checked",
+      "here": "No ads yet.",
+      "checked": null,
+      "by": null
+    },
+    "ADS-02": {
+      "status": "not-checked",
+      "here": "No ad accounts set up yet. Plan: optimise Google on booking_handoff and voucher purchases, and Meta on landing-page events (CONVERSION-PLAN §11).",
+      "checked": null,
+      "by": null
+    },
+    "ADS-03": {
+      "status": "not-checked",
+      "here": "No ads running. TRK-01, TRK-05 and LAW-08 aren't met yet, and TRK-02 is an unaccepted gap, so ads must not start.",
+      "checked": null,
+      "by": null
+    },
+    "ADS-05": {
+      "status": "not-checked",
+      "here": "Waiting on the economics (brief §7 and §10 Q1–Q5). See Targets.",
+      "checked": null,
+      "by": null
+    },
+    "SEO-01": {
+      "status": "fail",
+      "here": "The landing routes get distinct titles and descriptions, but only after JavaScript runs (IntentLandingPage.jsx). Every other route (/, /stays, /gift, /faq, /contact and the rest) shares index.html's single title and description.",
+      "checked": "2026-11-20",
+      "by": "ai"
+    },
+    "SEO-02": {
+      "status": "fail",
+      "here": "No Open Graph tags anywhere (index.html, src).",
+      "checked": "2026-11-20",
+      "by": "ai"
+    },
+    "SEO-03": {
+      "status": "fail",
+      "here": "A plain Vite single-page app (package.json: vite build), with no prerendering. Content and meta tags exist only after JavaScript runs. CONVERSION-PLAN §6 Phase 0 plans vite-react-ssg.",
+      "checked": "2026-11-20",
+      "by": "ai"
+    },
+    "SEO-04": {
+      "status": "pass",
+      "here": "No structured data in V3 (searched for ld+json, schema.org and aggregateRating). Nothing to remove.",
+      "checked": "2026-11-20",
+      "by": "ai"
+    },
+    "SEO-05": {
+      "status": "fail",
+      "here": "Not searched yet, but one inconsistency is already known: the bus's Airbnb listing shows its location as \"Preston, England\" (retreats.js bus.toConfirm).",
+      "checked": "2026-11-20",
+      "by": "ai"
+    },
+    "FUN-02": {
+      "status": "pass",
+      "here": "In place: App.jsx hides the header and drawer on every landing path, and LandingChrome.jsx has no links. Privacy and terms panels are still to build (LAW-09).",
+      "checked": "2026-11-20",
+      "by": "ai"
+    },
+    "FUN-03": {
+      "status": "pass",
+      "here": "In place: intent pages (/anniversary, /birthday, /surprise, /escape, /carriage, /yurt, /bus) and the story deck (/s/:intent) both reach /booking. The deck is still V2's until Phase 2.",
+      "checked": "2026-11-20",
+      "by": "ai"
+    },
+    "FUN-04": {
+      "status": "pass",
+      "here": "In place: hero buttons, the fork and the sticky bar all offer dates and gift side by side (LandingHero.jsx, ConversionFork.jsx, StickyThumbBar.jsx). Equal size, but the dates button is solid and the gift button outlined, so not quite equal weight. The gift path can't complete yet (FUN-10).",
+      "checked": "2026-11-20",
+      "by": "ai"
+    },
+    "FUN-05": {
+      "status": "pass",
+      "here": "In place by the code: both hero buttons sit in the first screen (min-h-[100svh] hero with content at the bottom). Not screenshotted.",
+      "checked": "2026-11-20",
+      "by": "ai"
+    },
+    "FUN-06": {
+      "status": "pass",
+      "here": "In place: StickyThumbBar.jsx appears once the hero buttons leave the screen and hides while the fork is visible.",
+      "checked": "2026-11-20",
+      "by": "ai"
+    },
+    "FUN-07": {
+      "status": "not-checked",
+      "here": "Partly: the retreat picks the right per-property widget, but nights are only echoed in the heading (\"Pick your 2 nights\"), and guests and dates aren't asked before the hand-off. The widget IDs aren't set yet.",
+      "checked": null,
+      "by": null
+    },
+    "FUN-08": {
+      "status": "not-checked",
+      "here": "Landing pages: the buttons fade in within 0.3 s (LandingHero.jsx). The story deck (/s/*) is still V2's, which holds buttons back 3.3–4.2 s until Phase 2.",
+      "checked": null,
+      "by": null
+    },
+    "FUN-11": {
+      "status": "not-checked",
+      "here": "Not built (no midweek alerts list or guide sign-up; no email tool yet).",
+      "checked": null,
+      "by": null
+    },
+    "FUN-12": {
+      "status": "pass",
+      "here": "In place on the organic front door: / offers occasion choices (FunnelEntryView.jsx, ENTRY_CHOICES). Paid routes get the occasion from the ad instead.",
+      "checked": "2026-11-20",
+      "by": "ai"
+    },
+    "FUN-13": {
+      "status": "pass",
+      "here": "In place: LandingFaq.jsx answers privacy, winter warmth, getting there, food, how the hot tub and bath work, cancelling and vouchers. Noise is covered in \"Good to know\" (StayDetails.jsx).",
+      "checked": "2026-11-20",
+      "by": "ai"
+    },
+    "FUN-14": {
+      "status": "pass",
+      "here": "In place: EveningTimeline.jsx shows each retreat's evening hour by hour from retreats.js, and is honest that guests light the tub themselves.",
+      "checked": "2026-11-20",
+      "by": "ai"
+    },
+    "SAL-01": {
+      "status": "pass",
+      "here": "In place: \"From £240 a night\" in the hero (LandingHero.jsx). See LAW-03 on whether £240 is all-in.",
+      "checked": "2026-11-20",
+      "by": "ai"
+    },
+    "SAL-02": {
+      "status": "pass",
+      "here": "In place: 2 nights pre-selected in the fork, with 1 night one tap away (ConversionFork.jsx). Its \"Most loved\" label needs evidence (LAW-06).",
+      "checked": "2026-11-20",
+      "by": "ai"
+    },
+    "SAL-03": {
+      "status": "not-checked",
+      "here": "Not built: the voucher checkout is Phase 3.",
+      "checked": null,
+      "by": null
+    },
+    "SAL-04": {
+      "status": "pass",
+      "here": "In place: the Slow Stay shows £68 against £90 struck through (StayDetails.jsx, pricing.js anchorPrice). The live listing prices differ (see the rule's conflicts).",
+      "checked": "2026-11-20",
+      "by": "ai"
+    },
+    "SAL-06": {
+      "status": "not-checked",
+      "here": "Named and priced in nights (\"The One-Night Escape\" £240, \"The Two-Night Adventure\" £480, pricing.js), plus \"Any Amount\" on /gift. They can't be bought yet (FUN-10).",
+      "checked": null,
+      "by": null
+    },
+    "SAL-07": {
+      "status": "not-checked",
+      "here": "Stays: Hospitable Direct Premium already offers Apple Pay and Google Pay. Vouchers: the checkout isn't built.",
+      "checked": null,
+      "by": null
+    },
+    "SAL-08": {
+      "status": "not-checked",
+      "here": "Not built. Only possible on the voucher checkout; Hospitable has instalment terms but no BNPL.",
+      "checked": null,
+      "by": null
+    },
+    "SAL-09": {
+      "status": "not-checked",
+      "here": "Not built: /escape pitches Sunday to Thursday, but there's no midweek value-add offer.",
+      "checked": null,
+      "by": null
+    },
+    "SAL-10": {
+      "status": "not-checked",
+      "here": "Not set up: Hospitable upsells, the Guest Portal link and the pre-arrival messages aren't configured. The site says the Celebration package is \"added after you book\" (EXTRAS_IN_CHECKOUT = false).",
+      "checked": null,
+      "by": null
+    },
+    "SAL-12": {
+      "status": "pass",
+      "here": "In place: \"No-hassle cancellation within 48 hours of booking. No questions asked.\" (ConversionFork.jsx) is one plain sentence beside the actions.",
+      "checked": "2026-11-20",
+      "by": "ai"
+    },
+    "CUS-01": {
+      "status": "pass",
+      "here": "In place on the site: the 48-hour line is in the hero, the fork, the booking page and the FAQ. Not yet set in Hospitable (LAW-13).",
+      "checked": "2026-11-20",
+      "by": "ai"
+    },
+    "CUS-02": {
+      "status": "not-checked",
+      "here": "Not set up: Pete's video-guide \"New reservation\" message in Hospitable (Pete's Hospitable to-do 4). The site already promises it (POLICIES.afterBookingLine).",
+      "checked": null,
+      "by": null
+    },
+    "CUS-04": {
+      "status": "not-checked",
+      "here": "No review requests yet.",
+      "checked": null,
+      "by": null
+    },
+    "CUS-05": {
+      "status": "not-checked",
+      "here": "Not built (no CRM; the occasion isn't captured at booking).",
+      "checked": null,
+      "by": null
+    },
+    "CUS-06": {
+      "status": "not-checked",
+      "here": "Not built (Phase 5).",
+      "checked": null,
+      "by": null
+    },
+    "CUS-07": {
+      "status": "not-checked",
+      "here": "Not built (Phase 5).",
+      "checked": null,
+      "by": null
+    },
+    "CUS-08": {
+      "status": "not-checked",
+      "here": "No written complaints process known (brief §10 Q11).",
+      "checked": null,
+      "by": null
+    },
+    "UI-03": {
+      "status": "not-checked",
+      "here": "Not built: the speed pass is deferred.",
+      "checked": null,
+      "by": null
+    },
+    "UI-07": {
+      "status": "not-checked",
+      "here": "Applies to Hooga's own forms: the voucher checkout (not built) and ContactView.jsx (not checked).",
+      "checked": null,
+      "by": null
+    },
+    "ADS-04": {
+      "status": "not-checked",
+      "here": "/escape targets Sunday to Thursday. No campaigns yet.",
+      "checked": null,
+      "by": null
+    },
+    "ADS-06": {
+      "status": "not-checked",
+      "here": "No ads yet.",
+      "checked": null,
+      "by": null
+    },
+    "ADS-07": {
+      "status": "not-checked",
+      "here": "No ads yet.",
+      "checked": null,
+      "by": null
+    },
+    "ADS-08": {
+      "status": "not-checked",
+      "here": "No ads yet. It needs the consent tool (LAW-08) before audiences can build.",
+      "checked": null,
+      "by": null
+    },
+    "ADS-09": {
+      "status": "not-checked",
+      "here": "Retreat pages exist (/carriage, /yurt, /bus). The planned /hot-tub feature page (CONVERSION-PLAN §6 Phase 1) isn't built. No campaigns yet.",
+      "checked": null,
+      "by": null
+    },
+    "TRK-08": {
+      "status": "not-checked",
+      "here": "Untested: whether Hospitable stores a forwarded source parameter on the reservation (CONVERSION-PLAN §11 step 3).",
+      "checked": null,
+      "by": null
+    },
+    "SEO-06": {
+      "status": "not-checked",
+      "here": "Unknown whether a Google Business Profile exists (brief §10 Q20).",
+      "checked": null,
+      "by": null
+    },
+    "SEO-07": {
+      "status": "not-checked",
+      "here": "Not live yet. The intent pages are client-rendered (SEO-03), which may limit this.",
+      "checked": null,
+      "by": null
+    }
+  },
+  "notApplied": {
+    "TRK-10": "Hooga's plan has no Conversions API, and Hospitable's Meta Pixel sends Page View only, so there's no browser-and-server pair to deduplicate. Revisit if a server-side Meta setup is added."
+  },
+  "bets": {
+    "TRK-08": {
+      "measure": "Cost per stay booking from Google Ads",
+      "baseline": null,
+      "measuringSince": null,
+      "readings": [],
+      "read": "too early"
+    },
+    "FUN-02": {
+      "measure": "Landing → fork rate (select_conversion_path per landing view) on paid routes",
+      "baseline": null,
+      "measuringSince": null,
+      "readings": [],
+      "read": "too early"
+    },
+    "FUN-03": {
+      "measure": "Hand-offs per 100 paid visits, by channel and page type",
+      "baseline": null,
+      "measuringSince": null,
+      "readings": [],
+      "read": "too early"
+    },
+    "FUN-04": {
+      "measure": "Gift share of select_conversion_path; total revenue (stays plus vouchers) per 100 visits",
+      "baseline": null,
+      "measuringSince": null,
+      "readings": [],
+      "read": "too early"
+    },
+    "FUN-05": {
+      "measure": "Hero-button clicks per landing view",
+      "baseline": null,
+      "measuringSince": null,
+      "readings": [],
+      "read": "too early"
+    },
+    "FUN-06": {
+      "measure": "Share of hand-offs started from the sticky bar; landing → hand-off rate",
+      "baseline": null,
+      "measuringSince": null,
+      "readings": [],
+      "read": "too early"
+    },
+    "FUN-07": {
+      "measure": "Hand-off → purchase rate",
+      "baseline": null,
+      "measuringSince": null,
+      "readings": [],
+      "read": "too early"
+    },
+    "FUN-08": {
+      "measure": "Next-step clicks per screen view",
+      "baseline": null,
+      "measuringSince": null,
+      "readings": [],
+      "read": "too early"
+    },
+    "FUN-11": {
+      "measure": "generate_lead per 100 visits; purchases from the list within 90 days",
+      "baseline": null,
+      "measuringSince": null,
+      "readings": [],
+      "read": "too early"
+    },
+    "FUN-12": {
+      "measure": "Landing → hand-off rate for visitors who answer, against untailored pages",
+      "baseline": null,
+      "measuringSince": null,
+      "readings": [],
+      "read": "too early"
+    },
+    "FUN-13": {
+      "measure": "Landing → hand-off rate; FAQ opens per visit",
+      "baseline": null,
+      "measuringSince": null,
+      "readings": [],
+      "read": "too early"
+    },
+    "FUN-14": {
+      "measure": "Scroll depth to the fork; landing → hand-off rate",
+      "baseline": null,
+      "measuringSince": null,
+      "readings": [],
+      "read": "too early"
+    },
+    "UI-03": {
+      "measure": "Landing → hand-off rate for faster against slower page loads",
+      "baseline": null,
+      "measuringSince": null,
+      "readings": [],
+      "read": "too early"
+    },
+    "UI-07": {
+      "measure": "Form completion rate",
+      "baseline": null,
+      "measuringSince": null,
+      "readings": [],
+      "read": "too early"
+    },
+    "SAL-01": {
+      "measure": "Landing → hand-off rate",
+      "baseline": null,
+      "measuringSince": null,
+      "readings": [],
+      "read": "too early"
+    },
+    "SAL-02": {
+      "measure": "Average length of stay for direct bookings",
+      "baseline": null,
+      "measuringSince": null,
+      "readings": [],
+      "read": "too early"
+    },
+    "SAL-03": {
+      "measure": "Upgrade take-up and average order value",
+      "baseline": null,
+      "measuringSince": null,
+      "readings": [],
+      "read": "too early"
+    },
+    "SAL-04": {
+      "measure": "Bundle take-up against single-extra take-up",
+      "baseline": null,
+      "measuringSince": null,
+      "readings": [],
+      "read": "too early"
+    },
+    "SAL-06": {
+      "measure": "Voucher revenue per 100 visits; share of named against cash vouchers",
+      "baseline": null,
+      "measuringSince": null,
+      "readings": [],
+      "read": "too early"
+    },
+    "SAL-07": {
+      "measure": "Checkout completion rate on mobile",
+      "baseline": null,
+      "measuringSince": null,
+      "readings": [],
+      "read": "too early"
+    },
+    "SAL-08": {
+      "measure": "Checkout completion and average order value above the threshold",
+      "baseline": null,
+      "measuringSince": null,
+      "readings": [],
+      "read": "too early"
+    },
+    "SAL-09": {
+      "measure": "Midweek occupancy and revenue per available night",
+      "baseline": null,
+      "measuringSince": null,
+      "readings": [],
+      "read": "too early"
+    },
+    "SAL-10": {
+      "measure": "Upgrade revenue per booking",
+      "baseline": null,
+      "measuringSince": null,
+      "readings": [],
+      "read": "too early"
+    },
+    "SAL-12": {
+      "measure": "Purchases per 100 visits",
+      "baseline": null,
+      "measuringSince": null,
+      "readings": [],
+      "read": "too early"
+    },
+    "CUS-01": {
+      "measure": "Bookings per 100 visits, against the share cancelled inside the window",
+      "baseline": null,
+      "measuringSince": null,
+      "readings": [],
+      "read": "too early"
+    },
+    "CUS-02": {
+      "measure": "Review accuracy rating",
+      "baseline": null,
+      "measuringSince": null,
+      "readings": [],
+      "read": "too early"
+    },
+    "CUS-04": {
+      "measure": "Reviews per completed stay or sale",
+      "baseline": null,
+      "measuringSince": null,
+      "readings": [],
+      "read": "too early"
+    },
+    "CUS-05": {
+      "measure": "Repeat bookings from past occasion guests within 13 months",
+      "baseline": null,
+      "measuringSince": null,
+      "readings": [],
+      "read": "too early"
+    },
+    "CUS-06": {
+      "measure": "Share of buyers who create a reveal; visits and sales arriving from reveal links",
+      "baseline": null,
+      "measuringSince": null,
+      "readings": [],
+      "read": "too early"
+    },
+    "CUS-07": {
+      "measure": "Guest messages per booking",
+      "baseline": null,
+      "measuringSince": null,
+      "readings": [],
+      "read": "too early"
+    },
+    "CUS-08": {
+      "measure": "Average review rating",
+      "baseline": null,
+      "measuringSince": null,
+      "readings": [],
+      "read": "too early"
+    },
+    "ADS-04": {
+      "measure": "Midweek and off-season occupancy from paid traffic",
+      "baseline": null,
+      "measuringSince": null,
+      "readings": [],
+      "read": "too early"
+    },
+    "ADS-06": {
+      "measure": "Cost per landing-page view and click-through rate against other creatives",
+      "baseline": null,
+      "measuringSince": null,
+      "readings": [],
+      "read": "too early"
+    },
+    "ADS-07": {
+      "measure": "Three-second view rate (hook rate)",
+      "baseline": null,
+      "measuringSince": null,
+      "readings": [],
+      "read": "too early"
+    },
+    "ADS-08": {
+      "measure": "Purchases per £ spent on retargeting",
+      "baseline": null,
+      "measuringSince": null,
+      "readings": [],
+      "read": "too early"
+    },
+    "ADS-09": {
+      "measure": "Sales per £ by ad group type (feature against occasion)",
+      "baseline": null,
+      "measuringSince": null,
+      "readings": [],
+      "read": "too early"
+    },
+    "SEO-06": {
+      "measure": "Google review count, and Business Profile search impressions",
+      "baseline": null,
+      "measuringSince": null,
+      "readings": [],
+      "read": "too early"
+    },
+    "SEO-07": {
+      "measure": "Organic clicks per intent page (Search Console)",
+      "baseline": null,
+      "measuringSince": null,
+      "readings": [],
+      "read": "too early"
+    }
+  },
+  "targets": [
+    {
+      "name": "What one extra booked night is worth",
+      "value": null,
+      "basis": "The margin on a night that would otherwise stay empty (midweek and off-season). Waiting on margin per night (brief §10 Q1).",
+      "actual": null
+    },
+    {
+      "name": "What one direct booking that replaces an Airbnb booking is worth",
+      "value": null,
+      "basis": "Only the fee saved by booking direct, net of Hospitable Direct costs. Waiting on the Airbnb share and fee (brief §10 Q2).",
+      "actual": null
+    },
+    {
+      "name": "Most a booking can cost (ads)",
+      "value": null,
+      "basis": "What the booking is worth (weighted by how many bookings are extra) minus the profit Pete wants from it. Waiting on brief §10 Q1–Q4.",
+      "actual": null
+    },
+    {
+      "name": "Lowest landing → booking conversion rate at which ads pay",
+      "value": null,
+      "basis": "Cost per click ÷ most a booking can cost. Waiting on the above and on real CPCs from the first campaigns. (CONVERSION-PLAN §7 illustrates: at £3 a click, 2% means £150 per booking; that is an illustration, not a target.)",
+      "actual": null
+    },
+    {
+      "name": "Baseline period",
+      "value": null,
+      "basis": "For the first 4–8 weeks after launch, record landing → fork, fork → hand-off and hand-off → booking rates rather than setting goals (PLAN.md §9).",
+      "actual": null
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "slug": "danger-club",
+  "name": "Danger Club",
+  "launchNumber": 2,
+  "modules": ["membership"],
+  "stage": "brief",
+  "repo": null,
+  "site": null,
+  "plan": null,
+  "facts": [],
+  "github": null,
+  "liveUrl": null,
+  "channels": [],
+  "platforms": [],
+  "sources": null,
+  "notes": [
+    "Pete is working on Danger Club now. Ask him where the site and its working files live before assuming anything.",
+    "Known facts, from the charter in the overworld repo (strongholdvault/05-Danger-Club/00-Danger-Club-Master-Charter.md): 100 members at £50/month (a £5k/month base), monthly real-world events paid on top of the subscription, the golden rule 'Don't Be a Dick', and soft pathways into Grownuphood, the Relationship Growth Centre and Post-Success. The charter lists the website as dangerclub.co.uk.",
+    "The brief must come from Pete, using templates/project-brief.md (task T7)."
+  ]
+}

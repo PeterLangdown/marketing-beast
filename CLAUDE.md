@@ -24,6 +24,11 @@ The eventual shape is a four-layer pipeline, discussed but only partly built:
 4. **Execution agent system** (not built) — an agent (or agents) that actually implements
    the chosen playbook.
 
+**Approved 20 Nov 2026:** layers 3 and 4 for the first stream (sales funnels / website
+conversion) are being built in `Conversion Blueprint/`. **Start at
+`Conversion Blueprint/START-HERE.md`**: it has the ground rules, the task list (T1–T8) and
+the status. Hooga Retreats is launch #1 and Danger Club is launch #2.
+
 `Guru Vault` is deliberately scoped to layer 1 only. Per this repo's own `apps/README.md`
 convention, it's a standalone app (own git repo, no reach-back into sibling folders), so
 layers 2–4 should become separate apps that *consume* Guru Vault's `data.js` as input,

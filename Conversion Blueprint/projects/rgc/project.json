@@ -1,0 +1,20 @@
+{
+  "slug": "rgc",
+  "name": "Relationship Growth Centre",
+  "launchNumber": null,
+  "modules": ["course"],
+  "stage": "brief",
+  "repo": "apps/RGC core website",
+  "site": null,
+  "plan": null,
+  "facts": [],
+  "github": null,
+  "liveUrl": null,
+  "channels": [],
+  "platforms": [],
+  "sources": "Marketing Beast/RGC Literature Review/",
+  "notes": [
+    "Later, not yet. Its sites are apps/RGC core website and apps/RGC Theory Site. Ask Pete which is the sales site.",
+    "The literature review here is a condensed summary. The full review, with about 150 sources, is in Pete's chat history."
+  ]
+}

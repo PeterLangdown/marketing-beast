@@ -1,0 +1,30 @@
+{
+  "slug": "hooga-retreats",
+  "name": "Hooga Retreats",
+  "launchNumber": 1,
+  "modules": ["booked-experience"],
+  "stage": "building",
+  "repo": "apps/Hooga Website",
+  "site": "apps/Hooga Website/couples-site-v3",
+  "plan": "apps/Hooga Website/CONVERSION-PLAN.md",
+  "facts": [
+    "apps/Hooga Website/couples-site-v3/src/content/retreats.js",
+    "apps/Hooga Website/couples-site-v3/src/content/pricing.js",
+    "apps/Hooga Website/couples-site-v3/src/content/reviews.js",
+    "apps/Hooga Website/couples-site-v3/src/content/landings.js",
+    "apps/Hooga Website/couples-site-v3/src/content/hospitable.js"
+  ],
+  "github": "https://github.com/PeterLangdown/hooga-website",
+  "liveUrl": null,
+  "channels": ["google-ads", "google-organic", "meta-ads", "meta-organic"],
+  "platforms": ["hospitable-direct (Mogul plan)", "gmail", "firebase-hosting (project: hooga-retreats)", "stripe (planned, for vouchers only)"],
+  "sources": "Conversion Blueprint/sources/hooga/",
+  "notes": [
+    "V2 (couples-site-v2) is the current site and is frozen. V3 (couples-site-v3) is the rebuild.",
+    "Three retreats near Canterbury: The Showman's Carriage (romance, sleeps 2), The Little Yurt Retreat (enchantment, sleeps 4), The Midnight Express bus (adventure, sleeps 6).",
+    "Pete's house rules: sell the dream, get them to book, explain the reality straight after booking, make cancelling easy (no-hassle cancellation within 48 hours of booking). Voice is magic and childlike wonder, not luxury.",
+    "Families get an organic route only, with no paid ads.",
+    "Reviews in V3 are labelled samples until Pete supplies real ones and video testimonials.",
+    "liveUrl unknown: ask Pete."
+  ]
+}

@@ -1,0 +1,125 @@
+# PROJECT SPECIFICATION: LUXURY COUPLES GLAMPING CONVERSION FUNNEL
+
+## 1. META-GOAL, FRAME & TELOS (READ BEFORE WRITING ANY CODE OR COPY)
+
+### The Telos (Ultimate Purpose)
+This project is **NOT** a traditional hospitality brochure website, directory listing, or multi-page brand exploration site. Its sole telos is to operate as a **closed-loop, high-ticket direct-response sales funnel** that converts paid Google PPC intent traffic (£2–£5+ per click) into £400–£900+ luxury romantic stays and open-date experience gift vouchers with zero traffic leakage.
+
+### The Buyer Frame & Psychological Context
+* **Target Audience:** Couples aged 25–45 living within a 90-minute drive/train radius of Canterbury, Kent (heavily weighted toward Greater London and the affluent South East).
+* **Core Buying Trigger:** Almost nobody is buying "glamping" or "a tent." They are buying an **emotional milestone or relational sanctuary**—specifically **Wedding Anniversaries**, **Milestone Birthdays**, or **Rare Child-Free Nights Away**.
+* **The Core Conversion Friction to Solve:** Roughly half of occasion buyers are planning a *surprise* for their partner or haven't arranged childcare/annual leave yet. Forcing every visitor into a rigid calendar picker kills conversions. Therefore, the architecture must give equal visual weight to **Path A (Lock Exact Dates)** and **Path B (Buy an Open-Date Named Experience Voucher)**.
+
+### Non-Negotiable Architectural Laws (Anti-Goals)
+1. **Zero Navigation Leaks:** Do NOT build a standard header navigation bar, multi-page menu, blog feed, footer sitemap, or outbound social media icon row. Paid visitors leave the page only by purchasing, claiming a lead magnet, or closing the browser tab.
+2. **Mobile Commuter First:** Assume 75%+ of visitors are scrolling one-handed on an iPhone over patchy 4G (e.g., commuting out of London). Every interaction must be thumb-friendly, sub-2-second fast, and completable via Apple Pay or Google Pay in under 60 seconds.
+3. **Outcomes Over Specs:** Never lead with technical unit specifications or camp rules. Lead with sensory arrival, seclusion, warmth, romance, and effortless proximity to London, backed by transparent pricing and risk-free date changes.
+4. **Attribution Integrity:** Paid Smart Bidding lives or dies on clean data. No UI component, iframe, or redirect may strip URL tracking parameters (`gclid`, `gbraid`, `wbraid`, `utm_*`) between landing and payment confirmation.
+
+---
+
+## 2. ARCHITECTURE, ROUTING & DYNAMIC MESSAGE MATCH
+
+- [ ] **Nav-Free Funnel Shell:** Build a distraction-free layout shell containing only a minimal brand mark and a subtle trust/location indicator in the header—zero clickable page-away links (keep Privacy/Terms inside slide-over modals rather than full page exits).
+- [ ] **Dynamic Occasion Routing:** Support clean occasion routes (`/anniversary`, `/birthday`, `/escape`) AND fallback query parameter hydration (`?occasion=anniversary|birthday|escape`) from a single master funnel template so every Google Ads group gets 1:1 message match.
+- [ ] **Dynamic Content Map:** Hydrate the following elements automatically per route/parameter without layout shift:
+  - [ ] Hero `H1` headline and sensory subheadline.
+  - [ ] Primary & sticky CTA micro-copy (e.g., *"Gift an Anniversary Stay"* vs. *"Plan Their Birthday Surprise"*).
+  - [ ] Lead testimonial card and pre-selected review filter tab.
+  - [ ] Default highlighted Celebration Upgrade / Voucher package title.
+- [ ] **URL Parameter Persistence:** Capture `gclid`, `gbraid`, `wbraid`, `utm_source`, `utm_medium`, `utm_campaign`, `utm_term`, and `occasion` on entry; persist them in `sessionStorage` and first-party cookies (`90-day expiry`), and append them automatically to any checkout/voucher handoff URLs or hidden form inputs.
+- [ ] **Thumb-Zone Sticky Mobile Bar:** Render a persistent bottom bar on mobile viewports once the Hero CTA scrolls out of view, presenting dual actions side-by-side: **[Check Live Dates]** and **[Gift Open Voucher]**.
+
+---
+
+## 3. PERFORMANCE & MOBILE-FIRST ENGINEERING
+
+- [ ] **Core Web Vitals Gates:** Achieve Mobile Lighthouse Performance **95+**, Largest Contentful Paint (**LCP**) **< 2.0s** on throttled 4G, Interaction to Next Paint (**INP**) **< 150ms**, and Cumulative Layout Shift (**CLS**) **0.00**.
+- [ ] **Zero-Stutter Hero Video:** Implement a 6–8 second muted ambient hero loop (`autoplay`, `loop`, `muted`, `playsinline`) showing dusk atmosphere (steam off private hot tub, firelight, woodland seclusion):
+  - [ ] Serve dual-source compressed `WebM` + `MP4` strictly under **2.5 MB**.
+  - [ ] Set an instant high-res `AVIF`/`WebP` poster image with `fetchpriority="high"` so mobile users never see a black frame or spinner.
+  - [ ] Respect `prefers-reduced-motion` by falling back cleanly to the high-impact still frame.
+- [ ] **Asset & Font Optimization:** Self-host subsetted `woff2` fonts (`font-display: swap`), enforce explicit aspect ratios on all media containers, and lazy-load all below-the-fold imagery (`AVIF` with `WebP` fallback).
+- [ ] **Third-Party Preconnects:** Add `<link rel="preconnect">` hints for the booking engine API, payment gateway (Stripe), and Google Tag Manager endpoints; defer non-critical third-party scripts until user interaction or idle state.
+
+---
+
+## 4. SECTION-BY-SECTION CONVERSION WIREFRAME & COPY HOOKS
+
+- [ ] **Section 1 — Above the Fold (Zero-Scroll Clarity):**
+  - [ ] Proximity & Exclusivity Pill Badge: *"90 Mins from London • Private Canterbury Countryside • Couples Only"*.
+  - [ ] Occasion-Matched `H1` + Emotional Outcome Subheadline.
+  - [ ] Dual Primary CTAs visible above the fold on standard mobile viewports (*"Check Dates & Prices"* primary solid button + *"Buy as a Surprise Gift"* secondary high-contrast button).
+  - [ ] Verified Social Proof Micro-Bar: 5-star rating graphic, verified guest count, and a 10-word occasion quote.
+- [ ] **Section 2 — The Effortless Escape Timeline (London-to-Sanctuary Contrast):**
+  - [ ] Visual 3-step contrast block (*4:00 PM: Leave the noise behind* → *5:30 PM: Arrive in private Kent countryside* → *6:00 PM: Firepit lit, fizz poured, soaking under the stars*).
+- [ ] **Section 3 — Experiential Sanctuary Showcase:**
+  - [ ] Swipeable mobile-native gallery cards focusing on *privacy, warmth, acoustics, luxury bedding, private hot tub/sauna/firepit, and indulgent touches* rather than dry architectural dimensions.
+- [ ] **Section 4 — Radical Price Clarity & Package Architecture:**
+  - [ ] Display transparent midweek vs. weekend/2-night package pricing directly on the page—no "Click to enquire" or hidden fee ambushes at checkout.
+  - [ ] Explicitly list everything included as standard so the base stay feels generous and luxurious.
+  - [ ] Embed a high-visibility **Risk-Reversal Guarantee Box** directly beneath pricing: *"Plans change? Move your dates free of charge up to 14 days before arrival."*
+- [ ] **Section 5 — The Dual-Path Conversion Fork (Side-by-Side Interactive Module):**
+  - [ ] **Card A: Ready to Book Dates** — Opens live availability calendar inline/drawer with real-time scarcity badges (e.g., *"Only 1 Friday left next month"*).
+  - [ ] **Card B: Planning a Surprise? (Open-Date Gift Stay)** — Explains how the recipient gets 12 months to choose their own dates, showing a preview of the instant printable reveal card / luxury physical gift box.
+- [ ] **Section 6 — Occasion-Tagged Social Proof:**
+  - [ ] Filterable or tagged verified guest stories specifically badged as `[Wedding Anniversary]`, `[40th Birthday Surprise]`, and `[First Night Away From The Kids]`.
+- [ ] **Section 7 — Friction-Killing FAQ Accordion:**
+  - [ ] Address exact conversion blockers in plain, reassuring copy: total privacy from other guests, winter warmth/weatherproofing, exact drive/high-speed train time from London St Pancras to Canterbury, food/local pub proximity, and how gift vouchers are redeemed.
+
+---
+
+## 5. CHECKOUT PIPELINE, VOUCHER ENGINE & AOV MAXIMIZATION
+
+- [ ] **Visual & Domain Continuity:** Embed the booking engine and voucher checkout natively (API or fully themed inline embed) matching the exact funnel typography, colours, and luxury aesthetic—never bounce users out to an unstyled third-party portal.
+- [ ] **3-Step Compressed Checkout Flow:**
+  - [ ] **Step 1 (Selection):** Default to the highest-converting 2-night stay package (with easy toggle to 1-night or Open-Date Named Experience Voucher).
+  - [ ] **Step 2 (The High-Margin Celebration Order Bump):** Present **one** irresistible single-click upgrade toggle (*The Celebration Arrival Bundle*: chilled English sparkling wine, hot tub & firepit pre-lit for arrival, local artisan breakfast hamper, and 12pm late checkout for £95–£135). Do NOT clutter with 10 separate £10 add-ons.
+  - [ ] **Step 3 (One-Tap Express Payment):** Render **Apple Pay** and **Google Pay** buttons at the very top of the payment block, followed by **Klarna / Clearpay** (split into 3 interest-free payments) and standard card entry.
+- [ ] **Named Experience Vouchers (Not Generic Cash Cards):**
+  - [ ] Sell fixed-package named experiences (e.g., *The One-Night Anniversary Sanctuary*, *The Two-Night Birthday Woodland Escape*) rather than raw £50/£100 denominations so gift-buyers purchase a complete romantic plan.
+  - [ ] Offer instant automated PDF gift reveal delivery on confirmation + optional physical luxury gift box upgrade.
+- [ ] **Form Friction Stripping:** Use single-column inputs, UK postcode address autocomplete, proper mobile keyboard `inputmode` types (`email`, `tel`, `numeric`), and inline real-time validation.
+- [ ] **First-Party LTV Milestone Capture:** Add one required, low-friction selector inside checkout: *"What are you celebrating?"* (`Anniversary` / `Partner's Birthday` / `Child-Free Escape` / `Other`) + optional *"Occasion Month & Day"*. Pass this payload via webhook to the CRM to automate the 10.5-month repeat-booking VIP invite.
+
+---
+
+## 6. LEAD RECOVERY & ABANDONMENT SAFETY NETS
+
+- [ ] **Step-1 Checkout Email/SMS Capture:** Capture guest email (and optional WhatsApp/SMS opt-in) prior to final payment submission so abandoned checkouts trigger an automated 30-minute recovery message with a direct cart-restore link.
+- [ ] **Non-Spammy Exit-Intent / Scroll-Back Micro-Offer:** Trigger a sleek slide-up card only for non-purchasing visitors showing exit intent (desktop) or upward disengagement after 60% scroll (mobile):
+  - [ ] Hook: *"Planning a surprise and can't pick dates yet? Get our Private Kent Couples Guide + Instant Last-Minute Friday Cancellation Alerts."*
+- [ ] **Dedicated Post-Purchase Confirmation Endpoint (`/booking-confirmed` & `/voucher-confirmed`):**
+  - [ ] Render immediate reassurance, clear next steps (or instant gift voucher download), and fire deduplicated primary conversion events.
+
+---
+
+## 7. TRACKING, ATTRIBUTION & UK CONSENT MODE V2 INFRASTRUCTURE
+
+- [ ] **Google Consent Mode v2 (Advanced Implementation):**
+  - [ ] Deploy a UK GDPR/PECR-compliant Consent Management Platform (CMP) wired through Google Tag Manager.
+  - [ ] Default `ad_storage`, `analytics_storage`, `ad_user_data`, and `ad_personalization` to `denied` prior to interaction for UK/EEA regions, firing cookieless modeling pings immediately and dynamically updating on user consent.
+  - [ ] Style the consent banner to match the site's luxury UI so it doesn't look like a spam popup or block the entire mobile viewport.
+- [ ] **Google Ads Enhanced Conversions:** Push SHA-256 normalized/hashed `email`, `phone_number` (E.164 `+44` format), `first_name`, `last_name`, and `postal_code` into the `dataLayer` upon lead capture and checkout completion.
+- [ ] **Cross-Domain Linker Configuration:** Configure GTM Conversion Linker and GA4 cross-domain measurement across the funnel domain, PMS/booking domain, voucher subdomain, and payment processor so zero sessions break into `Direct / Referral`.
+- [ ] **Structured `dataLayer` Event Schema:** Implement clean, non-duplicating events with explicit parameters:
+  - [ ] `occasion_landing_view` (`occasion_type`)
+  - [ ] `select_conversion_path` (`path_type`: `'live_dates'` | `'gift_voucher'`)
+  - [ ] `begin_checkout` (`value`, `currency: 'GBP'`, `package_name`)
+  - [ ] `add_celebration_bump` (`bump_value`, `currency: 'GBP'`)
+  - [ ] `generate_lead` (`lead_source`: `'exit_guide'` | `'checkout_step1'` — set as Secondary Conversion in Google Ads)
+  - [ ] `purchase` (`transaction_id`, `value` in GBP float, `currency: 'GBP'`, `purchase_type`: `'stay'` | `'voucher'`, `celebration_type` — set as Primary Conversion in Google Ads, deduplicated by `transaction_id`).
+- [ ] **Retargeting Pixel Parity:** Mirror the exact same consent-aware event hooks to Meta Pixel + Conversions API (CAPI) so £5/day warm retargeting ads can follow non-booking PPC visitors across Instagram and Facebook for 14 days.
+
+---
+
+## 8. PRE-LAUNCH QA & DEFINITION OF DONE (DO NOT GO LIVE UNTIL ALL PASS)
+
+- [ ] **Live 4G iPhone Test:** Load `/anniversary?gclid=TEST12345` over cellular 4G (not Wi-Fi) on an actual iPhone; verify hero renders under 2.0s with smooth video playback, zero layout shift, and sticky thumb CTA functioning.
+- [ ] **Parameter Survival Audit:** Navigate from landing → availability/voucher modal → celebration bump → payment screen and confirm `gclid=TEST12345` and session attribution survive every transition without dropping.
+- [ ] **Consent Mode v2 Verification:** Open Google Tag Assistant; run one complete session clicking *Reject/Decline* (confirm `gcs=G100` cookieless pings fire cleanly) and one session clicking *Accept* (confirm `gcs=G111` full tags fire).
+- [ ] **Live £1 End-to-End Apple Pay Test:** Create a temporary £1 live voucher/test rate, complete checkout on mobile via Apple Pay, and verify:
+  1. Confirmation screen loads cleanly with instant voucher/email trigger.
+  2. `purchase` event fires **once** (refreshing confirmation page does NOT fire a duplicate conversion).
+  3. Exact `value`, `currency: 'GBP'`, `transaction_id`, and Enhanced Conversion user payload register accurately in Tag Assistant / Google Ads Diagnostics.
+  4. Occasion type and milestone date land cleanly inside the CRM record.

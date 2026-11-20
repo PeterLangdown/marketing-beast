@@ -1,0 +1,9 @@
+{
+  "name": "conversion-blueprint-tools",
+  "private": true,
+  "type": "module",
+  "description": "Audit scripts for the Conversion Blueprint (see tools/README.md)",
+  "dependencies": {
+    "puppeteer-core": "23.11.1"
+  }
+}

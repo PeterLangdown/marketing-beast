@@ -6,11 +6,11 @@
 
 ## Where things stand
 
-- **Launch gate** (standards and don'ts, 46 rules): 7 pass · 15 fail · 1 gap · 22 not checked · 1 n/a.
+- **Launch gate** (standards and don'ts, 46 rules): 8 pass · 16 fail · 1 gap · 20 not checked · 1 n/a.
 - **Bets** (38): 13 in place, 25 not yet built or not checked.
 - **Blocking launch** (launch needs every standard and don't to be pass, n/a, or a gap Pete has accepted):
-  - failing or an open gap: LAW-01, LAW-06, LAW-07, LAW-09, LAW-15, TRK-01, TRK-02, TRK-03, TRK-05, FUN-10, UI-05, UI-08, SEO-01, SEO-02, SEO-03, SEO-05;
-  - not checked yet: LAW-02, LAW-03, LAW-05, LAW-08, LAW-10, LAW-11, LAW-13, LAW-14, TRK-04, TRK-06, TRK-09, TRK-11, FUN-01, UI-02, UI-04, UI-06, SAL-11, CUS-03, ADS-01, ADS-02, ADS-03, ADS-05.
+  - failing or an open gap: LAW-01, LAW-06, LAW-07, LAW-09, LAW-15, TRK-01, TRK-02, TRK-03, TRK-05, FUN-10, UI-02, UI-05, UI-08, SEO-01, SEO-02, SEO-03, SEO-05;
+  - not checked yet: LAW-02, LAW-03, LAW-05, LAW-08, LAW-10, LAW-11, LAW-13, LAW-14, TRK-04, TRK-06, TRK-09, TRK-11, FUN-01, UI-04, SAL-11, CUS-03, ADS-01, ADS-02, ADS-03, ADS-05.
 - **Open questions for Pete:** see `brief.md` §10.
 
 Boxes: `[x]` pass · `[ ]` not checked yet · `[!]` fail · `[~]` gap · `[-]` n/a. For a bet, `[x]` means it is in place on the site, ready to be measured.
@@ -84,7 +84,7 @@ Boxes: `[x]` pass · `[ ]` not checked yet · `[!]` fail · `[~]` gap · `[-]` n
 - [~] **TRK-02** · standard · Moderate (proposed)
   Ad click IDs and UTM tags survive from the landing page to the payment step, or the gap is written down with a workaround.
   *Check:* Open /<landing>?gclid=TEST123&gbraid=TEST&utm_source=test, click through to payment, and confirm each is present at every step. tools/hooga-attribution-flow.mjs does this for Hooga.
-  *Here:* attribution.js carries gclid, gbraid, wbraid, fbclid, msclkid and utm_* onto /booking and /gift; the Hooga session tested /anniversary?gclid=TEST123 → /booking?gclid=TEST123&… (CONVERSION-PLAN §10). Hospitable's widget keeps utm_* but drops gclid, fbclid and _gl, and checkout ends on booking.hospitable.com. Workaround: CONVERSION-PLAN §11 (UTMs on every ad, optimise on booking_handoff, test the source parameter: TRK-08). Gap accepted by Pete: no. (checked 2026-11-19, ai)
+  *Here:* attribution.js carries gclid, gbraid, wbraid, fbclid, msclkid and utm_* onto /booking and /gift; the Hooga session tested /anniversary?gclid=TEST123 → /booking?gclid=TEST123&… (CONVERSION-PLAN §10). Hospitable's widget keeps utm_* but drops gclid, fbclid and _gl, and checkout ends on booking.hospitable.com. Workaround: CONVERSION-PLAN §11 (UTMs on every ad, optimise on booking_handoff, test the source parameter: TRK-08). Re-run on 20 Nov with tools/hooga-attribution-flow.mjs on a production build of b24f110: gclid and the UTMs reached /booking and /gift, and all four dataLayer events (occasion_landing_view, fork_view, select_conversion_path, booking_handoff) carried the gclid. The site's side works; the gap is Hospitable's alone. Gap accepted by Pete: no. (checked 2026-11-20, ai)
 
 - [!] **TRK-03** · standard · Weak (proposed)
   Click IDs and UTM tags are kept for return visits in a first-party cookie, set only after consent.
@@ -145,10 +145,10 @@ Boxes: `[x]` pass · `[ ]` not checked yet · `[!]` fail · `[~]` gap · `[-]` n
   *Check:* Read the page's meta viewport tag, then pinch-zoom on a phone.
   *Here:* index.html's viewport tag is "width=device-width, initial-scale=1.0, viewport-fit=cover": no user-scalable=no and no maximum-scale. V2's zoom block is gone. Not tried on a phone. (checked 2026-11-20, ai)
 
-- [ ] **UI-02** · standard · Moderate (proposed)
+- [!] **UI-02** · standard · Moderate (proposed)
   Mobile pages meet Google's 'good' Core Web Vitals at the 75th percentile: LCP ≤ 2.5 s, INP ≤ 200 ms and CLS ≤ 0.1.
   *Check:* Use field data (Search Console, or PageSpeed Insights' Chrome UX Report) once the site has enough traffic. Before launch, record Lighthouse mobile runs as a stand-in.
-  *Here:* Not measured. The LCP image is a 400–1200w WebP poster loaded eagerly at high priority (LandingHero.jsx, Img.jsx). The hero videos are 11.8–25.2 MB (public/assets/videos), and / still runs the 15.5 MB background video. Pete deferred the speed pass (CONVERSION-PLAN §0).
+  *Here:* Lab stand-in, not field data: Lighthouse 12.2.1 mobile (simulated slow 4G), median of 3 runs, on a production build of b24f110 served locally with gzip. LCP: /anniversary 9.9 s, /yurt 9.2 s, / 54.9 s, /s/anniversary 155 s (good is 2.5 s or less). CLS 0 and blocking time 0 ms on all four, so the layout and the JavaScript are fine; the weight is the problem. First paint takes 6.3–7.1 s: the fonts are about 1 MB of TTF files (Montserrat-Variable.ttf alone is 673 KB), and none of the @font-face rules in index.css sets font-display. The story deck /s/<occasion> (where the Meta ads will point) downloaded about 117–120 MB: funnelConfig.js uses the original 5.9–9.7 MB PNG and JPEG photos rather than the optimised WebP copies, and its four videos download in full. / uses the 9.7 MB carriage-hot-tub.jpeg (FunnelEntryView.jsx) as well as its 15.5 MB background video. Expected: Pete deferred the speed pass until the product looks right, and it must be done before any paid traffic (CONVERSION-PLAN §0). Re-check with field data once there's traffic. (checked 2026-11-20, ai)
 
 - [ ] **UI-04** · standard · Weak (proposed)
   Before launch, test every paid landing page on a real phone over mobile data, not only on a desktop or over Wi-Fi.
@@ -160,10 +160,10 @@ Boxes: `[x]` pass · `[ ]` not checked yet · `[!]` fail · `[~]` gap · `[-]` n
   *Check:* On each page with autoplay video, find a pause control, and check it works by keyboard and touch.
   *Here:* The hero video autoplays and loops with no pause control (LandingHero.jsx), and so does the background video on / (FunnelEntryView.jsx). The landing hero does skip video when reduced motion or Save-Data is requested. (checked 2026-11-20, ai)
 
-- [ ] **UI-06** · standard · Moderate (proposed)
+- [x] **UI-06** · standard · Moderate (proposed)
   Buttons and links are at least 24 by 24 CSS pixels, or spaced so that a 24-pixel circle around each doesn't overlap another.
   *Check:* Measure the tap targets on each sales page in the browser's developer tools at phone width, and note any under 24 px that the WCAG exceptions don't cover.
-  *Here:* The main buttons are full-width and about 52 px tall. The smaller chips (review filters, retreat tabs) weren't measured.
+  *Here:* Measured with tools/tap-targets.mjs at 390×844, on a production build of b24f110: /, the eight landing pages, /s/anniversary, /booking, /gift, /stays, /faq and /contact. Nothing on the landing pages or the story deck is under 24 px, chips and tabs included. The only small targets are the footer links on /gift, /stays, /faq and /contact: 16 px tall, in rows 24 px apart. They pass on WCAG's spacing exception, with no margin to spare. (checked 2026-11-20, ai)
 
 - [!] **UI-08** · standard · Weak (proposed)
   If a third-party booking or payment widget fails to load, the page shows a working alternative (another way to book, or contact details), not an empty box.

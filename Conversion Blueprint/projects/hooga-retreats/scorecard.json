@@ -100,8 +100,8 @@
     },
     "TRK-02": {
       "status": "gap",
-      "here": "attribution.js carries gclid, gbraid, wbraid, fbclid, msclkid and utm_* onto /booking and /gift; the Hooga session tested /anniversary?gclid=TEST123 → /booking?gclid=TEST123&… (CONVERSION-PLAN §10). Hospitable's widget keeps utm_* but drops gclid, fbclid and _gl, and checkout ends on booking.hospitable.com. Workaround: CONVERSION-PLAN §11 (UTMs on every ad, optimise on booking_handoff, test the source parameter: TRK-08).",
-      "checked": "2026-11-19",
+      "here": "attribution.js carries gclid, gbraid, wbraid, fbclid, msclkid and utm_* onto /booking and /gift; the Hooga session tested /anniversary?gclid=TEST123 → /booking?gclid=TEST123&… (CONVERSION-PLAN §10). Hospitable's widget keeps utm_* but drops gclid, fbclid and _gl, and checkout ends on booking.hospitable.com. Workaround: CONVERSION-PLAN §11 (UTMs on every ad, optimise on booking_handoff, test the source parameter: TRK-08). Re-run on 20 Nov with tools/hooga-attribution-flow.mjs on a production build of b24f110: gclid and the UTMs reached /booking and /gift, and all four dataLayer events (occasion_landing_view, fork_view, select_conversion_path, booking_handoff) carried the gclid. The site's side works; the gap is Hospitable's alone.",
+      "checked": "2026-11-20",
       "by": "ai",
       "gapAcceptedByPete": false
     },
@@ -178,10 +178,10 @@
       "by": "ai"
     },
     "UI-02": {
-      "status": "not-checked",
-      "here": "Not measured. The LCP image is a 400–1200w WebP poster loaded eagerly at high priority (LandingHero.jsx, Img.jsx). The hero videos are 11.8–25.2 MB (public/assets/videos), and / still runs the 15.5 MB background video. Pete deferred the speed pass (CONVERSION-PLAN §0).",
-      "checked": null,
-      "by": null
+      "status": "fail",
+      "here": "Lab stand-in, not field data: Lighthouse 12.2.1 mobile (simulated slow 4G), median of 3 runs, on a production build of b24f110 served locally with gzip. LCP: /anniversary 9.9 s, /yurt 9.2 s, / 54.9 s, /s/anniversary 155 s (good is 2.5 s or less). CLS 0 and blocking time 0 ms on all four, so the layout and the JavaScript are fine; the weight is the problem. First paint takes 6.3–7.1 s: the fonts are about 1 MB of TTF files (Montserrat-Variable.ttf alone is 673 KB), and none of the @font-face rules in index.css sets font-display. The story deck /s/<occasion> (where the Meta ads will point) downloaded about 117–120 MB: funnelConfig.js uses the original 5.9–9.7 MB PNG and JPEG photos rather than the optimised WebP copies, and its four videos download in full. / uses the 9.7 MB carriage-hot-tub.jpeg (FunnelEntryView.jsx) as well as its 15.5 MB background video. Expected: Pete deferred the speed pass until the product looks right, and it must be done before any paid traffic (CONVERSION-PLAN §0). Re-check with field data once there's traffic.",
+      "checked": "2026-11-20",
+      "by": "ai"
     },
     "UI-04": {
       "status": "not-checked",
@@ -196,10 +196,10 @@
       "by": "ai"
     },
     "UI-06": {
-      "status": "not-checked",
-      "here": "The main buttons are full-width and about 52 px tall. The smaller chips (review filters, retreat tabs) weren't measured.",
-      "checked": null,
-      "by": null
+      "status": "pass",
+      "here": "Measured with tools/tap-targets.mjs at 390×844, on a production build of b24f110: /, the eight landing pages, /s/anniversary, /booking, /gift, /stays, /faq and /contact. Nothing on the landing pages or the story deck is under 24 px, chips and tabs included. The only small targets are the footer links on /gift, /stays, /faq and /contact: 16 px tall, in rows 24 px apart. They pass on WCAG's spacing exception, with no margin to spare.",
+      "checked": "2026-11-20",
+      "by": "ai"
     },
     "UI-08": {
       "status": "fail",

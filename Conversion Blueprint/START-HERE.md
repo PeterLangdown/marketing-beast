@@ -62,7 +62,7 @@ Pete's three decisions (20 Nov 2026):
 |---|---|---|---|
 | T1 | done | 2026-11-20 | `ledger.json` (empty), `CHANGELOG.md`, `README.md`, `tools/validate-ledger.mjs`. The checker passes on the empty ledger and caught all 12 errors planted in a test ledger, including a removed rule. |
 | T2 | done | 2026-11-20 | 91 rules, all `proposed`:<br>• by stream: LAW 17, TRK 12, FUN 15, UI 8, SAL 12, CUS 11, ADS 9, SEO 7;<br>• by kind: 51 standards, 40 bets;<br>• by rating: Strong 9, Excluded 3, Moderate 27, Weak 52.<br>The law and platform ratings rest on quick checks of primary sources, recorded in `sources/quick-checks-2026-11-20.md`. The validator passes. Gaps and left-out ideas are in `README.md`. |
-| T3 | not started | | |
+| T3 | done | 2026-11-20 | Written:<br>• templates: `templates/project-brief.md` (10 sections) and `templates/scorecard.json`;<br>• `platforms/hospitable.md`: every line marked tested, help centre or plan, plus a rule-by-rule effects table;<br>• `modules/booked-experience.md`, plus stubs for `modules/membership.md` and `modules/course.md`. |
 | T4 | not started | | |
 | T5 | not started | | |
 | T6 | not started | | |

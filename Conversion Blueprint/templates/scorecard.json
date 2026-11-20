@@ -1,0 +1,39 @@
+{
+  "project": "<slug>",
+  "ledgerUpdated": "YYYY-MM-DD",
+  "items": {
+    "<RULE-ID>": {
+      "status": "not-checked",
+      "here": "What this rule means for this project, and the evidence for the status",
+      "checked": null,
+      "by": null
+    },
+    "<RULE-ID of a gap>": {
+      "status": "gap",
+      "here": "Why it can't pass, and the workaround",
+      "checked": "YYYY-MM-DD",
+      "by": "ai",
+      "gapAcceptedByPete": false
+    }
+  },
+  "notApplied": {
+    "<RULE-ID>": "Why the rule doesn't fit this project"
+  },
+  "bets": {
+    "<RULE-ID of a bet>": {
+      "measure": "The event or number to watch (from the rule's metric)",
+      "baseline": null,
+      "measuringSince": null,
+      "readings": [],
+      "read": "too early"
+    }
+  },
+  "targets": [
+    {
+      "name": "Most a sale can cost (ads)",
+      "value": null,
+      "basis": "How it was worked out, or which number from the brief it's waiting for",
+      "actual": null
+    }
+  ]
+}

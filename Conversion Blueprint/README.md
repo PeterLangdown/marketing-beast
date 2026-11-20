@@ -43,7 +43,32 @@ Read your own list, `projects/<slug>/requirements.md`, and cite rule IDs in your
 
 ## Known gaps
 
-Filled in during seeding (T2).
+Recorded during seeding (T2, 20 Nov 2026).
 
-- **Thin streams:** none recorded yet.
-- **Ideas without a check:** none recorded yet. A candidate rule that couldn't be given a check is listed here instead of going into the ledger.
+**Streams.** None is thin. `LAW` came out at 17 against a target of 8–12, because the quick legal checks turned up specific duties worth a rule each (for example, LAW-14: tell buyers of dated stays that there's no statutory right to cancel). Nothing was added to pad a stream.
+
+**Ratings.** 52 of the 91 rules are Weak. That's honest, not a defect: their only sources are:
+- the AI-written Google doc;
+- the Hooga plan's reasoning;
+- the gurus;
+- the RGC review summary, which is held only secondhand.
+
+Two things would lift some of them:
+- **The full RGC review** (in Pete's chat history) would lift SAL-05, FUN-15, CUS-10, CUS-11 and TRK-07. They're capped at Weak only because the summary is all that's held.
+- **A `method` source type.** The source types have no slot for a statistical method (TRK-07) or a W3C standard (UI-01, UI-05 and UI-06 use `platform-docs` as the nearest fit). Adding one would be a structural change, so it's a proposal for Pete.
+
+**Ideas left out of the ledger, and why.**
+
+Not site rules:
+- Priestley's partnership deals (co-promotion, affiliates): a channel strategy, not something a site can pass or fail.
+- Priestley's "7-hour research window": a number with no source held, and no site check follows from it.
+- Stoffel's content split (60–70% new audience, 30–40% nurture): content production, not site conversion.
+
+Belong in a module note or a brief:
+- The RGC waitlist planning figures (about 2% of a list, a median lag of about 67 days): planning assumptions for `modules/course.md`.
+- The Google doc's "Couples Only" and "90 mins from London" badges: Hooga facts and decisions. They're recorded as clashes and handled in Hooga's brief.
+- Hooga's "families come organically, with no paid ads": a project decision for its brief.
+
+Not checked against WCAG levels: a reduced-motion fallback for hero video. It's noted under UI-05.
+
+**What the quick checks found.** `sources/quick-checks-2026-11-20.md` lists each check, its source and what it confirmed.

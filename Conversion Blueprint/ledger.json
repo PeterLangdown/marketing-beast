@@ -17,5 +17,3665 @@
     "membership": "Recurring membership plus paid events (Danger Club)",
     "course": "Considered, higher-priced education purchases (RGC)"
   },
-  "rules": []
+  "rules": [
+    {
+      "id": "LAW-01",
+      "stream": "LAW",
+      "kind": "standard",
+      "scope": [
+        "core"
+      ],
+      "status": "proposed",
+      "rule": "No invented reviews or testimonials are shown as real. Placeholder reviews are clearly labelled, and all are replaced with genuine ones before launch.",
+      "why": "Fake reviews are a banned practice under the DMCC Act 2024 (Schedule 20 para 13), in force since 6 April 2025, and advertisers must hold evidence that each testimonial is genuine (CAP 3.47).",
+      "check": "List every review and testimonial on the site. Each traces to a real source (platform, date, first name) held on file, and nothing labelled as a sample remains at launch.",
+      "metric": null,
+      "evidence": {
+        "rating": "Strong",
+        "reason": "Primary legislation and the regulator's code, read in the original. The reason to follow it is legal, not a conversion effect.",
+        "sources": [
+          {
+            "ref": "DMCC Act 2024, Schedule 20 para 13 (banned: fake reviews, concealed incentivised reviews, publishing reviews in a misleading way including suppressing negative ones); in force 6 Apr 2025 (SI 2025/272)",
+            "type": "legislation",
+            "read": "full",
+            "where": "https://www.legislation.gov.uk/ukpga/2024/13/schedule/20"
+          },
+          {
+            "ref": "CAP Code (UK Code of Non-broadcast Advertising), rule 3.44 and 3.47: no fake consumer reviews; hold documentary evidence that a testimonial is genuine",
+            "type": "regulator",
+            "read": "full",
+            "where": "https://www.asa.org.uk/type/non_broadcast/code_section/03.html"
+          },
+          {
+            "ref": "CMA208 Fake reviews guidance (4 Apr 2025): paras 4.3–4.4 (no suppressing or cherry-picking negative reviews), 8.1–8.2 and 8.9 (publishers should have published policies prohibiting fake reviews), 8.12 (risk assessments)",
+            "type": "regulator",
+            "read": "full",
+            "where": "https://www.gov.uk/government/publications/fake-reviews-cma208"
+          }
+        ]
+      },
+      "verdict": "Adopt",
+      "betState": null,
+      "origin": "PLAN.md §8 (LAW-01); RGC Literature Review summary, finding 1; sources/hooga/CONVERSION-PLAN-2026-11-20.md §0 round 2 (labelled sample reviews)",
+      "conflicts": [],
+      "proposals": [],
+      "added": {
+        "date": "2026-11-20",
+        "by": "ai"
+      }
+    },
+    {
+      "id": "LAW-02",
+      "stream": "LAW",
+      "kind": "standard",
+      "scope": [
+        "core"
+      ],
+      "status": "proposed",
+      "rule": "Everything a buyer needs to decide (the all-in price, what's included, cancellation terms and key limits) is on the page or one tap away before they pay.",
+      "why": "Leaving material information out of an invitation to purchase is a misleading omission under the DMCC Act 2024 (s.227 and s.230), and information that is unclear, untimely or unlikely to be seen counts as left out (s.230(9)).",
+      "check": "For each product, list the facts that could change a buyer's mind (from the brief's house rules and the facts file's limits). Each is visible, or one tap away, before the payment step.",
+      "metric": null,
+      "evidence": {
+        "rating": "Strong",
+        "reason": "Primary legislation and CMA guidance, read in the original.",
+        "sources": [
+          {
+            "ref": "Digital Markets, Competition and Consumers Act 2024, s.230 (omission of material information from an invitation to purchase): s.230(2)(b) total price; s.230(4) total price includes every fee the consumer will necessarily incur; s.230(9) unclear or untimely information counts as omitted",
+            "type": "legislation",
+            "read": "full",
+            "where": "https://www.legislation.gov.uk/ukpga/2024/13/section/230"
+          },
+          {
+            "ref": "CMA207 Unfair commercial practices guidance (updated 18 Nov 2025): Chapter 4 summary (drip pricing is prohibited) and paras 4.16–4.18",
+            "type": "regulator",
+            "read": "full",
+            "where": "https://www.gov.uk/government/publications/unfair-commercial-practices-cma207"
+          }
+        ]
+      },
+      "verdict": "Adopt",
+      "betState": null,
+      "origin": "PLAN.md §8 (LAW-02); RGC Literature Review summary, finding 1; sources/hooga/CONVERSION-PLAN-2026-11-20.md §5a (the legal guardrail); sources/hooga/Hooga_Business_and_Marketing_Brief.md §6 (make practical details clear before booking)",
+      "conflicts": [
+        "'Book first, explain after' (CONVERSION-PLAN §5a) puts the full picture after booking. The decisive facts (guests heat the hot tub, low ceilings on the bus, city sounds at the yurt, the unheated wagon) must still be one tap away before payment."
+      ],
+      "proposals": [],
+      "added": {
+        "date": "2026-11-20",
+        "by": "ai"
+      }
+    },
+    {
+      "id": "LAW-03",
+      "stream": "LAW",
+      "kind": "standard",
+      "scope": [
+        "core"
+      ],
+      "status": "proposed",
+      "rule": "Every price shown includes all mandatory fees and charges; nothing compulsory is added later in the purchase.",
+      "why": "The total price must include every fee the buyer will necessarily pay (DMCC Act 2024 s.230(4); CAP 3.18). Drip pricing is prohibited (CMA207), and the CMA fined the AA £4.2m in April 2026 for a £3 booking fee added during booking.",
+      "check": "Take a test purchase to the final payment screen. The total equals the price first shown for those choices, and no compulsory fee appears along the way.",
+      "metric": null,
+      "evidence": {
+        "rating": "Strong",
+        "reason": "Primary legislation, CMA guidance and a CMA penalty, read in the original.",
+        "sources": [
+          {
+            "ref": "Digital Markets, Competition and Consumers Act 2024, s.230 (omission of material information from an invitation to purchase): s.230(2)(b) total price; s.230(4) total price includes every fee the consumer will necessarily incur; s.230(9) unclear or untimely information counts as omitted",
+            "type": "legislation",
+            "read": "full",
+            "where": "https://www.legislation.gov.uk/ukpga/2024/13/section/230"
+          },
+          {
+            "ref": "CMA207 Unfair commercial practices guidance (updated 18 Nov 2025): Chapter 4 summary (drip pricing is prohibited) and paras 4.16–4.18",
+            "type": "regulator",
+            "read": "full",
+            "where": "https://www.gov.uk/government/publications/unfair-commercial-practices-cma207"
+          },
+          {
+            "ref": "CMA press release, 15 Apr 2026: AA Driving School and BSM fined £4.2m for a mandatory £3 booking fee added later in the booking (drip pricing); the first CMA fine under its new consumer powers",
+            "type": "regulator",
+            "read": "full",
+            "where": "https://www.gov.uk/government/news/cma-orders-the-aa-and-bsm-driving-schools-to-refund-learner-drivers-over-drip-pricing"
+          },
+          {
+            "ref": "CAP Code (UK Code of Non-broadcast Advertising), rule 3.18: quoted prices must include non-optional taxes, duties, fees and charges",
+            "type": "regulator",
+            "read": "full",
+            "where": "https://www.asa.org.uk/type/non_broadcast/code_section/03.html"
+          }
+        ]
+      },
+      "verdict": "Adopt",
+      "betState": null,
+      "origin": "RGC Literature Review summary, finding 1; sources/hooga/google-optimisation-ideas.txt §4 Section 4 (no hidden-fee ambushes at checkout)",
+      "conflicts": [
+        "Unknown for Hooga: whether Hospitable Direct bookings carry a cleaning or service fee (CONVERSION-PLAN §11, Pete's to-do 5). If they do, the site's 'from £' prices must include it.",
+        "For memberships: the CMA fined Gold's Gym £45k (October 2026) for leaving a mandatory joining fee out of its total membership price."
+      ],
+      "proposals": [],
+      "added": {
+        "date": "2026-11-20",
+        "by": "ai"
+      }
+    },
+    {
+      "id": "LAW-04",
+      "stream": "LAW",
+      "kind": "standard",
+      "scope": [
+        "core"
+      ],
+      "status": "proposed",
+      "rule": "Don't say that dates, stock or a price are limited, or show a countdown, unless it is true and driven by live data or a real, fixed deadline.",
+      "why": "Falsely saying a product is available only for a limited time is a banned practice (DMCC Act 2024 Schedule 20 para 7; CAP 3.30). The CMA fined Wayfair £4.8m in October 2026 for deals that carried on past their deadlines.",
+      "check": "Find every urgency or scarcity message on the site. Each comes from live data (for example, real availability) or a real, fixed deadline, and none resets or repeats.",
+      "metric": null,
+      "evidence": {
+        "rating": "Excluded",
+        "reason": "Banned outright when false: legislation, the CAP Code and a CMA penalty, read in the original. Genuine scarcity is allowed.",
+        "sources": [
+          {
+            "ref": "DMCC Act 2024, Schedule 20 para 7 (banned: 'falsely stating that a product will only be available for a limited time…'); in force 6 Apr 2025 (SI 2025/272)",
+            "type": "legislation",
+            "read": "full",
+            "where": "https://www.legislation.gov.uk/ukpga/2024/13/schedule/20"
+          },
+          {
+            "ref": "CAP Code (UK Code of Non-broadcast Advertising), rule 3.30: must not falsely state that a product or its terms are available only for a limited time",
+            "type": "regulator",
+            "read": "full",
+            "where": "https://www.asa.org.uk/type/non_broadcast/code_section/03.html"
+          },
+          {
+            "ref": "CMA press release, 14 Oct 2026: Wayfair fined £4.8m for false time-limited 'Flash Deals'; Appliances Direct £1.2m for false countdown banners and pre-selected paid extras; Gold's Gym £45k for leaving a mandatory joining fee out of the total membership price",
+            "type": "regulator",
+            "read": "full",
+            "where": "https://www.gov.uk/government/news/cma-fines-firms-6-million-for-misleading-sales-tactics"
+          }
+        ]
+      },
+      "verdict": "Avoid",
+      "betState": null,
+      "origin": "RGC Literature Review summary, findings 1 and 7 (one real, dated cohort deadline); sources/hooga/google-optimisation-ideas.txt §4 Section 5 (real-time scarcity badges); FRCS Module 04 ('Scarcity vs. Urgency': both must be genuine) via Guru Vault",
+      "conflicts": [
+        "The Google doc wants badges like 'Only 1 Friday left next month'. They are allowed only if driven by live availability from the booking platform."
+      ],
+      "proposals": [],
+      "added": {
+        "date": "2026-11-20",
+        "by": "ai"
+      }
+    },
+    {
+      "id": "LAW-05",
+      "stream": "LAW",
+      "kind": "standard",
+      "scope": [
+        "core"
+      ],
+      "status": "proposed",
+      "rule": "Don't pre-select any paid extra; every add-on starts unticked.",
+      "why": "Any payment beyond the main price needs the buyer's express consent, which can't be inferred from a pre-ticked box (Consumer Contracts Regulations 2013, reg 40). The CMA fined Appliances Direct £1.2m in October 2026, partly for pre-selected paid extras.",
+      "check": "Go through every checkout you control, and the booking platform's checkout, with a test purchase: no paid extra is selected by default.",
+      "metric": null,
+      "evidence": {
+        "rating": "Excluded",
+        "reason": "Banned outright: legislation and a CMA penalty, read in the original.",
+        "sources": [
+          {
+            "ref": "Consumer Contracts Regulations 2013, reg 40(1)–(2): express consent needed for any extra payment; no consent if 'inferred from the consumer not changing a default option (such as a pre-ticked box on a website)'",
+            "type": "legislation",
+            "read": "full",
+            "where": "https://www.legislation.gov.uk/uksi/2013/3134/regulation/40"
+          },
+          {
+            "ref": "CMA press release, 14 Oct 2026: Wayfair fined £4.8m for false time-limited 'Flash Deals'; Appliances Direct £1.2m for false countdown banners and pre-selected paid extras; Gold's Gym £45k for leaving a mandatory joining fee out of the total membership price",
+            "type": "regulator",
+            "read": "full",
+            "where": "https://www.gov.uk/government/news/cma-fines-firms-6-million-for-misleading-sales-tactics"
+          }
+        ]
+      },
+      "verdict": "Avoid",
+      "betState": null,
+      "origin": "RGC Literature Review summary, finding 1; sources/hooga/google-optimisation-ideas.txt §5 step 2 (single-click upgrade toggle)",
+      "conflicts": [
+        "The Google doc's order bump is a one-click toggle; it must start switched off."
+      ],
+      "proposals": [],
+      "added": {
+        "date": "2026-11-20",
+        "by": "ai"
+      }
+    },
+    {
+      "id": "LAW-06",
+      "stream": "LAW",
+      "kind": "standard",
+      "scope": [
+        "core"
+      ],
+      "status": "proposed",
+      "rule": "Don't make objective claims the business can't prove, or promise outcomes (for example, 'Kent's best-rated stay' or 'a flawless night, guaranteed').",
+      "why": "Advertisers must hold documentary evidence for claims a buyer would take as objective (CAP 3.7) and must not mislead (CAP 3.1). Overpromising also costs the review.",
+      "check": "List every claim on the site and in ads. Each objective claim has its evidence on file (see LAW-07); there are no promised outcomes.",
+      "metric": null,
+      "evidence": {
+        "rating": "Excluded",
+        "reason": "The CAP Code, read in the original. Unsubstantiated objective claims breach it regardless of whether they sell.",
+        "sources": [
+          {
+            "ref": "CAP Code (UK Code of Non-broadcast Advertising), rule 3.1 and 3.7: must not materially mislead; hold documentary evidence for objective claims",
+            "type": "regulator",
+            "read": "full",
+            "where": "https://www.asa.org.uk/type/non_broadcast/code_section/03.html"
+          }
+        ]
+      },
+      "verdict": "Avoid",
+      "betState": null,
+      "origin": "RGC Literature Review summary, finding 5 (avoid outcome promises); sources/hooga/Hooga_Business_and_Marketing_Brief.md §6 (avoid exaggerated luxury claims or promising a flawless experience); Marketing Beast CLAUDE.md conventions (no outcome-guarantee language)",
+      "conflicts": [
+        "The Google doc's 'luxury' framing throughout. Pete: 'not luxury: it's an experience, magic' (CONVERSION-PLAN §5b)."
+      ],
+      "proposals": [],
+      "added": {
+        "date": "2026-11-20",
+        "by": "ai"
+      }
+    },
+    {
+      "id": "LAW-07",
+      "stream": "LAW",
+      "kind": "standard",
+      "scope": [
+        "core"
+      ],
+      "status": "proposed",
+      "rule": "Every factual claim on the site (ratings, review counts, years trading, travel times, features) comes from one facts file that records its source, and nothing unconfirmed is shown as fact at launch.",
+      "why": "Objective claims need documentary evidence (CAP 3.7). Hooga V2 invented stay details and said '10+ years' when the truth was 7; a single facts file with sources stops that recurring.",
+      "check": "Pick ten facts at random from the live pages; each appears in the facts file with a source. The file's 'to confirm' list is empty, or those items aren't on the site.",
+      "metric": null,
+      "evidence": {
+        "rating": "Strong",
+        "reason": "The CAP Code, read in the original, plus the V2 audit showing the failure it prevents.",
+        "sources": [
+          {
+            "ref": "CAP Code (UK Code of Non-broadcast Advertising), rule 3.7: hold documentary evidence for objective claims",
+            "type": "regulator",
+            "read": "full",
+            "where": "https://www.asa.org.uk/type/non_broadcast/code_section/03.html"
+          },
+          {
+            "ref": "Hooga V2/V3 build finding: V2's invented stay descriptions and wrong '10+ years' claim",
+            "type": "own-data",
+            "read": "full",
+            "where": "sources/hooga/CONVERSION-PLAN-2026-11-20.md §0"
+          }
+        ]
+      },
+      "verdict": "Adopt",
+      "betState": null,
+      "origin": "sources/hooga/CONVERSION-PLAN-2026-11-20.md §0 (every fact comes from one file) and §8 (content as configuration); RGC Literature Review summary, finding 5 (state credentials exactly)",
+      "conflicts": [
+        "'90 mins from London' (Google doc) and 'under an hour on the high-speed train from St Pancras' (V3 FAQ) are both still unconfirmed (spec 03 clash table)."
+      ],
+      "proposals": [],
+      "added": {
+        "date": "2026-11-20",
+        "by": "ai"
+      }
+    },
+    {
+      "id": "LAW-08",
+      "stream": "LAW",
+      "kind": "standard",
+      "scope": [
+        "core"
+      ],
+      "status": "proposed",
+      "rule": "Advertising tags and cookies run only after the visitor consents. Analytics may run without consent only where the PECR statistical-purposes exception fully applies: clear information and a simple, free way to object.",
+      "why": "PECR reg 6 and Schedule A1 (as amended by the Data (Use and Access) Act 2025, in force 5 February 2026) require consent unless an exception applies. The statistical exception doesn't cover advertising (ICO).",
+      "check": "In a fresh private window, open a landing page and ignore the banner: the browser's developer tools show no advertising cookies and no ad pixels firing. Reject and check again. If analytics runs before consent, the privacy notice explains it and offers a one-click objection.",
+      "metric": null,
+      "evidence": {
+        "rating": "Strong",
+        "reason": "Primary legislation and ICO guidance, read in the original.",
+        "sources": [
+          {
+            "ref": "PECR reg 6 and Schedule A1, as amended by the Data (Use and Access) Act 2025, in force 5 Feb 2026 (SI 2026/82): consent unless an exception applies; para 5 statistical purposes (sole purpose, clear information, a simple free means of objecting)",
+            "type": "legislation",
+            "read": "full",
+            "where": "https://www.legislation.gov.uk/uksi/2003/2426/schedule/A1"
+          },
+          {
+            "ref": "ICO guidance on storage and access technologies, 'What are the exceptions?': 'The statistical purposes exception does not apply to purposes related to online advertising'",
+            "type": "regulator",
+            "read": "full",
+            "where": "https://ico.org.uk/for-organisations/direct-marketing-and-privacy-and-electronic-communications/guidance-on-the-use-of-storage-and-access-technologies/what-are-the-exceptions/"
+          }
+        ]
+      },
+      "verdict": "Adopt",
+      "betState": null,
+      "origin": "sources/hooga/google-optimisation-ideas.txt §7 (UK GDPR/PECR-compliant consent platform); sources/hooga/CONVERSION-PLAN-2026-11-20.md §6 Phase 0 (tracking off until the visitor consents) and §10",
+      "conflicts": [
+        "The Google doc defaults analytics_storage to denied. Since 5 February 2026 analytics may run without consent if Schedule A1 para 5's conditions are met; whether a given analytics setup qualifies (for example, if it shares data for the vendor's own purposes) hasn't been checked."
+      ],
+      "proposals": [],
+      "added": {
+        "date": "2026-11-20",
+        "by": "ai"
+      }
+    },
+    {
+      "id": "LAW-09",
+      "stream": "LAW",
+      "kind": "standard",
+      "scope": [
+        "core"
+      ],
+      "status": "proposed",
+      "rule": "Wherever the site collects personal details (forms, sign-ups, checkouts you run), the privacy information is shown or linked right there, without leaving the page.",
+      "why": "UK GDPR Article 13 requires the information at the time the data is collected. It changed in 2026: notices must now mention the right to complain to the controller (Art 13(2)(ca), from 19 June 2026).",
+      "check": "At every form and checkout you run, a privacy link opens in place, and the notice covers who you are, why you collect the data, the lawful basis, and how to complain (to you and to the regulator).",
+      "metric": null,
+      "evidence": {
+        "rating": "Strong",
+        "reason": "Primary legislation, read in the original.",
+        "sources": [
+          {
+            "ref": "UK GDPR Article 13: 'at the time when personal data are obtained', give the data subject the listed information; amended by the Data (Use and Access) Act 2025 (13(2)(ca) from 19 Jun 2026: the right to complain to the controller)",
+            "type": "legislation",
+            "read": "full",
+            "where": "https://www.legislation.gov.uk/eur/2016/679/article/13"
+          }
+        ]
+      },
+      "verdict": "Adopt",
+      "betState": null,
+      "origin": "sources/hooga/google-optimisation-ideas.txt §2 (Privacy and Terms in slide-over modals); sources/hooga/CONVERSION-PLAN-2026-11-20.md §10 (launch checklist: privacy and terms panels)",
+      "conflicts": [
+        "Privacy notices written from templates before 19 June 2026 lack the right to complain to the controller."
+      ],
+      "proposals": [],
+      "added": {
+        "date": "2026-11-20",
+        "by": "ai"
+      }
+    },
+    {
+      "id": "LAW-10",
+      "stream": "LAW",
+      "kind": "standard",
+      "scope": [
+        "core"
+      ],
+      "status": "proposed",
+      "rule": "Marketing emails and texts go only to people who opted in, or to customers under the soft opt-in, and every message has a simple way to opt out.",
+      "why": "PECR reg 22 requires prior consent for email and SMS marketing, except the soft opt-in for a business's own customers, with an opt-out offered at collection and in every message.",
+      "check": "Look at each sign-up and checkout: marketing consent is a separate, unticked choice (or the soft opt-in conditions are met and an opt-out is offered there). Every marketing message sent has a working unsubscribe link.",
+      "metric": null,
+      "evidence": {
+        "rating": "Strong",
+        "reason": "Primary legislation, read in the original.",
+        "sources": [
+          {
+            "ref": "PECR reg 22(2)–(3): email and SMS marketing need prior consent, except the soft opt-in (details obtained in the course of a sale or negotiations for a sale, similar products, a simple opt-out at collection and in every message)",
+            "type": "legislation",
+            "read": "full",
+            "where": "https://www.legislation.gov.uk/uksi/2003/2426/regulation/22"
+          }
+        ]
+      },
+      "verdict": "Adopt",
+      "betState": null,
+      "origin": "sources/hooga/google-optimisation-ideas.txt §6 (email and SMS capture, recovery messages); sources/hooga/CONVERSION-PLAN-2026-11-20.md §6 Phase 5 (midweek alerts, occasion memory)",
+      "conflicts": [
+        "The Google doc sends abandoned-checkout recovery messages. Whether an abandoned checkout counts as 'negotiations for the sale' under the soft opt-in wasn't checked, and for Hooga it is only possible on its own voucher checkout (spec 03 clash table)."
+      ],
+      "proposals": [],
+      "added": {
+        "date": "2026-11-20",
+        "by": "ai"
+      }
+    },
+    {
+      "id": "LAW-11",
+      "stream": "LAW",
+      "kind": "standard",
+      "scope": [
+        "core"
+      ],
+      "status": "proposed",
+      "rule": "Photos and video show the product as it really is; any editing (including AI editing) changes nothing a buyer would rely on.",
+      "why": "Images mustn't be altered in a way that exaggerates what the product can do, and a 'not representative' disclaimer generally won't cure it (CAP guidance, 2025).",
+      "check": "Compare each image and clip on the site with the real product and the facts file: features, size, setting and condition match.",
+      "metric": null,
+      "evidence": {
+        "rating": "Moderate",
+        "reason": "Regulator guidance (CAP News, 2025), read through the fetch tool's extract. The CAP Code itself has no images rule; 3.1 applies generally.",
+        "sources": [
+          {
+            "ref": "CAP News, 11 Sep 2025, 'A picture says a thousand words': images should not be altered in a way that exaggerates what the product can do; a 'not representative' disclaimer generally won't cure it. CAP News, 29 May 2025: no AI-specific rules; disclosure alone won't cure a misleading message",
+            "type": "regulator",
+            "read": "full",
+            "where": "https://www.asa.org.uk/news/a-picture-says-a-thousand-words-avoiding-misleading-imagery-in-ads.html"
+          },
+          {
+            "ref": "CAP Code (UK Code of Non-broadcast Advertising), rule 3.1 and 3.11: must not mislead; must not exaggerate capability or performance",
+            "type": "regulator",
+            "read": "full",
+            "where": "https://www.asa.org.uk/type/non_broadcast/code_section/03.html"
+          }
+        ]
+      },
+      "verdict": "Adopt",
+      "betState": null,
+      "origin": "sources/hooga/CONVERSION-PLAN-2026-11-20.md §0 round 2 (the people in the photos are real guests, only edited with AI) and §0 (V2's invented stay descriptions)",
+      "conflicts": [
+        "Hooga's guest photos are AI-edited (CONVERSION-PLAN §0 round 2). Edits that change the setting, the retreat or what it offers would break this rule."
+      ],
+      "proposals": [],
+      "added": {
+        "date": "2026-11-20",
+        "by": "ai"
+      }
+    },
+    {
+      "id": "LAW-12",
+      "stream": "LAW",
+      "kind": "standard",
+      "scope": [
+        "core"
+      ],
+      "status": "proposed",
+      "rule": "Don't use another company's trademark (for example 'Harry Potter') in ads or sales copy without permission.",
+      "why": "The owner can complain to Google, which may then restrict the ads (Google Ads trademark policy). UK trade mark and passing-off law applies separately.",
+      "check": "Search all ad text, keywords and site copy for brand and franchise names. Each is the project's own, used purely descriptively, or licensed.",
+      "metric": null,
+      "evidence": {
+        "rating": "Moderate",
+        "reason": "Google's policy, read in full: it works on complaint rather than automatically, and doesn't restrict keywords. UK trade mark law was not checked.",
+        "sources": [
+          {
+            "ref": "Google Ads policy, Trademarks: Google may restrict a trademark in ads after the owner complains, for the advertiser named; keywords are not restricted",
+            "type": "platform-docs",
+            "read": "full",
+            "where": "https://support.google.com/adspolicy/answer/6118"
+          }
+        ]
+      },
+      "verdict": "Avoid",
+      "betState": null,
+      "origin": "sources/hooga/CONVERSION-PLAN-2026-11-20.md §5b (leave 'Harry Potter' off the website and ads)",
+      "conflicts": [
+        "The bus's Airbnb listing mentions Harry Potter (CONVERSION-PLAN §5b)."
+      ],
+      "proposals": [],
+      "added": {
+        "date": "2026-11-20",
+        "by": "ai"
+      }
+    },
+    {
+      "id": "LAW-13",
+      "stream": "LAW",
+      "kind": "standard",
+      "scope": [
+        "booked-experience"
+      ],
+      "status": "proposed",
+      "rule": "The cancellation terms on the site match the policy actually set in the booking platform: same window, same refunds, same exceptions.",
+      "why": "The platform's policy is fixed when the booking is made, so that is what binds. A site that promises more misleads the buyer.",
+      "check": "Read the cancellation wording on the site and the policy in the booking platform side by side; they agree on window, refunds and exceptions.",
+      "metric": null,
+      "evidence": {
+        "rating": "Moderate",
+        "reason": "Hospitable's help centre confirms the policy is fixed at booking. The legal angle (misleading actions, DMCC s.226) was identified but not read in full.",
+        "sources": [
+          {
+            "ref": "Hospitable help centre, Direct cancellation policies (27 Jul 2026): custom policies including a free window within 48 hours of booking; the policy is fixed when the booking is made",
+            "type": "platform-docs",
+            "read": "full",
+            "where": "https://help.hospitable.com/en/articles/14631739-direct-cancellation-policies"
+          },
+          {
+            "ref": "DMCC Act 2024, s.226 (misleading actions): section identified, text not quoted",
+            "type": "legislation",
+            "read": "secondary",
+            "where": "https://www.legislation.gov.uk/ukpga/2024/13/section/226"
+          }
+        ]
+      },
+      "verdict": "Adopt",
+      "betState": null,
+      "origin": "sources/hooga/CONVERSION-PLAN-2026-11-20.md §11 ('Set the policy in Hospitable to match the site'); spec 03 clash table ('Move your dates free up to 14 days')",
+      "conflicts": [
+        "The Google doc promises 'move your dates free of charge up to 14 days before arrival'. Pete's policy is no-hassle cancellation within 48 hours of booking."
+      ],
+      "proposals": [],
+      "added": {
+        "date": "2026-11-20",
+        "by": "ai"
+      }
+    },
+    {
+      "id": "LAW-14",
+      "stream": "LAW",
+      "kind": "standard",
+      "scope": [
+        "booked-experience"
+      ],
+      "status": "proposed",
+      "rule": "Before a dated booking is paid for, tell the buyer that the statutory 14-day cancellation right doesn't apply, and show the business's own cancellation policy instead.",
+      "why": "Dated accommodation and leisure services are exempt from the 14-day right (Consumer Contracts Regulations 2013, reg 28(1)(h)), but the trader must still tell the buyer so before the contract (Schedule 2 para (o)).",
+      "check": "On the booking path, before payment, the site or the platform's checkout says there is no statutory right to cancel and shows the business's own policy.",
+      "metric": null,
+      "evidence": {
+        "rating": "Strong",
+        "reason": "Primary legislation, read in the original.",
+        "sources": [
+          {
+            "ref": "Consumer Contracts Regulations 2013, reg 28(1)(h) (no 14-day cancellation right for accommodation and leisure services with a specific date or period) and Schedule 2 para (o) (the trader must say there is no right to cancel)",
+            "type": "legislation",
+            "read": "full",
+            "where": "https://www.legislation.gov.uk/uksi/2013/3134/regulation/28"
+          }
+        ]
+      },
+      "verdict": "Adopt",
+      "betState": null,
+      "origin": "Quick legal check during T2 seeding, prompted by sources/hooga/CONVERSION-PLAN-2026-11-20.md §5a ('Check this with whoever writes your terms')",
+      "conflicts": [
+        "Hooga's stay checkout is Hospitable's. Whether it shows this statement hasn't been checked; if it doesn't, the site must show it before the hand-off."
+      ],
+      "proposals": [],
+      "added": {
+        "date": "2026-11-20",
+        "by": "ai"
+      }
+    },
+    {
+      "id": "LAW-15",
+      "stream": "LAW",
+      "kind": "standard",
+      "scope": [
+        "booked-experience"
+      ],
+      "status": "proposed",
+      "rule": "Before a gift voucher is bought, show what it buys, how long it lasts, how it's redeemed, what it doesn't cover, and the cancellation and refund terms.",
+      "why": "These are the voucher's material facts (DMCC Act 2024 s.230). Whether the 14-day cancellation right applies to an open-dated voucher isn't settled: the accommodation exemption rests on reserved capacity, which an open voucher doesn't have.",
+      "check": "Read the voucher page as a buyer: validity, contents, redemption steps, exclusions (for example, fees not covered) and refund terms are all there before payment.",
+      "metric": null,
+      "evidence": {
+        "rating": "Moderate",
+        "reason": "The duty to give material information is primary legislation, read in the original; which voucher terms count as material is a reading of it, not stated in the Act.",
+        "sources": [
+          {
+            "ref": "Digital Markets, Competition and Consumers Act 2024, s.230 (omission of material information from an invitation to purchase): s.230(2)(b) total price; s.230(4) total price includes every fee the consumer will necessarily incur; s.230(9) unclear or untimely information counts as omitted",
+            "type": "legislation",
+            "read": "full",
+            "where": "https://www.legislation.gov.uk/ukpga/2024/13/section/230"
+          },
+          {
+            "ref": "BIS guidance on the Consumer Contracts Regulations (Dec 2013), Q9: the exemption protects traders who set aside specific capacity. Vouchers are not mentioned",
+            "type": "regulator",
+            "read": "full",
+            "where": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/429300/bis-13-1368-consumer-contracts-information-cancellation-and-additional-payments-regulations-guidance.pdf"
+          }
+        ]
+      },
+      "verdict": "Adopt",
+      "betState": null,
+      "origin": "sources/hooga/CONVERSION-PLAN-2026-11-20.md §6 Phase 3 (clear voucher terms, 12 months' validity suggested) and §9 question 2; sources/hooga/google-optimisation-ideas.txt §5",
+      "conflicts": [
+        "Not clear: whether open-dated vouchers carry the 14-day cancellation right. Until Pete has advice, the safe course is to offer it.",
+        "Hospitable promo codes cover the nightly rate only, not fees, so a voucher redeemed there can't pay fees (Hospitable help centre, promo codes)."
+      ],
+      "proposals": [],
+      "added": {
+        "date": "2026-11-20",
+        "by": "ai"
+      }
+    },
+    {
+      "id": "LAW-16",
+      "stream": "LAW",
+      "kind": "standard",
+      "scope": [
+        "course"
+      ],
+      "status": "proposed",
+      "rule": "If a quiz asks about health, sex life or sexual orientation, or is designed to infer them, treat the answers as special category data: ask the minimum, avoid free text, and get separate explicit consent first.",
+      "why": "UK GDPR Article 9 prohibits processing this data without a condition such as explicit consent. The ICO counts inferences too, where you intend to make them or act on them.",
+      "check": "Read every quiz question. Any that touches these areas sits behind a separate explicit-consent step, and each such question is necessary for the recommendation.",
+      "metric": null,
+      "evidence": {
+        "rating": "Moderate",
+        "reason": "Article 9 and ICO guidance, read in the original. Whether a given quiz triggers them depends on its questions. The RGC summary also recommends a data protection impact assessment; that step wasn't checked.",
+        "sources": [
+          {
+            "ref": "UK GDPR Article 9(1): processing data concerning health, sex life or sexual orientation is prohibited unless a condition in 9(2) applies (explicit consent is one)",
+            "type": "legislation",
+            "read": "full",
+            "where": "https://www.legislation.gov.uk/eur/2016/679/article/9"
+          },
+          {
+            "ref": "ICO guidance, What is special category data? ('What about inferences?'): inferred data is special category where you intend to make the inference or treat people differently because of it",
+            "type": "regulator",
+            "read": "full",
+            "where": "https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/lawful-basis/special-category-data/what-is-special-category-data/"
+          },
+          {
+            "ref": "RGC online sales literature review, condensed summary, finding 4: quiz answers as special category data (underlying study types as described in the summary)",
+            "type": "regulator",
+            "read": "secondary",
+            "where": "../RGC Literature Review/RGC-Online-Sales-Practices-Literature-Review.md"
+          }
+        ]
+      },
+      "verdict": "Adopt",
+      "betState": null,
+      "origin": "RGC Literature Review summary, finding 4",
+      "conflicts": [],
+      "proposals": [],
+      "added": {
+        "date": "2026-11-20",
+        "by": "ai"
+      }
+    },
+    {
+      "id": "LAW-17",
+      "stream": "LAW",
+      "kind": "standard",
+      "scope": [
+        "membership"
+      ],
+      "status": "proposed",
+      "rule": "Cancelling a membership is as easy as joining: online, in the same place, with no call, chat or retention offer standing in the way.",
+      "why": "A costly exit is one of the RGC review's harm markers for high-identity groups. The DMCC Act's subscription rules aren't in force yet: draft regulations set 1 January 2027.",
+      "check": "Join with a test account, then cancel. Cancelling takes no more steps than joining and needs no contact with a person.",
+      "metric": null,
+      "evidence": {
+        "rating": "Weak",
+        "reason": "An ethical audit marker from the RGC summary (secondhand). The legal duty is not in force yet; re-rate once the subscription regulations are made.",
+        "sources": [
+          {
+            "ref": "RGC online sales literature review, condensed summary, the 'high-identity end' strand: a costly or humiliating exit as a harm marker (underlying study types as described in the summary)",
+            "type": "observational",
+            "read": "secondary",
+            "where": "../RGC Literature Review/RGC-Online-Sales-Practices-Literature-Review.md"
+          },
+          {
+            "ref": "Draft Consumer Subscription Contracts (Cancellation and Information) Regulations 2026, reg 1(2): in force 1 Jan 2027 (a draft, not yet made); DMCC Act 2024 Part 4 Chapter 2 marked prospective",
+            "type": "legislation",
+            "read": "full",
+            "where": "https://www.legislation.gov.uk/ukdsi/2026/9780348287912/regulation/1"
+          }
+        ]
+      },
+      "verdict": "Adopt",
+      "betState": null,
+      "origin": "spec 03 (membership module: how easy it is to cancel); RGC Literature Review summary ('high-identity end' strand)",
+      "conflicts": [
+        "The subscription contract rules (DMCC Act 2024 Part 4 Chapter 2) are not in force as of 20 Nov 2026. Check again in January 2027."
+      ],
+      "proposals": [],
+      "added": {
+        "date": "2026-11-20",
+        "by": "ai"
+      }
+    },
+    {
+      "id": "TRK-01",
+      "stream": "TRK",
+      "kind": "standard",
+      "scope": [
+        "core"
+      ],
+      "status": "proposed",
+      "rule": "Before any ad spend, analytics and a tag manager are installed and the named funnel events fire: landing view, path chosen, hand-off or checkout started, and purchase.",
+      "why": "Without measurement no other stream can be scored, and ad money buys data you can't read. Hooga V2's events went nowhere because no analytics was loaded.",
+      "check": "Open GA4 DebugView (or the tag manager's preview), walk the funnel once, and confirm each named event arrives with its parameters.",
+      "metric": null,
+      "evidence": {
+        "rating": "Moderate",
+        "reason": "A precondition rather than a lift claim. The V2 audit shows what happens without it.",
+        "sources": [
+          {
+            "ref": "Hooga V2/V3 build finding: V2 called window.gtag, which did not exist, so every event was lost",
+            "type": "own-data",
+            "read": "full",
+            "where": "sources/hooga/CONVERSION-PLAN-2026-11-20.md §3 #2"
+          }
+        ]
+      },
+      "verdict": "Adopt",
+      "betState": null,
+      "origin": "sources/hooga/google-optimisation-ideas.txt §7 (structured dataLayer event schema); sources/hooga/CONVERSION-PLAN-2026-11-20.md §3 #2, §6 Phase 0 and §7",
+      "conflicts": [],
+      "proposals": [],
+      "added": {
+        "date": "2026-11-20",
+        "by": "ai"
+      }
+    },
+    {
+      "id": "TRK-02",
+      "stream": "TRK",
+      "kind": "standard",
+      "scope": [
+        "core"
+      ],
+      "status": "proposed",
+      "rule": "Ad click IDs and UTM tags survive from the landing page to the payment step, or the gap is written down with a workaround.",
+      "why": "Ad platforms bid on what they can see converting. Google says the GCLID is required for website conversion tracking and must survive any redirect; if it is lost, the platform learns from the wrong signal.",
+      "check": "Open /<landing>?gclid=TEST123&gbraid=TEST&utm_source=test, click through to payment, and confirm each is present at every step. tools/hooga-attribution-flow.mjs does this for Hooga.",
+      "metric": null,
+      "evidence": {
+        "rating": "Moderate",
+        "reason": "Platform documentation on conversion tracking, read in full; not a controlled study.",
+        "sources": [
+          {
+            "ref": "Google Ads Help (answer 9744275): the GCLID is required for Google Ads website conversion tracking",
+            "type": "platform-docs",
+            "read": "full",
+            "where": "https://support.google.com/google-ads/answer/9744275"
+          },
+          {
+            "ref": "Google Ads Help, About auto-tagging: GCLID is added to clicked URLs and must be passed through redirects to the final landing page for conversion tracking",
+            "type": "platform-docs",
+            "read": "full",
+            "where": "https://support.google.com/google-ads/answer/3095550"
+          },
+          {
+            "ref": "Google Ads Help, iOS 14 changes: gbraid is added for iOS 14.5+ clicks; wbraid helps attribute web conversions",
+            "type": "platform-docs",
+            "read": "full",
+            "where": "https://support.google.com/google-ads/answer/10417364"
+          }
+        ]
+      },
+      "verdict": "Adopt",
+      "betState": null,
+      "origin": "sources/hooga/google-optimisation-ideas.txt §1 law 4 (Attribution Integrity) and §8 (Parameter Survival Audit); sources/hooga/CONVERSION-PLAN-2026-11-20.md §11 (Hospitable finding); spec 01 example",
+      "conflicts": [
+        "Hospitable's booking widget keeps UTM tags but drops gclid, fbclid and _gl, and checkout finishes on booking.hospitable.com with no redirect back (CONVERSION-PLAN §11, tested).",
+        "Hospitable's help centre says to set up cross-domain tracking by adding booking.hospitable.com, but the Hooga test found the widget drops the _gl linker parameter, so cross-domain linking may not survive the iframe."
+      ],
+      "proposals": [],
+      "added": {
+        "date": "2026-11-20",
+        "by": "ai"
+      }
+    },
+    {
+      "id": "TRK-03",
+      "stream": "TRK",
+      "kind": "standard",
+      "scope": [
+        "core"
+      ],
+      "status": "proposed",
+      "rule": "Click IDs and UTM tags are kept for return visits in a first-party cookie, set only after consent.",
+      "why": "Occasion buyers often come back days later to book. Without a stored click ID the return visit can't be credited to the ad.",
+      "check": "With consent given, land with ?gclid=TEST123, close the tab, return the next day with no parameters, and confirm the hand-off URL still carries the click ID.",
+      "metric": null,
+      "evidence": {
+        "rating": "Weak",
+        "reason": "The AI-written spec's design. How long to keep the cookie (it says 90 days) wasn't checked against the ad platforms' conversion windows.",
+        "sources": [
+          {
+            "ref": "Hooga 'google optimisation ideas' spec (AI-written, no sources given)",
+            "type": "ai-spec",
+            "read": "full",
+            "where": "sources/hooga/google-optimisation-ideas.txt §2 (URL Parameter Persistence)"
+          }
+        ]
+      },
+      "verdict": "Adopt",
+      "betState": null,
+      "origin": "sources/hooga/google-optimisation-ideas.txt §2; sources/hooga/CONVERSION-PLAN-2026-11-20.md §6 Phase 0 and §10 (attribution kept in memory until consent)",
+      "conflicts": [
+        "Storing click IDs is storage for advertising, so it needs consent (LAW-08). Visitors who reject can't be credited on a return visit."
+      ],
+      "proposals": [],
+      "added": {
+        "date": "2026-11-20",
+        "by": "ai"
+      }
+    },
+    {
+      "id": "TRK-04",
+      "stream": "TRK",
+      "kind": "standard",
+      "scope": [
+        "core"
+      ],
+      "status": "proposed",
+      "rule": "Each sale sends exactly one purchase event with a unique transaction ID, its value and its currency; reloading the confirmation page sends nothing more.",
+      "why": "Duplicate purchases inflate results and mislead bidding. GA4 deduplicates purchases that share a transaction ID from the same user, and an empty ID collapses all of them, so each sale needs its own non-empty ID.",
+      "check": "Make a test purchase, reload the confirmation page twice, and confirm a single purchase in GA4 DebugView with a unique, non-empty transaction ID and the right value and currency.",
+      "metric": null,
+      "evidence": {
+        "rating": "Moderate",
+        "reason": "Platform documentation, read in full.",
+        "sources": [
+          {
+            "ref": "Google Analytics Help, Minimize duplicate key events with transaction IDs: purchases with the same transaction ID from the same user are deduplicated; an empty ID collapses all of them",
+            "type": "platform-docs",
+            "read": "full",
+            "where": "https://support.google.com/analytics/answer/12313109"
+          }
+        ]
+      },
+      "verdict": "Adopt",
+      "betState": null,
+      "origin": "sources/hooga/google-optimisation-ideas.txt §7 and §8 (purchase fires once); sources/hooga/CONVERSION-PLAN-2026-11-20.md §6 Phase 3 (the purchase event fires only once per transaction)",
+      "conflicts": [
+        "Hospitable fires its own GA4 purchase event with value, currency, property, dates and guests; its help centre doesn't mention transaction_id, so deduplication of Hooga's stay purchases is unconfirmed."
+      ],
+      "proposals": [],
+      "added": {
+        "date": "2026-11-20",
+        "by": "ai"
+      }
+    },
+    {
+      "id": "TRK-05",
+      "stream": "TRK",
+      "kind": "standard",
+      "scope": [
+        "core"
+      ],
+      "status": "proposed",
+      "rule": "Google tags run in consent mode, with ad_storage, ad_user_data and ad_personalization denied until the visitor consents and updated when they choose.",
+      "why": "Google's EU user consent policy covers UK visitors. Consent mode is how Google receives the signals: with ad_user_data denied, enhanced conversions are off; with ad_personalization denied, remarketing gets no data.",
+      "check": "In Tag Assistant, load a page and reject: the ad signals show as denied. Repeat and accept: they update to granted.",
+      "metric": null,
+      "evidence": {
+        "rating": "Moderate",
+        "reason": "Google's policy and tag documentation, read in full.",
+        "sources": [
+          {
+            "ref": "Google EU user consent policy: disclosures and consents required for end users in the EEA, the UK and Switzerland",
+            "type": "platform-docs",
+            "read": "full",
+            "where": "https://www.google.com/about/company/user-consent-policy/"
+          },
+          {
+            "ref": "Google Tag Platform, consent mode concepts (updated 30 Jul 2026): ad_user_data denied disables enhanced conversions; ad_personalization denied stops remarketing data",
+            "type": "platform-docs",
+            "read": "full",
+            "where": "https://developers.google.com/tag-platform/security/concepts/consent-mode"
+          }
+        ]
+      },
+      "verdict": "Adopt",
+      "betState": null,
+      "origin": "sources/hooga/google-optimisation-ideas.txt §7 (Consent Mode v2) and §8 (Consent Mode verification); sources/hooga/CONVERSION-PLAN-2026-11-20.md §6 Phase 0",
+      "conflicts": [
+        "Google doesn't literally say 'you must use consent mode v2': its policy requires consent and the signals, and consent mode is the documented way to send them.",
+        "The Google doc also defaults analytics_storage to denied. See LAW-08 on when analytics may run without consent."
+      ],
+      "proposals": [],
+      "added": {
+        "date": "2026-11-20",
+        "by": "ai"
+      }
+    },
+    {
+      "id": "TRK-06",
+      "stream": "TRK",
+      "kind": "standard",
+      "scope": [
+        "core"
+      ],
+      "status": "proposed",
+      "rule": "Where the booking or checkout platform allows its own analytics, use the same GA4 and tag manager IDs there as on the site, with cross-domain measurement set up.",
+      "why": "The platform's own purchase event then lands in the same property, credited through UTM tags even when the click ID is lost.",
+      "check": "In the booking platform's analytics settings, the IDs match the site's; a test booking appears in the same GA4 property with its campaign.",
+      "metric": null,
+      "evidence": {
+        "rating": "Moderate",
+        "reason": "Hospitable's help centre, read in full; the Hooga plan's finding on what it forwards.",
+        "sources": [
+          {
+            "ref": "Hospitable help centre, Site analytics (18 May 2026): GA/GTM funnel events incl. Purchase (value, currency, property, dates, guests; no transaction_id mentioned); Meta Pixel Page View only; cross-domain must be set up by adding booking.hospitable.com",
+            "type": "platform-docs",
+            "read": "full",
+            "where": "https://help.hospitable.com/en/articles/9877398-hospitable-site-analytics"
+          },
+          {
+            "ref": "Hooga V2/V3 build finding: the Hospitable widget forwards utm_* but drops gclid, fbclid and _gl",
+            "type": "own-data",
+            "read": "full",
+            "where": "sources/hooga/CONVERSION-PLAN-2026-11-20.md §11"
+          }
+        ]
+      },
+      "verdict": "Adopt",
+      "betState": null,
+      "origin": "sources/hooga/CONVERSION-PLAN-2026-11-20.md §11 (Analytics row); sources/hooga/google-optimisation-ideas.txt §7 (Cross-Domain Linker Configuration)",
+      "conflicts": [
+        "Without cross-domain setup, Hospitable warns that completed bookings may show as 'Direct' traffic; and the Hooga test found its widget drops _gl."
+      ],
+      "proposals": [],
+      "added": {
+        "date": "2026-11-20",
+        "by": "ai"
+      }
+    },
+    {
+      "id": "TRK-07",
+      "stream": "TRK",
+      "kind": "standard",
+      "scope": [
+        "core"
+      ],
+      "status": "proposed",
+      "rule": "Before an A/B test starts, write down the baseline rate, the smallest lift worth detecting and the visitors needed per version; run only tests the project's traffic can finish, one at a time per page.",
+      "why": "Small sites can't detect small effects. Detecting a 30% lift on a 5% conversion rate needs about 3,800 visitors per version.",
+      "check": "Each test in the project's plan has those three numbers and an expected end date based on current traffic.",
+      "metric": null,
+      "evidence": {
+        "rating": "Weak",
+        "reason": "The arithmetic is standard and was recomputed here (3,773 visitors per version at 95% confidence and 80% power), so this is firmer than its rating suggests. The ledger's source types have no slot for a statistical method, and the RGC summary is held only secondhand.",
+        "sources": [
+          {
+            "ref": "RGC online sales literature review, condensed summary, finding 8: statistical power at low traffic (underlying study types as described in the summary)",
+            "type": "experiment",
+            "read": "secondary",
+            "where": "../RGC Literature Review/RGC-Online-Sales-Practices-Literature-Review.md"
+          }
+        ]
+      },
+      "verdict": "Adopt",
+      "betState": null,
+      "origin": "RGC Literature Review summary, finding 8; sources/hooga/CONVERSION-PLAN-2026-11-20.md §6 Phase 7 (one test at a time; big changes, not button colours); PLAN.md §2",
+      "conflicts": [],
+      "proposals": [],
+      "added": {
+        "date": "2026-11-20",
+        "by": "ai"
+      }
+    },
+    {
+      "id": "TRK-08",
+      "stream": "TRK",
+      "kind": "bet",
+      "scope": [
+        "booked-experience"
+      ],
+      "status": "proposed",
+      "rule": "Where the booking platform drops click IDs, match its bookings back to ad clicks (for example, through a hand-off ID in a parameter the platform stores) and upload them to the ad platform as offline conversions.",
+      "why": "Bidding on real bookings rather than a stand-in event should lower the cost per booking.",
+      "check": "Make a test booking with a known hand-off ID and confirm the booking platform stores it; then confirm a matched upload appears in the ad platform's conversions.",
+      "metric": {
+        "measure": "Cost per stay booking from Google Ads",
+        "direction": "down",
+        "guardrail": "Booking volume"
+      },
+      "evidence": {
+        "rating": "Weak",
+        "reason": "Google documents GCLID-based offline imports (read in the original), but frames them around offline sales, and whether Hospitable stores a forwarded parameter is untested. The lift is the plan's reasoning.",
+        "sources": [
+          {
+            "ref": "Google Ads Help, offline conversion imports (answer 2998031): GCLID-based imports for offline sales; new adopters are pointed to enhanced conversions for leads; uploads moved to the Data Manager API from 15 Jun 2026",
+            "type": "platform-docs",
+            "read": "full",
+            "where": "https://support.google.com/google-ads/answer/2998031"
+          },
+          {
+            "ref": "Hooga V3 conversion plan (AI-written strategy recording Pete's decisions)",
+            "type": "ai-spec",
+            "read": "full",
+            "where": "sources/hooga/CONVERSION-PLAN-2026-11-20.md §11 (what to do about it, step 3)"
+          }
+        ]
+      },
+      "verdict": "Test",
+      "betState": "untested",
+      "origin": "sources/hooga/CONVERSION-PLAN-2026-11-20.md §11 (test whether Hospitable stores the forwarded source parameter)",
+      "conflicts": [
+        "Google now points new adopters to 'enhanced conversions for leads' instead, and since 15 June 2026 uploads go through the Data Manager API rather than the Google Ads API.",
+        "Untested: whether Hospitable stores the forwarded 'source' parameter on the reservation."
+      ],
+      "proposals": [],
+      "added": {
+        "date": "2026-11-20",
+        "by": "ai"
+      }
+    },
+    {
+      "id": "TRK-09",
+      "stream": "TRK",
+      "kind": "standard",
+      "scope": [
+        "core"
+      ],
+      "status": "proposed",
+      "rule": "Send hashed customer details to ad platforms (enhanced conversions, Meta Conversions API) only from checkouts you run, and only for buyers who consented.",
+      "why": "The data has to be yours to send, and Google turns enhanced conversions off when ad_user_data consent is denied.",
+      "check": "List every place customer data is sent to an ad platform. Each is a checkout the project owns, and the code checks consent first.",
+      "metric": null,
+      "evidence": {
+        "rating": "Moderate",
+        "reason": "Google's consent mode documentation, read in full.",
+        "sources": [
+          {
+            "ref": "Google Tag Platform, consent mode concepts (updated 30 Jul 2026): ad_user_data denied disables enhanced conversions; ad_personalization denied stops remarketing data",
+            "type": "platform-docs",
+            "read": "full",
+            "where": "https://developers.google.com/tag-platform/security/concepts/consent-mode"
+          }
+        ]
+      },
+      "verdict": "Adapt",
+      "betState": null,
+      "origin": "sources/hooga/google-optimisation-ideas.txt §7 (Google Ads Enhanced Conversions); spec 03 clash table",
+      "conflicts": [
+        "The Google doc pushes hashed email, phone and name into the dataLayer at every checkout. Hooga never sees stay-checkout personal data (Hospitable does), so this is possible only on its own voucher checkout."
+      ],
+      "proposals": [],
+      "added": {
+        "date": "2026-11-20",
+        "by": "ai"
+      }
+    },
+    {
+      "id": "TRK-10",
+      "stream": "TRK",
+      "kind": "standard",
+      "scope": [
+        "core"
+      ],
+      "status": "proposed",
+      "rule": "When an event is sent both from the browser (Meta Pixel) and from a server (Conversions API), both copies carry the same event name and event ID so Meta counts it once.",
+      "why": "Meta deduplicates matching events received within 48 hours. Without a shared ID, each one counts twice.",
+      "check": "In Meta Events Manager's test events, trigger a tracked event and confirm it shows as deduplicated.",
+      "metric": null,
+      "evidence": {
+        "rating": "Moderate",
+        "reason": "Meta's documentation, read through the fetch tool's extract rather than the raw page.",
+        "sources": [
+          {
+            "ref": "Meta for Developers, Deduplicate Pixel and server events: matching event name and event ID, received within 48 hours (read through the fetch tool's extract)",
+            "type": "platform-docs",
+            "read": "full",
+            "where": "https://developers.facebook.com/docs/marketing-api/conversions-api/deduplicate-pixel-and-server-events/"
+          }
+        ]
+      },
+      "verdict": "Adopt",
+      "betState": null,
+      "origin": "sources/hooga/google-optimisation-ideas.txt §7 (Retargeting Pixel Parity: Meta Pixel plus CAPI)",
+      "conflicts": [
+        "Hospitable's Meta Pixel sends Page View only, so stay purchases have no Meta event to deduplicate unless a separate server-side setup is built."
+      ],
+      "proposals": [],
+      "added": {
+        "date": "2026-11-20",
+        "by": "ai"
+      }
+    },
+    {
+      "id": "TRK-11",
+      "stream": "TRK",
+      "kind": "standard",
+      "scope": [
+        "core"
+      ],
+      "status": "proposed",
+      "rule": "Before launch, make one real low-value purchase on each checkout (for example, £1) and confirm the whole chain: confirmation page, emails, a single purchase event with the right value, and attribution.",
+      "why": "Test modes skip parts of the real chain. One live purchase catches what they miss.",
+      "check": "Record the test: date, checkout, amount, and screenshots of the event in GA4 and in each ad platform.",
+      "metric": null,
+      "evidence": {
+        "rating": "Weak",
+        "reason": "Asserted in the AI-written spec; no study held.",
+        "sources": [
+          {
+            "ref": "Hooga 'google optimisation ideas' spec (AI-written, no sources given)",
+            "type": "ai-spec",
+            "read": "full",
+            "where": "sources/hooga/google-optimisation-ideas.txt §8 (Live £1 End-to-End Apple Pay Test)"
+          }
+        ]
+      },
+      "verdict": "Adopt",
+      "betState": null,
+      "origin": "sources/hooga/google-optimisation-ideas.txt §8",
+      "conflicts": [],
+      "proposals": [],
+      "added": {
+        "date": "2026-11-20",
+        "by": "ai"
+      }
+    },
+    {
+      "id": "TRK-12",
+      "stream": "TRK",
+      "kind": "standard",
+      "scope": [
+        "core"
+      ],
+      "status": "proposed",
+      "rule": "Use one documented set of event names and parameters across every project, extended but never renamed.",
+      "why": "The blueprint learns by comparing launches. That only works if 'select_conversion_path' means the same thing everywhere.",
+      "check": "The project's events match the Hooga plan's set (Google doc §7 events plus CONVERSION-PLAN §7 additions) or a documented extension of it.",
+      "metric": null,
+      "evidence": {
+        "rating": "Weak",
+        "reason": "A requirement of the blueprint itself (PLAN.md §14), not an outside finding.",
+        "sources": [
+          {
+            "ref": "Hooga V3 conversion plan (AI-written strategy recording Pete's decisions)",
+            "type": "ai-spec",
+            "read": "full",
+            "where": "sources/hooga/CONVERSION-PLAN-2026-11-20.md §7 (Measurement: events)"
+          }
+        ]
+      },
+      "verdict": "Adopt",
+      "betState": null,
+      "origin": "sources/hooga/google-optimisation-ideas.txt §7; sources/hooga/CONVERSION-PLAN-2026-11-20.md §7; PLAN.md §14",
+      "conflicts": [],
+      "proposals": [],
+      "added": {
+        "date": "2026-11-20",
+        "by": "ai"
+      }
+    },
+    {
+      "id": "FUN-01",
+      "stream": "FUN",
+      "kind": "standard",
+      "scope": [
+        "core"
+      ],
+      "status": "proposed",
+      "rule": "Every paid ad lands on a page whose headline matches the ad's promise.",
+      "why": "Searchers who don't see what they clicked for leave. Google also scores ad relevance and landing page experience into Quality Score, which affects what each click costs.",
+      "check": "List every live ad group with its final URL. Open each on a phone and confirm the main headline names the same occasion, product or feature the ad promised.",
+      "metric": null,
+      "evidence": {
+        "rating": "Moderate",
+        "reason": "Google Ads documentation on Quality Score, read in full (Search campaigns only). The link to conversion rate is reasoning, not a study.",
+        "sources": [
+          {
+            "ref": "Google Ads Help, About Quality Score for Search campaigns: expected CTR, ad relevance and landing page experience",
+            "type": "platform-docs",
+            "read": "full",
+            "where": "https://support.google.com/google-ads/answer/6167118"
+          }
+        ]
+      },
+      "verdict": "Adopt",
+      "betState": null,
+      "origin": "PLAN.md §8 (FUN-01); sources/hooga/google-optimisation-ideas.txt §2 (Dynamic Occasion Routing: 1:1 message match); sources/hooga/CONVERSION-PLAN-2026-11-20.md §4 and §6 Phase 1 (intent pages)",
+      "conflicts": [],
+      "proposals": [],
+      "added": {
+        "date": "2026-11-20",
+        "by": "ai"
+      }
+    },
+    {
+      "id": "FUN-02",
+      "stream": "FUN",
+      "kind": "bet",
+      "scope": [
+        "core"
+      ],
+      "status": "proposed",
+      "rule": "Paid landing pages carry no site navigation or outbound links; privacy and terms open in a panel on the same page.",
+      "why": "Every link that isn't the offer is a way out. Brochure pages with navigation stay available for organic and direct visitors.",
+      "check": "Open each paid landing route and list every link on it. Only purchase actions, in-page anchors and in-place legal panels should be there.",
+      "metric": {
+        "measure": "Landing → fork rate (select_conversion_path per landing view) on paid routes",
+        "direction": "up",
+        "guardrail": "Bounce rate, and questions or complaints about missing information"
+      },
+      "evidence": {
+        "rating": "Weak",
+        "reason": "Common practitioner advice, asserted in the AI-written spec without a source. No outside study held.",
+        "sources": [
+          {
+            "ref": "Hooga 'google optimisation ideas' spec (AI-written, no sources given)",
+            "type": "ai-spec",
+            "read": "full",
+            "where": "sources/hooga/google-optimisation-ideas.txt §1 law 1 (Zero Navigation Leaks) and §2 (Nav-Free Funnel Shell)"
+          },
+          {
+            "ref": "Hooga V2/V3 build finding: V2 header drawer reached 6 content pages from every funnel screen",
+            "type": "own-data",
+            "read": "full",
+            "where": "sources/hooga/CONVERSION-PLAN-2026-11-20.md §3 #8"
+          }
+        ]
+      },
+      "verdict": "Test",
+      "betState": "untested",
+      "origin": "sources/hooga/google-optimisation-ideas.txt §1 law 1 and §2; sources/hooga/CONVERSION-PLAN-2026-11-20.md §3 #8 and §5 ('Zero navigation' row)",
+      "conflicts": [
+        "The Google doc wants zero navigation everywhere. The Hooga plan keeps navigation on brochure pages for organic and direct visitors; only the ad routes are nav-free."
+      ],
+      "proposals": [],
+      "added": {
+        "date": "2026-11-20",
+        "by": "ai"
+      }
+    },
+    {
+      "id": "FUN-03",
+      "stream": "FUN",
+      "kind": "bet",
+      "scope": [
+        "core"
+      ],
+      "status": "proposed",
+      "rule": "Send search traffic to a long-scroll intent page and social traffic to a short, skippable story-style page, with both ending in the same checkout.",
+      "why": "Searchers are already looking and want proof, price and dates fast. Social visitors were interrupted mid-scroll and need winning over first.",
+      "check": "List the final URL of every live ad: search ads point at intent pages, social ads at story pages, and both kinds reach the same hand-off.",
+      "metric": {
+        "measure": "Hand-offs per 100 paid visits, by channel and page type",
+        "direction": "up",
+        "guardrail": "Cost per sale"
+      },
+      "evidence": {
+        "rating": "Weak",
+        "reason": "Reasoning in the Hooga plan, with no study held. The plan itself lists 'story deck vs intent page for Meta traffic' as an experiment.",
+        "sources": [
+          {
+            "ref": "Hooga V3 conversion plan (AI-written strategy recording Pete's decisions)",
+            "type": "ai-spec",
+            "read": "full",
+            "where": "sources/hooga/CONVERSION-PLAN-2026-11-20.md §1, §4 and §6 Phase 7 test 1"
+          }
+        ]
+      },
+      "verdict": "Test",
+      "betState": "untested",
+      "origin": "sources/hooga/CONVERSION-PLAN-2026-11-20.md §1 and §4 (two front doors, one checkout), §6 Phase 2 and Phase 7 test 1",
+      "conflicts": [],
+      "proposals": [],
+      "added": {
+        "date": "2026-11-20",
+        "by": "ai"
+      }
+    },
+    {
+      "id": "FUN-04",
+      "stream": "FUN",
+      "kind": "bet",
+      "scope": [
+        "booked-experience"
+      ],
+      "status": "proposed",
+      "rule": "For occasion purchases, give 'book dates' and 'give it as a gift' equal weight everywhere the visitor can act.",
+      "why": "Many occasion buyers are planning a surprise or can't fix dates yet. A date picker alone loses them; a gift route keeps them.",
+      "check": "On each occasion landing page, both actions appear side by side in the hero, the fork and the sticky bar, at equal size and contrast.",
+      "metric": {
+        "measure": "Gift share of select_conversion_path; total revenue (stays plus vouchers) per 100 visits",
+        "direction": "up",
+        "guardrail": "Stay bookings per 100 visits"
+      },
+      "evidence": {
+        "rating": "Weak",
+        "reason": "The Google doc's reason ('roughly half of occasion buyers are planning a surprise') has no source. Pete's brief confirms the surprise-buyer motive but gives no share.",
+        "sources": [
+          {
+            "ref": "Hooga 'google optimisation ideas' spec (AI-written, no sources given)",
+            "type": "ai-spec",
+            "read": "full",
+            "where": "sources/hooga/google-optimisation-ideas.txt §1 (buyer frame) and §4 Section 5 (dual-path fork)"
+          },
+          {
+            "ref": "Hooga business and marketing brief (Pete's own)",
+            "type": "own-data",
+            "read": "full",
+            "where": "sources/hooga/Hooga_Business_and_Marketing_Brief.md §3 (motivations; the decision-maker may be one partner)"
+          }
+        ]
+      },
+      "verdict": "Test",
+      "betState": "untested",
+      "origin": "PLAN.md §8 (FUN-04); sources/hooga/google-optimisation-ideas.txt §1 and §4 Section 5; sources/hooga/Hooga_Business_and_Marketing_Brief.md §3; sources/hooga/CONVERSION-PLAN-2026-11-20.md §1 and §4",
+      "conflicts": [
+        "'Roughly half of occasion buyers are planning a surprise' is unsourced: an assumption inside this bet, not a fact.",
+        "Stoffel's FRCS teaches exactly one call to action at a time (Modules 03 and 05). The fork deliberately offers two."
+      ],
+      "proposals": [],
+      "added": {
+        "date": "2026-11-20",
+        "by": "ai"
+      }
+    },
+    {
+      "id": "FUN-05",
+      "stream": "FUN",
+      "kind": "bet",
+      "scope": [
+        "core"
+      ],
+      "status": "proposed",
+      "rule": "On mobile, the primary action is visible on the first screen without scrolling (both actions, where FUN-04 applies).",
+      "why": "A ready buyer shouldn't have to hunt for the button.",
+      "check": "Load each landing page at 390 × 844 and confirm the button or buttons are fully visible before any scroll. Capture it with tools/shoot.mjs.",
+      "metric": {
+        "measure": "Hero-button clicks per landing view",
+        "direction": "up",
+        "guardrail": "Landing → hand-off rate"
+      },
+      "evidence": {
+        "rating": "Weak",
+        "reason": "Asserted in the AI-written spec; no study held.",
+        "sources": [
+          {
+            "ref": "Hooga 'google optimisation ideas' spec (AI-written, no sources given)",
+            "type": "ai-spec",
+            "read": "full",
+            "where": "sources/hooga/google-optimisation-ideas.txt §4 Section 1 (dual primary CTAs above the fold)"
+          }
+        ]
+      },
+      "verdict": "Test",
+      "betState": "untested",
+      "origin": "sources/hooga/google-optimisation-ideas.txt §4 Section 1; sources/hooga/CONVERSION-PLAN-2026-11-20.md §6 Phase 1 (hero) and §10 (page order)",
+      "conflicts": [],
+      "proposals": [],
+      "added": {
+        "date": "2026-11-20",
+        "by": "ai"
+      }
+    },
+    {
+      "id": "FUN-06",
+      "stream": "FUN",
+      "kind": "bet",
+      "scope": [
+        "core"
+      ],
+      "status": "proposed",
+      "rule": "On mobile, a sticky bottom bar with the primary action appears once the hero buttons scroll out of view.",
+      "why": "It keeps the next step within thumb reach at every point of a long page.",
+      "check": "Scroll a landing page on a phone: the bar appears when the hero buttons leave the screen, doesn't cover content or the consent banner, and causes no layout shift.",
+      "metric": {
+        "measure": "Share of hand-offs started from the sticky bar; landing → hand-off rate",
+        "direction": "up",
+        "guardrail": "Layout shift (UI-02) and complaints about covered content"
+      },
+      "evidence": {
+        "rating": "Weak",
+        "reason": "Asserted in the AI-written spec; no study held.",
+        "sources": [
+          {
+            "ref": "Hooga 'google optimisation ideas' spec (AI-written, no sources given)",
+            "type": "ai-spec",
+            "read": "full",
+            "where": "sources/hooga/google-optimisation-ideas.txt §2 (Thumb-Zone Sticky Mobile Bar)"
+          }
+        ]
+      },
+      "verdict": "Test",
+      "betState": "untested",
+      "origin": "sources/hooga/google-optimisation-ideas.txt §2; sources/hooga/CONVERSION-PLAN-2026-11-20.md §6 Phase 1 and §10",
+      "conflicts": [],
+      "proposals": [],
+      "added": {
+        "date": "2026-11-20",
+        "by": "ai"
+      }
+    },
+    {
+      "id": "FUN-07",
+      "stream": "FUN",
+      "kind": "bet",
+      "scope": [
+        "core"
+      ],
+      "status": "proposed",
+      "rule": "Choices the visitor has already made (product, occasion, nights, guests, dates) are carried into the checkout hand-off, so nothing is asked twice.",
+      "why": "Asking again is friction at the most fragile step.",
+      "check": "Pick a product, nights and guests on the landing page, click through, and confirm the checkout opens with them filled in. Note any the platform cannot accept.",
+      "metric": {
+        "measure": "Hand-off → purchase rate",
+        "direction": "up",
+        "guardrail": "Wrong-date or wrong-product bookings"
+      },
+      "evidence": {
+        "rating": "Weak",
+        "reason": "Hooga V2 discarded the occasion and nights before its booking widget; the lift from fixing it is assumed, not measured.",
+        "sources": [
+          {
+            "ref": "Hooga V2/V3 build finding: V2 passed intent and nights in the URL but never into the Hospitable widget",
+            "type": "own-data",
+            "read": "full",
+            "where": "sources/hooga/CONVERSION-PLAN-2026-11-20.md §3 #3"
+          },
+          {
+            "ref": "Hooga V3 conversion plan (AI-written strategy recording Pete's decisions)",
+            "type": "ai-spec",
+            "read": "full",
+            "where": "sources/hooga/CONVERSION-PLAN-2026-11-20.md §6 Phase 0 (booking hand-off)"
+          }
+        ]
+      },
+      "verdict": "Test",
+      "betState": "untested",
+      "origin": "sources/hooga/CONVERSION-PLAN-2026-11-20.md §3 #3 and §6 Phase 0 (booking hand-off)",
+      "conflicts": [
+        "Hospitable's widget reads dates, guest counts and utm_* from the page URL (CONVERSION-PLAN §11); the occasion isn't among them."
+      ],
+      "proposals": [],
+      "added": {
+        "date": "2026-11-20",
+        "by": "ai"
+      }
+    },
+    {
+      "id": "FUN-08",
+      "stream": "FUN",
+      "kind": "bet",
+      "scope": [
+        "core"
+      ],
+      "status": "proposed",
+      "rule": "Every screen shows its next action within about a second: intro animations never hold the button back, and story scenes can be skipped.",
+      "why": "Hooga V2 hid each button for 3.3–4.2 seconds, adding more than 20 seconds before anyone saw a date picker. Paid visitors leave rather than wait.",
+      "check": "Screen-record each funnel screen loading on a phone and time it from first paint to the button being tappable. It should be no more than one second.",
+      "metric": {
+        "measure": "Next-step clicks per screen view",
+        "direction": "up",
+        "guardrail": "Time on page for visitors who do buy"
+      },
+      "evidence": {
+        "rating": "Weak",
+        "reason": "A V2 audit finding plus reasoning. The plan's 0.8-second target is a judgement, not a sourced number.",
+        "sources": [
+          {
+            "ref": "Hooga V2/V3 build finding: V2 scenes hid their buttons for 3.3–4.2 s each",
+            "type": "own-data",
+            "read": "full",
+            "where": "sources/hooga/CONVERSION-PLAN-2026-11-20.md §3 #4"
+          },
+          {
+            "ref": "Hooga V3 conversion plan (AI-written strategy recording Pete's decisions)",
+            "type": "ai-spec",
+            "read": "full",
+            "where": "sources/hooga/CONVERSION-PLAN-2026-11-20.md §6 Phase 2"
+          }
+        ]
+      },
+      "verdict": "Test",
+      "betState": "untested",
+      "origin": "sources/hooga/CONVERSION-PLAN-2026-11-20.md §3 #4 and §6 Phase 2 (button visible within ~0.8 s)",
+      "conflicts": [],
+      "proposals": [],
+      "added": {
+        "date": "2026-11-20",
+        "by": "ai"
+      }
+    },
+    {
+      "id": "FUN-09",
+      "stream": "FUN",
+      "kind": "standard",
+      "scope": [
+        "core"
+      ],
+      "status": "proposed",
+      "rule": "Don't ask for a name, email or any other personal detail before showing the offer on a landing page.",
+      "why": "Asking before giving reads as a barrier and loses visitors who haven't decided yet.",
+      "check": "Open each landing route in a private window: the offer, the price and the actions are all visible without filling anything in.",
+      "metric": null,
+      "evidence": {
+        "rating": "Weak",
+        "reason": "The Hooga plan's judgement on V1's name gate; Stoffel's 'keep giving until they ask' points the same way. No outside study held.",
+        "sources": [
+          {
+            "ref": "Hooga V3 conversion plan (AI-written strategy recording Pete's decisions)",
+            "type": "ai-spec",
+            "read": "full",
+            "where": "sources/hooga/CONVERSION-PLAN-2026-11-20.md §8 (don't port the V1 name gate)"
+          },
+          {
+            "ref": "Sam Stoffel, FRCS Module 02: 'Keep Giving Until They Ask' (Guru Vault's summary of the course)",
+            "type": "guru",
+            "read": "secondary",
+            "where": "../Guru Vault/data.js"
+          }
+        ]
+      },
+      "verdict": "Avoid",
+      "betState": null,
+      "origin": "sources/hooga/CONVERSION-PLAN-2026-11-20.md §8 (the V1 'Who are we welcoming?' name gate); FRCS Module 02 via Guru Vault",
+      "conflicts": [],
+      "proposals": [],
+      "added": {
+        "date": "2026-11-20",
+        "by": "ai"
+      }
+    },
+    {
+      "id": "FUN-10",
+      "stream": "FUN",
+      "kind": "standard",
+      "scope": [
+        "core"
+      ],
+      "status": "proposed",
+      "rule": "Every button on a sales page leads to a step that can complete the purchase; none ends in a contact form or a broken results page.",
+      "why": "Hooga V2's 'Purchase gift voucher' button went to a contact form, and its booking widget's results link pointed nowhere. A dead end can't sell.",
+      "check": "Click every button and link on each sales page and follow it to the end. Each must reach a working checkout or a deliberate, clearly labelled alternative.",
+      "metric": null,
+      "evidence": {
+        "rating": "Moderate",
+        "reason": "No study is needed for the mechanism (a contact form cannot take payment). The V2 audit found two cases.",
+        "sources": [
+          {
+            "ref": "Hooga V2/V3 build finding: V2's gift button went to /contact and results-url pointed at '#stays'",
+            "type": "own-data",
+            "read": "full",
+            "where": "sources/hooga/CONVERSION-PLAN-2026-11-20.md §3 #3 and #7"
+          }
+        ]
+      },
+      "verdict": "Adopt",
+      "betState": null,
+      "origin": "sources/hooga/CONVERSION-PLAN-2026-11-20.md §3 #3 and #7 (V2 audit)",
+      "conflicts": [],
+      "proposals": [],
+      "added": {
+        "date": "2026-11-20",
+        "by": "ai"
+      }
+    },
+    {
+      "id": "FUN-11",
+      "stream": "FUN",
+      "kind": "bet",
+      "scope": [
+        "core"
+      ],
+      "status": "proposed",
+      "rule": "Offer visitors who aren't ready to buy one useful, lower-commitment next step that collects an email address (for example, alerts when a midweek night opens up).",
+      "why": "Most visitors don't buy on their first visit. An email address given with consent is a way back that doesn't depend on ad platforms.",
+      "check": "Each sales page offers the step and says what will be sent. A test sign-up lands in a list with its marketing consent recorded (LAW-10).",
+      "metric": {
+        "measure": "generate_lead per 100 visits; purchases from the list within 90 days",
+        "direction": "up",
+        "guardrail": "Landing → hand-off rate must not fall"
+      },
+      "evidence": {
+        "rating": "Weak",
+        "reason": "Asserted in the AI-written spec and by Stoffel (self-reported); no outside study held.",
+        "sources": [
+          {
+            "ref": "Hooga 'google optimisation ideas' spec (AI-written, no sources given)",
+            "type": "ai-spec",
+            "read": "full",
+            "where": "sources/hooga/google-optimisation-ideas.txt §6 (exit-intent micro-offer)"
+          },
+          {
+            "ref": "Sam Stoffel, FRCS Module 05: 'Rented vs. Owned Media' (Guru Vault's summary of the course)",
+            "type": "guru",
+            "read": "secondary",
+            "where": "../Guru Vault/data.js"
+          }
+        ]
+      },
+      "verdict": "Test",
+      "betState": "untested",
+      "origin": "sources/hooga/google-optimisation-ideas.txt §6; sources/hooga/CONVERSION-PLAN-2026-11-20.md §4 and §6 Phase 5 (midweek alerts list); FRCS Module 05 via Guru Vault",
+      "conflicts": [
+        "The Google doc triggers the offer on exit intent or when the visitor scrolls back up. The Hooga plan places it as a list sign-up, without saying how it is triggered.",
+        "Hooga has no email-marketing tool yet (CONVERSION-PLAN §0, round 2)."
+      ],
+      "proposals": [],
+      "added": {
+        "date": "2026-11-20",
+        "by": "ai"
+      }
+    },
+    {
+      "id": "FUN-12",
+      "stream": "FUN",
+      "kind": "bet",
+      "scope": [
+        "core"
+      ],
+      "status": "proposed",
+      "rule": "Ask one tap question early (for example, 'What are you celebrating?') and tailor the rest of the page to the answer.",
+      "why": "A tailored page speaks to the buyer's actual reason, and the answer can travel with the booking.",
+      "check": "Answer the question each way and confirm the headline, proof and offer change to match, and that the answer reaches the hand-off.",
+      "metric": {
+        "measure": "Landing → hand-off rate for visitors who answer, against untailored pages",
+        "direction": "up",
+        "guardrail": "Drop-off at the question itself"
+      },
+      "evidence": {
+        "rating": "Weak",
+        "reason": "Hooga V2 already opens this way; Stoffel recommends segmenting with one or two tap questions (self-reported). No outside study held.",
+        "sources": [
+          {
+            "ref": "Hooga V3 conversion plan (AI-written strategy recording Pete's decisions)",
+            "type": "ai-spec",
+            "read": "full",
+            "where": "sources/hooga/CONVERSION-PLAN-2026-11-20.md §1 and §2 (V2 opens with \"what are you celebrating?\")"
+          },
+          {
+            "ref": "Sam Stoffel, FRCS Module 05: 'Segmentation via Two Questions' (Guru Vault's summary of the course)",
+            "type": "guru",
+            "read": "secondary",
+            "where": "../Guru Vault/data.js"
+          }
+        ]
+      },
+      "verdict": "Test",
+      "betState": "untested",
+      "origin": "sources/hooga/CONVERSION-PLAN-2026-11-20.md §1 and §2; FRCS Module 05 via Guru Vault; sources/hooga/google-optimisation-ideas.txt §5 ('What are you celebrating?' selector)",
+      "conflicts": [
+        "The Google doc asks the question inside checkout, for repeat-booking reminders. Hooga V2 asks it at the start, to tailor the page."
+      ],
+      "proposals": [],
+      "added": {
+        "date": "2026-11-20",
+        "by": "ai"
+      }
+    },
+    {
+      "id": "FUN-13",
+      "stream": "FUN",
+      "kind": "bet",
+      "scope": [
+        "core"
+      ],
+      "status": "proposed",
+      "rule": "List the main reasons buyers hesitate, and answer each on the page before the final buy step (usually as an FAQ).",
+      "why": "Unanswered doubts become exits. Hooga's include privacy, winter warmth, travel time, food nearby, noise and how vouchers work.",
+      "check": "Compare the page's FAQ with the objections listed in the project brief: every objection has an answer on the page.",
+      "metric": {
+        "measure": "Landing → hand-off rate; FAQ opens per visit",
+        "direction": "up",
+        "guardrail": "Messages asking questions before booking"
+      },
+      "evidence": {
+        "rating": "Weak",
+        "reason": "Recommended by Stoffel (self-reported) and the AI-written spec; no outside study held.",
+        "sources": [
+          {
+            "ref": "Sam Stoffel, FRCS Module 04: 'Objection → Solution Mapping' and the '3 Levels of Disbelief' (Guru Vault's summary of the course)",
+            "type": "guru",
+            "read": "secondary",
+            "where": "../Guru Vault/data.js"
+          },
+          {
+            "ref": "Hooga 'google optimisation ideas' spec (AI-written, no sources given)",
+            "type": "ai-spec",
+            "read": "full",
+            "where": "sources/hooga/google-optimisation-ideas.txt §4 Section 7 (FAQ accordion)"
+          }
+        ]
+      },
+      "verdict": "Test",
+      "betState": "untested",
+      "origin": "FRCS Module 04 via Guru Vault; sources/hooga/google-optimisation-ideas.txt §4 Section 7; sources/hooga/CONVERSION-PLAN-2026-11-20.md §6 Phase 1 (FAQ)",
+      "conflicts": [],
+      "proposals": [],
+      "added": {
+        "date": "2026-11-20",
+        "by": "ai"
+      }
+    },
+    {
+      "id": "FUN-14",
+      "stream": "FUN",
+      "kind": "bet",
+      "scope": [
+        "booked-experience"
+      ],
+      "status": "proposed",
+      "rule": "Lead with how the experience unfolds (arriving, settling in, the evening, the morning), specific to each product, before listing facilities.",
+      "why": "Buyers of an experience are buying the imagined evening, not a list of facilities. Pete's brief says the same.",
+      "check": "On each landing page, the section after the hero pictures the stay hour by hour or scene by scene, specific to that retreat and honest about anything guests do themselves.",
+      "metric": {
+        "measure": "Scroll depth to the fork; landing → hand-off rate",
+        "direction": "up",
+        "guardrail": "Cancellations inside the free window (a sign of mismatched expectations)"
+      },
+      "evidence": {
+        "rating": "Weak",
+        "reason": "Pete's own direction and the AI-written spec; no study held.",
+        "sources": [
+          {
+            "ref": "Hooga business and marketing brief (Pete's own)",
+            "type": "own-data",
+            "read": "full",
+            "where": "sources/hooga/Hooga_Business_and_Marketing_Brief.md §4 and §6 (lead with the imagined evening)"
+          },
+          {
+            "ref": "Hooga 'google optimisation ideas' spec (AI-written, no sources given)",
+            "type": "ai-spec",
+            "read": "full",
+            "where": "sources/hooga/google-optimisation-ideas.txt §1 law 3 and §4 Section 2 (escape timeline)"
+          }
+        ]
+      },
+      "verdict": "Test",
+      "betState": "untested",
+      "origin": "sources/hooga/Hooga_Business_and_Marketing_Brief.md §4 and §6; sources/hooga/google-optimisation-ideas.txt §1 law 3 and §4 Section 2; sources/hooga/CONVERSION-PLAN-2026-11-20.md §6 Phase 1 ('Your evening' timeline)",
+      "conflicts": [
+        "The Google doc's timeline ('6:00 PM: firepit lit, fizz poured, soaking under the stars') implies a hot tub ready on arrival. Hooga's wood-fired tubs take hours to heat (CONVERSION-PLAN §5)."
+      ],
+      "proposals": [],
+      "added": {
+        "date": "2026-11-20",
+        "by": "ai"
+      }
+    },
+    {
+      "id": "FUN-15",
+      "stream": "FUN",
+      "kind": "bet",
+      "scope": [
+        "course"
+      ],
+      "status": "proposed",
+      "rule": "If a quiz or selector recommends a product, build it as a transparent decision aid that shows the reasons for its answer, and test it against letting people buy directly.",
+      "why": "Decision aids improve understanding and confidence but don't reliably raise purchases, according to the RGC review (citing a Cochrane review of 105 trials).",
+      "check": "Take the quiz: every recommendation shows which answers led to it, and a direct-buy route is available alongside it.",
+      "metric": {
+        "measure": "Purchases per 100 visits, quiz route against direct route",
+        "direction": "up",
+        "guardrail": "Refund and completion rates"
+      },
+      "evidence": {
+        "rating": "Weak",
+        "reason": "The underlying Cochrane review is strong evidence on knowledge and clarity, but it studied health decisions, not course sales, and only the RGC summary is held here.",
+        "sources": [
+          {
+            "ref": "RGC online sales literature review, condensed summary, finding 3: decision aids and purchases (underlying study types as described in the summary)",
+            "type": "meta-analysis",
+            "read": "secondary",
+            "where": "../RGC Literature Review/RGC-Online-Sales-Practices-Literature-Review.md"
+          }
+        ]
+      },
+      "verdict": "Test",
+      "betState": "untested",
+      "origin": "RGC Literature Review summary, finding 3",
+      "conflicts": [],
+      "proposals": [],
+      "added": {
+        "date": "2026-11-20",
+        "by": "ai"
+      }
+    },
+    {
+      "id": "UI-01",
+      "stream": "UI",
+      "kind": "standard",
+      "scope": [
+        "core"
+      ],
+      "status": "proposed",
+      "rule": "Pinch-zoom is never disabled: no user-scalable=no, and no maximum-scale below 2, in the viewport tag.",
+      "why": "Disabling zoom fails WCAG 1.4.4 (Resize Text, AA), and people zoom in to look at photos before they book.",
+      "check": "Read the page's meta viewport tag, then pinch-zoom on a phone.",
+      "metric": null,
+      "evidence": {
+        "rating": "Moderate",
+        "reason": "W3C's standard and its approved test rule, read in the original. The rule notes that most modern mobile browsers ignore these settings anyway; the link to sales is reasoning.",
+        "sources": [
+          {
+            "ref": "W3C WCAG 2.2 (Recommendation, 12 Dec 2024), SC 1.4.4 Resize Text (AA) (a W3C standard: the ledger has no closer source type)",
+            "type": "platform-docs",
+            "read": "full",
+            "where": "https://www.w3.org/TR/WCAG22/"
+          },
+          {
+            "ref": "W3C WAI ACT rule b4f0c3, 'Meta viewport allows for zoom' (maps to WCAG 1.4.4): fails user-scalable=no and maximum-scale below 2; notes most modern mobile browsers ignore these",
+            "type": "platform-docs",
+            "read": "full",
+            "where": "https://www.w3.org/WAI/standards-guidelines/act/rules/b4f0c3/"
+          }
+        ]
+      },
+      "verdict": "Adopt",
+      "betState": null,
+      "origin": "sources/hooga/CONVERSION-PLAN-2026-11-20.md §3 #9 (V2 disabled pinch-zoom with user-scalable=no)",
+      "conflicts": [],
+      "proposals": [],
+      "added": {
+        "date": "2026-11-20",
+        "by": "ai"
+      }
+    },
+    {
+      "id": "UI-02",
+      "stream": "UI",
+      "kind": "standard",
+      "scope": [
+        "core"
+      ],
+      "status": "proposed",
+      "rule": "Mobile pages meet Google's 'good' Core Web Vitals at the 75th percentile: LCP ≤ 2.5 s, INP ≤ 200 ms and CLS ≤ 0.1.",
+      "why": "These are Google's published thresholds for a good experience. The link from speed to sales is weaker than the thresholds themselves.",
+      "check": "Use field data (Search Console, or PageSpeed Insights' Chrome UX Report) once the site has enough traffic. Before launch, record Lighthouse mobile runs as a stand-in.",
+      "metric": null,
+      "evidence": {
+        "rating": "Moderate",
+        "reason": "Google's published thresholds, read in full. The link to conversion is weaker.",
+        "sources": [
+          {
+            "ref": "web.dev, Web Vitals (updated 31 Oct 2024): good = LCP ≤ 2.5 s, INP ≤ 200 ms, CLS ≤ 0.1 at the 75th percentile, mobile and desktop separately",
+            "type": "platform-docs",
+            "read": "full",
+            "where": "https://web.dev/articles/vitals"
+          }
+        ]
+      },
+      "verdict": "Adopt",
+      "betState": null,
+      "origin": "PLAN.md §8 (UI-02); sources/hooga/google-optimisation-ideas.txt §3; sources/hooga/CONVERSION-PLAN-2026-11-20.md §3 #1 and §6 Phase 0",
+      "conflicts": [
+        "The Google doc asks for Lighthouse 95+, LCP under 2.0 s, INP under 150 ms and CLS of 0.00, which is stricter than Google's own line with nothing to back it (see UI-03).",
+        "Hooga V3's hero videos are still 11–25 MB. Pete deferred the speed pass until the product looks right (CONVERSION-PLAN §0 and §10)."
+      ],
+      "proposals": [],
+      "added": {
+        "date": "2026-11-20",
+        "by": "ai"
+      }
+    },
+    {
+      "id": "UI-03",
+      "stream": "UI",
+      "kind": "bet",
+      "scope": [
+        "core"
+      ],
+      "status": "proposed",
+      "rule": "Pages faster than Google's 'good' line (the Google doc's LCP under 2.0 s, INP under 150 ms, CLS of 0, Lighthouse 95+) sell more than pages that just meet it.",
+      "why": "If anyone wants the stricter targets, they should be tested rather than assumed.",
+      "check": "Split field data by load speed and compare conversion rates for visits above and below the stricter thresholds.",
+      "metric": {
+        "measure": "Landing → hand-off rate for faster against slower page loads",
+        "direction": "up",
+        "guardrail": "Build time spent on speed"
+      },
+      "evidence": {
+        "rating": "Weak",
+        "reason": "Asserted in the AI-written spec with nothing to back the extra strictness.",
+        "sources": [
+          {
+            "ref": "Hooga 'google optimisation ideas' spec (AI-written, no sources given)",
+            "type": "ai-spec",
+            "read": "full",
+            "where": "sources/hooga/google-optimisation-ideas.txt §3 (Core Web Vitals Gates)"
+          }
+        ]
+      },
+      "verdict": "Test",
+      "betState": "untested",
+      "origin": "sources/hooga/google-optimisation-ideas.txt §3; spec 03 clash table",
+      "conflicts": [
+        "Stricter than Google's own 'good' thresholds (UI-02)."
+      ],
+      "proposals": [],
+      "added": {
+        "date": "2026-11-20",
+        "by": "ai"
+      }
+    },
+    {
+      "id": "UI-04",
+      "stream": "UI",
+      "kind": "standard",
+      "scope": [
+        "core"
+      ],
+      "status": "proposed",
+      "rule": "Before launch, test every paid landing page on a real phone over mobile data, not only on a desktop or over Wi-Fi.",
+      "why": "Lab tools on a fast connection hide what a commuter on patchy 4G actually sees.",
+      "check": "Load each paid route on a real phone with Wi-Fi off. Note the load time, and check the video plays, the buttons and sticky bar work, and nothing jumps.",
+      "metric": null,
+      "evidence": {
+        "rating": "Weak",
+        "reason": "Asserted in the AI-written spec; no study held.",
+        "sources": [
+          {
+            "ref": "Hooga 'google optimisation ideas' spec (AI-written, no sources given)",
+            "type": "ai-spec",
+            "read": "full",
+            "where": "sources/hooga/google-optimisation-ideas.txt §8 (Live 4G iPhone Test)"
+          }
+        ]
+      },
+      "verdict": "Adopt",
+      "betState": null,
+      "origin": "sources/hooga/google-optimisation-ideas.txt §1 law 2 and §8",
+      "conflicts": [
+        "The Google doc's '75%+ of visitors on iPhone' is unsourced. Choose test devices from the project's own analytics once it is live."
+      ],
+      "proposals": [],
+      "added": {
+        "date": "2026-11-20",
+        "by": "ai"
+      }
+    },
+    {
+      "id": "UI-05",
+      "stream": "UI",
+      "kind": "standard",
+      "scope": [
+        "core"
+      ],
+      "status": "proposed",
+      "rule": "Video that starts automatically, lasts more than five seconds and plays alongside other content has a visible way to pause or stop it.",
+      "why": "WCAG 2.2 success criterion 2.2.2 (Pause, Stop, Hide, level A). A looping hero video is exactly this case.",
+      "check": "On each page with autoplay video, find a pause control, and check it works by keyboard and touch.",
+      "metric": null,
+      "evidence": {
+        "rating": "Moderate",
+        "reason": "W3C's standard, read in the original. Accessibility, not a conversion claim.",
+        "sources": [
+          {
+            "ref": "W3C WCAG 2.2 (Recommendation, 12 Dec 2024), SC 2.2.2 Pause, Stop, Hide (A) (a W3C standard: the ledger has no closer source type)",
+            "type": "platform-docs",
+            "read": "full",
+            "where": "https://www.w3.org/TR/WCAG22/"
+          }
+        ]
+      },
+      "verdict": "Adopt",
+      "betState": null,
+      "origin": "sources/hooga/google-optimisation-ideas.txt §3 (6–8 second hero loop, autoplay); sources/hooga/CONVERSION-PLAN-2026-11-20.md §6 Phase 1 (6 s hero loop)",
+      "conflicts": [
+        "The Google doc also asks for a still-image fallback when the device requests reduced motion. That's worth doing, but it wasn't checked against WCAG's levels."
+      ],
+      "proposals": [],
+      "added": {
+        "date": "2026-11-20",
+        "by": "ai"
+      }
+    },
+    {
+      "id": "UI-06",
+      "stream": "UI",
+      "kind": "standard",
+      "scope": [
+        "core"
+      ],
+      "status": "proposed",
+      "rule": "Buttons and links are at least 24 by 24 CSS pixels, or spaced so that a 24-pixel circle around each doesn't overlap another.",
+      "why": "WCAG 2.2 success criterion 2.5.8 (Target Size, AA). Small, crowded targets cause mis-taps on a phone.",
+      "check": "Measure the tap targets on each sales page in the browser's developer tools at phone width, and note any under 24 px that the WCAG exceptions don't cover.",
+      "metric": null,
+      "evidence": {
+        "rating": "Moderate",
+        "reason": "W3C's standard, read in the original.",
+        "sources": [
+          {
+            "ref": "W3C WCAG 2.2 (Recommendation, 12 Dec 2024), SC 2.5.8 Target Size (Minimum) (AA) (a W3C standard: the ledger has no closer source type)",
+            "type": "platform-docs",
+            "read": "full",
+            "where": "https://www.w3.org/TR/WCAG22/"
+          }
+        ]
+      },
+      "verdict": "Adopt",
+      "betState": null,
+      "origin": "sources/hooga/google-optimisation-ideas.txt §1 law 2 (every interaction thumb-friendly)",
+      "conflicts": [],
+      "proposals": [],
+      "added": {
+        "date": "2026-11-20",
+        "by": "ai"
+      }
+    },
+    {
+      "id": "UI-07",
+      "stream": "UI",
+      "kind": "bet",
+      "scope": [
+        "core"
+      ],
+      "status": "proposed",
+      "rule": "On forms you control, use a single column, the right mobile keyboard for each field, autofill, and inline error messages.",
+      "why": "Every stumble on a phone form is a chance to give up.",
+      "check": "Fill each form on a phone: one column, numeric and email keyboards where they fit, autofill works, and errors show beside the field as you go.",
+      "metric": {
+        "measure": "Form completion rate",
+        "direction": "up",
+        "guardrail": "Data quality (bad emails, wrong postcodes)"
+      },
+      "evidence": {
+        "rating": "Weak",
+        "reason": "Asserted in the AI-written spec; no study held.",
+        "sources": [
+          {
+            "ref": "Hooga 'google optimisation ideas' spec (AI-written, no sources given)",
+            "type": "ai-spec",
+            "read": "full",
+            "where": "sources/hooga/google-optimisation-ideas.txt §5 (Form Friction Stripping)"
+          }
+        ]
+      },
+      "verdict": "Test",
+      "betState": "untested",
+      "origin": "sources/hooga/google-optimisation-ideas.txt §5",
+      "conflicts": [],
+      "proposals": [],
+      "added": {
+        "date": "2026-11-20",
+        "by": "ai"
+      }
+    },
+    {
+      "id": "UI-08",
+      "stream": "UI",
+      "kind": "standard",
+      "scope": [
+        "core"
+      ],
+      "status": "proposed",
+      "rule": "If a third-party booking or payment widget fails to load, the page shows a working alternative (another way to book, or contact details), not an empty box.",
+      "why": "Widgets fail: blocked scripts, ad blockers, outages. An empty box loses the sale without anyone noticing.",
+      "check": "Block the widget's domain in the browser's developer tools and reload: the fallback appears.",
+      "metric": null,
+      "evidence": {
+        "rating": "Weak",
+        "reason": "Hooga V3 was tested with all Hospitable traffic blocked; the effect on sales is not measured.",
+        "sources": [
+          {
+            "ref": "Hooga V2/V3 build finding: V3 tested with all Hospitable traffic blocked; falls back to the V2 search widget until IDs are set",
+            "type": "own-data",
+            "read": "full",
+            "where": "sources/hooga/CONVERSION-PLAN-2026-11-20.md §10"
+          }
+        ]
+      },
+      "verdict": "Adopt",
+      "betState": null,
+      "origin": "sources/hooga/CONVERSION-PLAN-2026-11-20.md §10 (booking hand-off)",
+      "conflicts": [],
+      "proposals": [],
+      "added": {
+        "date": "2026-11-20",
+        "by": "ai"
+      }
+    },
+    {
+      "id": "SAL-01",
+      "stream": "SAL",
+      "kind": "bet",
+      "scope": [
+        "core"
+      ],
+      "status": "proposed",
+      "rule": "Show a 'from £' price on the first screen of a sales page.",
+      "why": "Price is one of the first things a ready buyer looks for. If it is hidden, they go elsewhere to find it.",
+      "check": "The first screen of each landing page shows a 'from £' price that matches the lowest bookable price in the facts file.",
+      "metric": {
+        "measure": "Landing → hand-off rate",
+        "direction": "up",
+        "guardrail": "Hand-off → purchase rate (price shock at checkout should fall, not rise)"
+      },
+      "evidence": {
+        "rating": "Weak",
+        "reason": "The AI-written spec asserts it; the Hooga plan lists it as an experiment. No study held.",
+        "sources": [
+          {
+            "ref": "Hooga 'google optimisation ideas' spec (AI-written, no sources given)",
+            "type": "ai-spec",
+            "read": "full",
+            "where": "sources/hooga/google-optimisation-ideas.txt §4 Section 4 (radical price clarity)"
+          },
+          {
+            "ref": "Hooga V2/V3 build finding: V2 showed no stay prices anywhere",
+            "type": "own-data",
+            "read": "full",
+            "where": "sources/hooga/CONVERSION-PLAN-2026-11-20.md §3 #5"
+          }
+        ]
+      },
+      "verdict": "Test",
+      "betState": "untested",
+      "origin": "sources/hooga/google-optimisation-ideas.txt §4 Section 4; sources/hooga/CONVERSION-PLAN-2026-11-20.md §3 #5, §6 Phase 1 (hero) and Phase 7 test 2 ('from £' in the hero vs none)",
+      "conflicts": [],
+      "proposals": [],
+      "added": {
+        "date": "2026-11-20",
+        "by": "ai"
+      }
+    },
+    {
+      "id": "SAL-02",
+      "stream": "SAL",
+      "kind": "bet",
+      "scope": [
+        "booked-experience"
+      ],
+      "status": "proposed",
+      "rule": "Pre-select the stay length the business prefers (Hooga: 2 nights), marked as recommended, with shorter stays one tap away.",
+      "why": "Pete's brief prefers two nights: guests enjoy more and there are fewer changeovers.",
+      "check": "Open the duration choice: the preferred length is pre-selected, labelled and priced, and the other lengths are visible and selectable.",
+      "metric": {
+        "measure": "Average length of stay for direct bookings",
+        "direction": "up",
+        "guardrail": "Bookings per 100 visits"
+      },
+      "evidence": {
+        "rating": "Weak",
+        "reason": "The business's preference, plus the AI-written spec; no study held.",
+        "sources": [
+          {
+            "ref": "Hooga business and marketing brief (Pete's own)",
+            "type": "own-data",
+            "read": "full",
+            "where": "sources/hooga/Hooga_Business_and_Marketing_Brief.md §5 (two nights preferred)"
+          },
+          {
+            "ref": "Hooga 'google optimisation ideas' spec (AI-written, no sources given)",
+            "type": "ai-spec",
+            "read": "full",
+            "where": "sources/hooga/google-optimisation-ideas.txt §5 step 1 (default to the 2-night package)"
+          }
+        ]
+      },
+      "verdict": "Test",
+      "betState": "untested",
+      "origin": "sources/hooga/Hooga_Business_and_Marketing_Brief.md §5; sources/hooga/google-optimisation-ideas.txt §5 step 1; sources/hooga/CONVERSION-PLAN-2026-11-20.md §2 (V2's 2-night default, marked 'Recommended')",
+      "conflicts": [],
+      "proposals": [],
+      "added": {
+        "date": "2026-11-20",
+        "by": "ai"
+      }
+    },
+    {
+      "id": "SAL-03",
+      "stream": "SAL",
+      "kind": "bet",
+      "scope": [
+        "core"
+      ],
+      "status": "proposed",
+      "rule": "On a checkout you control, offer one well-chosen upgrade rather than a list of small add-ons.",
+      "why": "One clear yes or no keeps checkout moving; a menu of extras slows the decision down.",
+      "check": "On the checkout step, count the upgrade offers: exactly one, unticked, with its price shown.",
+      "metric": {
+        "measure": "Upgrade take-up and average order value",
+        "direction": "up",
+        "guardrail": "Checkout completion rate"
+      },
+      "evidence": {
+        "rating": "Weak",
+        "reason": "Asserted in the AI-written spec; no study held.",
+        "sources": [
+          {
+            "ref": "Hooga 'google optimisation ideas' spec (AI-written, no sources given)",
+            "type": "ai-spec",
+            "read": "full",
+            "where": "sources/hooga/google-optimisation-ideas.txt §5 step 2 (one order bump)"
+          }
+        ]
+      },
+      "verdict": "Test",
+      "betState": "untested",
+      "origin": "sources/hooga/google-optimisation-ideas.txt §5 step 2; sources/hooga/CONVERSION-PLAN-2026-11-20.md §1 and §6 Phase 3",
+      "conflicts": [
+        "Hospitable's own checkout shows each custom upsell as its own toggle, so 'one upgrade' only applies to Hooga's own voucher checkout (CONVERSION-PLAN §6 Phase 4 and §11)."
+      ],
+      "proposals": [],
+      "added": {
+        "date": "2026-11-20",
+        "by": "ai"
+      }
+    },
+    {
+      "id": "SAL-04",
+      "stream": "SAL",
+      "kind": "bet",
+      "scope": [
+        "core"
+      ],
+      "status": "proposed",
+      "rule": "Show a bundle's price next to the total of its parts bought separately (for example, Slow Stay £68 against £90).",
+      "why": "A visible saving makes the bundle the easy choice.",
+      "check": "Each bundle shows both prices, and the 'separately' total matches the real separate prices in the facts file.",
+      "metric": {
+        "measure": "Bundle take-up against single-extra take-up",
+        "direction": "up",
+        "guardrail": "Average order value"
+      },
+      "evidence": {
+        "rating": "Weak",
+        "reason": "A pattern carried over from Hooga V1. The RGC review found price anchoring real but weak for willingness to pay (summary only held).",
+        "sources": [
+          {
+            "ref": "Hooga V3 conversion plan (AI-written strategy recording Pete's decisions)",
+            "type": "ai-spec",
+            "read": "full",
+            "where": "sources/hooga/CONVERSION-PLAN-2026-11-20.md §1 and §6 Phase 4 (V1 anchoring)"
+          },
+          {
+            "ref": "RGC online sales literature review, condensed summary, finding 6: price anchoring (underlying study types as described in the summary)",
+            "type": "experiment",
+            "read": "secondary",
+            "where": "../RGC Literature Review/RGC-Online-Sales-Practices-Literature-Review.md"
+          }
+        ]
+      },
+      "verdict": "Test",
+      "betState": "untested",
+      "origin": "sources/hooga/CONVERSION-PLAN-2026-11-20.md §1 and §6 Phase 4; RGC Literature Review summary, finding 6",
+      "conflicts": [
+        "The live listings price extras differently from V1 (carriage: £60 for both early and late, or £40 for one, against V1's £68 and £90). The anchor must use whichever prices Pete confirms (CONVERSION-PLAN §6 Phase 4 and §9 question 4)."
+      ],
+      "proposals": [],
+      "added": {
+        "date": "2026-11-20",
+        "by": "ai"
+      }
+    },
+    {
+      "id": "SAL-05",
+      "stream": "SAL",
+      "kind": "standard",
+      "scope": [
+        "core"
+      ],
+      "status": "proposed",
+      "rule": "Don't add a top tier just to make the middle one look cheaper; every tier must be a product someone would genuinely buy and the business can deliver.",
+      "why": "The RGC review found no study showing that a premium tier lifts mid-tier sales, and a decoy that cannot be delivered misleads.",
+      "check": "For each tier, write down who it's for and confirm it can be delivered. The project's forecasts don't count on a top tier lifting the others.",
+      "metric": null,
+      "evidence": {
+        "rating": "Weak",
+        "reason": "Only the RGC summary is held.",
+        "sources": [
+          {
+            "ref": "RGC online sales literature review, condensed summary, finding 6: premium tiers and anchoring (underlying study types as described in the summary)",
+            "type": "experiment",
+            "read": "secondary",
+            "where": "../RGC Literature Review/RGC-Online-Sales-Practices-Literature-Review.md"
+          }
+        ]
+      },
+      "verdict": "Avoid",
+      "betState": null,
+      "origin": "RGC Literature Review summary, finding 6",
+      "conflicts": [],
+      "proposals": [],
+      "added": {
+        "date": "2026-11-20",
+        "by": "ai"
+      }
+    },
+    {
+      "id": "SAL-06",
+      "stream": "SAL",
+      "kind": "bet",
+      "scope": [
+        "booked-experience"
+      ],
+      "status": "proposed",
+      "rule": "Sell gift vouchers as named experiences priced in nights (for example, 'The Anniversary Night'), with a cash amount as a quieter third option.",
+      "why": "A gift buyer is buying a plan, not a balance. Pricing in nights also suits a booking platform whose promo codes cover the nightly rate only.",
+      "check": "The voucher page leads with named experiences, each stating exactly what it buys; the cash option is there but secondary.",
+      "metric": {
+        "measure": "Voucher revenue per 100 visits; share of named against cash vouchers",
+        "direction": "up",
+        "guardrail": "Redemption problems and complaints"
+      },
+      "evidence": {
+        "rating": "Weak",
+        "reason": "The AI-written spec and Priestley's advice to productise (self-reported); no study held.",
+        "sources": [
+          {
+            "ref": "Hooga 'google optimisation ideas' spec (AI-written, no sources given)",
+            "type": "ai-spec",
+            "read": "full",
+            "where": "sources/hooga/google-optimisation-ideas.txt §5 (Named Experience Vouchers)"
+          },
+          {
+            "ref": "Daniel Priestley, Key Person of Influence, Product step: 'Productised Services' (Guru Vault's summary of the book)",
+            "type": "guru",
+            "read": "secondary",
+            "where": "../Guru Vault/data.js"
+          }
+        ]
+      },
+      "verdict": "Test",
+      "betState": "untested",
+      "origin": "sources/hooga/google-optimisation-ideas.txt §5; sources/hooga/CONVERSION-PLAN-2026-11-20.md §6 Phase 3; Priestley's Product step via Guru Vault",
+      "conflicts": [
+        "Hospitable promo codes cover the nightly rate only (not fees), can be a fixed amount or a percentage, and take a total-redemptions cap that can be set to 1 (help centre, 16 Apr 2026). The Hooga plan adds that they can't keep a leftover balance (CONVERSION-PLAN §6 Phase 3 and §11)."
+      ],
+      "proposals": [],
+      "added": {
+        "date": "2026-11-20",
+        "by": "ai"
+      }
+    },
+    {
+      "id": "SAL-07",
+      "stream": "SAL",
+      "kind": "bet",
+      "scope": [
+        "core"
+      ],
+      "status": "proposed",
+      "rule": "On a checkout you control, show Apple Pay and Google Pay at the top of the payment step.",
+      "why": "Paying without typing card details is quicker on a phone.",
+      "check": "Open the checkout on an iPhone (Safari) and an Android phone (Chrome): the express buttons sit above the card form.",
+      "metric": {
+        "measure": "Checkout completion rate on mobile",
+        "direction": "up",
+        "guardrail": "Payment failures and refunds"
+      },
+      "evidence": {
+        "rating": "Weak",
+        "reason": "Asserted in the AI-written spec; no study held.",
+        "sources": [
+          {
+            "ref": "Hooga 'google optimisation ideas' spec (AI-written, no sources given)",
+            "type": "ai-spec",
+            "read": "full",
+            "where": "sources/hooga/google-optimisation-ideas.txt §5 step 3 (One-Tap Express Payment)"
+          }
+        ]
+      },
+      "verdict": "Test",
+      "betState": "untested",
+      "origin": "sources/hooga/google-optimisation-ideas.txt §1 law 2 and §5 step 3; sources/hooga/CONVERSION-PLAN-2026-11-20.md §6 Phase 3",
+      "conflicts": [
+        "Hospitable Direct Premium (the UK default) supports Apple Pay and Google Pay (help centre, checked 20 Nov 2026), so for Hooga's stays the platform handles it; this bet applies to the voucher checkout."
+      ],
+      "proposals": [],
+      "added": {
+        "date": "2026-11-20",
+        "by": "ai"
+      }
+    },
+    {
+      "id": "SAL-08",
+      "stream": "SAL",
+      "kind": "bet",
+      "scope": [
+        "core"
+      ],
+      "status": "proposed",
+      "rule": "Offer payment in instalments on higher-priced purchases.",
+      "why": "Splitting a large price lowers the upfront hurdle without discounting.",
+      "check": "On purchases above the threshold set in the project's brief, an instalment option is shown at checkout with its full terms.",
+      "metric": {
+        "measure": "Checkout completion and average order value above the threshold",
+        "direction": "up",
+        "guardrail": "Refunds, chargebacks and missed payments"
+      },
+      "evidence": {
+        "rating": "Weak",
+        "reason": "The AI-written spec plus Stoffel's own example (a pay-in-3 plan on a £2,000 product, self-reported).",
+        "sources": [
+          {
+            "ref": "Hooga 'google optimisation ideas' spec (AI-written, no sources given)",
+            "type": "ai-spec",
+            "read": "full",
+            "where": "sources/hooga/google-optimisation-ideas.txt §5 step 3 (Klarna / Clearpay)"
+          },
+          {
+            "ref": "Sam Stoffel, FRCS Module 04: payment plans; the Steam Chaser example (Guru Vault's summary of the course)",
+            "type": "guru",
+            "read": "secondary",
+            "where": "../Guru Vault/data.js"
+          }
+        ]
+      },
+      "verdict": "Test",
+      "betState": "untested",
+      "origin": "sources/hooga/google-optimisation-ideas.txt §5 step 3; sources/hooga/CONVERSION-PLAN-2026-11-20.md §6 Phase 3; FRCS Module 04 via Guru Vault",
+      "conflicts": [
+        "Hospitable's help centre documents no buy-now-pay-later provider (checked 20 Nov 2026), so Klarna is only possible on Hooga's own voucher checkout. Hospitable does let hosts set instalment payment terms for stays, which may serve the same purpose.",
+        "Not checked: the current UK rules on offering and advertising buy-now-pay-later. Check them before adopting this."
+      ],
+      "proposals": [],
+      "added": {
+        "date": "2026-11-20",
+        "by": "ai"
+      }
+    },
+    {
+      "id": "SAL-09",
+      "stream": "SAL",
+      "kind": "bet",
+      "scope": [
+        "booked-experience"
+      ],
+      "status": "proposed",
+      "rule": "To fill quiet nights, add value (for example, a free late checkout on midweek two-night stays) rather than cutting the price.",
+      "why": "Discounts teach buyers to wait and drag down the price of busy nights; added value keeps the price intact.",
+      "check": "Midweek offers on the site are value-adds with clear terms, not price cuts, unless Pete has chosen to run a discount as the other side of a test.",
+      "metric": {
+        "measure": "Midweek occupancy and revenue per available night",
+        "direction": "up",
+        "guardrail": "Weekend rate and occupancy"
+      },
+      "evidence": {
+        "rating": "Weak",
+        "reason": "Pete's brief and Stoffel's own price-cut story (self-reported); no study held.",
+        "sources": [
+          {
+            "ref": "Hooga business and marketing brief (Pete's own)",
+            "type": "own-data",
+            "read": "full",
+            "where": "sources/hooga/Hooga_Business_and_Marketing_Brief.md §5 (test incentives before adopting permanent discounts)"
+          },
+          {
+            "ref": "Sam Stoffel, FRCS Module 04: the 2017 price-cut mistake (Guru Vault's summary of the course)",
+            "type": "guru",
+            "read": "secondary",
+            "where": "../Guru Vault/data.js"
+          }
+        ]
+      },
+      "verdict": "Test",
+      "betState": "untested",
+      "origin": "sources/hooga/Hooga_Business_and_Marketing_Brief.md §5; sources/hooga/CONVERSION-PLAN-2026-11-20.md §6 Phase 7 test 4; FRCS Module 04 via Guru Vault",
+      "conflicts": [
+        "Pete's brief says to test incentives before adopting permanent discounts, so a discount isn't ruled out: it is the other side of the test (CONVERSION-PLAN §6 Phase 7, test 4)."
+      ],
+      "proposals": [],
+      "added": {
+        "date": "2026-11-20",
+        "by": "ai"
+      }
+    },
+    {
+      "id": "SAL-10",
+      "stream": "SAL",
+      "kind": "bet",
+      "scope": [
+        "booked-experience"
+      ],
+      "status": "proposed",
+      "rule": "Offer upgrades after booking too (on the confirmation page and in pre-arrival messages about 7 and 3 days out), not only during checkout.",
+      "why": "Someone who has just said yes is open to making it special, and the date checkout may not be yours to change.",
+      "check": "Make a test booking: the confirmation and each pre-arrival message link to the upgrades available for that stay.",
+      "metric": {
+        "measure": "Upgrade revenue per booking",
+        "direction": "up",
+        "guardrail": "Cancellations inside the free window; complaints about upselling"
+      },
+      "evidence": {
+        "rating": "Weak",
+        "reason": "The Hooga plan's reasoning; no study held.",
+        "sources": [
+          {
+            "ref": "Hooga V3 conversion plan (AI-written strategy recording Pete's decisions)",
+            "type": "ai-spec",
+            "read": "full",
+            "where": "sources/hooga/CONVERSION-PLAN-2026-11-20.md §1 and §6 Phase 4"
+          }
+        ]
+      },
+      "verdict": "Test",
+      "betState": "untested",
+      "origin": "sources/hooga/CONVERSION-PLAN-2026-11-20.md §1 and §6 Phase 4 (T-7 and T-3 offers)",
+      "conflicts": [
+        "Hospitable sells custom upsells during checkout and in its Guest Portal, so the after-booking offer can be a Guest Portal link in the 'New reservation' message (CONVERSION-PLAN §6 Phase 4 and §11)."
+      ],
+      "proposals": [],
+      "added": {
+        "date": "2026-11-20",
+        "by": "ai"
+      }
+    },
+    {
+      "id": "SAL-11",
+      "stream": "SAL",
+      "kind": "standard",
+      "scope": [
+        "booked-experience"
+      ],
+      "status": "proposed",
+      "rule": "Only offer extras the product actually has and can deliver on the chosen dates; seasonal extras are hidden out of season.",
+      "why": "Selling what can't be delivered misleads and loses the review. The Google doc's 'hot tub pre-lit for arrival' is one such case.",
+      "check": "For each product, compare the extras on sale with the facts file and the season. Try a booking for an out-of-season date: seasonal extras don't appear.",
+      "metric": null,
+      "evidence": {
+        "rating": "Moderate",
+        "reason": "The CAP Code's general rule against misleading (read in the original) applied to extras; the application is a reading, not a ruling.",
+        "sources": [
+          {
+            "ref": "CAP Code (UK Code of Non-broadcast Advertising), rule 3.1 and 3.11: must not mislead; must not exaggerate capability or performance",
+            "type": "regulator",
+            "read": "full",
+            "where": "https://www.asa.org.uk/type/non_broadcast/code_section/03.html"
+          }
+        ]
+      },
+      "verdict": "Adopt",
+      "betState": null,
+      "origin": "sources/hooga/CONVERSION-PLAN-2026-11-20.md §5 (pre-lit hot tub) and §6 Phase 4 (show only upgrades that can actually be delivered)",
+      "conflicts": [
+        "The Google doc's Celebration Arrival Bundle includes 'hot tub & firepit pre-lit for arrival'; Hooga's wood-fired tubs take hours to heat, and guests light them (CONVERSION-PLAN §5).",
+        "The yurt's pool and sauna run May to September only (CONVERSION-PLAN §6 Phase 4)."
+      ],
+      "proposals": [],
+      "added": {
+        "date": "2026-11-20",
+        "by": "ai"
+      }
+    },
+    {
+      "id": "SAL-12",
+      "stream": "SAL",
+      "kind": "bet",
+      "scope": [
+        "core"
+      ],
+      "status": "proposed",
+      "rule": "State the guarantee or risk-reversal plainly, with as few conditions as the business can afford.",
+      "why": "Its job is to make trying feel less risky than walking away. Conditions and small print undo that.",
+      "check": "Read the guarantee as a buyer would: it fits in one sentence, and any conditions sit next to it rather than in the terms.",
+      "metric": {
+        "measure": "Purchases per 100 visits",
+        "direction": "up",
+        "guardrail": "Refunds or cancellations under the guarantee"
+      },
+      "evidence": {
+        "rating": "Weak",
+        "reason": "Stoffel's own claim; his example (Outplayed's results guarantee) is self-reported.",
+        "sources": [
+          {
+            "ref": "Sam Stoffel, FRCS Module 04: 'Conditional vs. Unconditional Guarantees' (Guru Vault's summary of the course)",
+            "type": "guru",
+            "read": "secondary",
+            "where": "../Guru Vault/data.js"
+          }
+        ]
+      },
+      "verdict": "Test",
+      "betState": "untested",
+      "origin": "FRCS Module 04 via Guru Vault",
+      "conflicts": [
+        "For dated stays, an open-ended money-back promise close to arrival may not be affordable. Hooga's version is a no-hassle cancellation window of 48 hours after booking (CUS-01)."
+      ],
+      "proposals": [],
+      "added": {
+        "date": "2026-11-20",
+        "by": "ai"
+      }
+    },
+    {
+      "id": "CUS-01",
+      "stream": "CUS",
+      "kind": "bet",
+      "scope": [
+        "core"
+      ],
+      "status": "proposed",
+      "rule": "Offer a clear, easy free-cancellation window, stated next to the buy button.",
+      "why": "Taking the fear out of saying yes should win more sales than the window loses to cancellations. This is Pete's 'book first, explain after' model.",
+      "check": "The window's terms appear next to the main button and match the policy set in the booking platform. A test booking can be cancelled by the guest inside the window without contacting anyone.",
+      "metric": {
+        "measure": "Bookings per 100 visits, against the share cancelled inside the window",
+        "direction": "up",
+        "guardrail": "Net bookings after cancellations"
+      },
+      "evidence": {
+        "rating": "Weak",
+        "reason": "No source held tests a free-cancellation window for stays (PLAN.md left this unrated; retail returns research may help but was not checked). Stoffel's guarantee claim points the same way (self-reported).",
+        "sources": [
+          {
+            "ref": "Hooga V3 conversion plan (AI-written strategy recording Pete's decisions)",
+            "type": "ai-spec",
+            "read": "full",
+            "where": "sources/hooga/CONVERSION-PLAN-2026-11-20.md §0 round 2 and §5a (book first, explain after, make cancelling easy)"
+          },
+          {
+            "ref": "Sam Stoffel, FRCS Module 04: guarantees (Guru Vault's summary of the course)",
+            "type": "guru",
+            "read": "secondary",
+            "where": "../Guru Vault/data.js"
+          }
+        ]
+      },
+      "verdict": "Test",
+      "betState": "untested",
+      "origin": "PLAN.md §8 (CUS-01); sources/hooga/CONVERSION-PLAN-2026-11-20.md §0 round 2 and §5a; FRCS Module 04 via Guru Vault",
+      "conflicts": [
+        "The Google doc's risk reversal is 'move your dates free up to 14 days before arrival'. Pete's policy is no-hassle cancellation within 48 hours of booking.",
+        "Open question for Pete: does the 48-hour window apply to a booking made the day before arrival? (CONVERSION-PLAN §9 question 1)",
+        "Hospitable's Guest Portal lets guests cancel direct bookings themselves, but asks for two-factor authentication first (help centre, 21 Oct 2026). Check that it still feels easy."
+      ],
+      "proposals": [],
+      "added": {
+        "date": "2026-11-20",
+        "by": "ai"
+      }
+    },
+    {
+      "id": "CUS-02",
+      "stream": "CUS",
+      "kind": "bet",
+      "scope": [
+        "booked-experience"
+      ],
+      "status": "proposed",
+      "rule": "Straight after booking, send an honest, detailed picture of what the stay is really like while the free-cancellation window is still open.",
+      "why": "The dream earns the booking; the honesty earns the review. Anyone it doesn't suit can cancel before it costs them, or the host, a bad stay.",
+      "check": "Make a test booking: within an hour the guest receives a 'your stay, honestly' message covering everything guests operate themselves and any known quirks, with the cancellation link.",
+      "metric": {
+        "measure": "Review accuracy rating",
+        "direction": "up",
+        "guardrail": "Cancellations inside the window"
+      },
+      "evidence": {
+        "rating": "Weak",
+        "reason": "Pete's model. The listings' 4.9 accuracy ratings suggest honesty already works for Hooga, but they don't test this message.",
+        "sources": [
+          {
+            "ref": "Hooga V3 conversion plan (AI-written strategy recording Pete's decisions)",
+            "type": "ai-spec",
+            "read": "full",
+            "where": "sources/hooga/CONVERSION-PLAN-2026-11-20.md §5a"
+          },
+          {
+            "ref": "Hooga business and marketing brief (Pete's own)",
+            "type": "own-data",
+            "read": "full",
+            "where": "sources/hooga/Hooga_Business_and_Marketing_Brief.md §4 and §6 (communicate guest-operated features honestly)"
+          }
+        ]
+      },
+      "verdict": "Test",
+      "betState": "untested",
+      "origin": "sources/hooga/CONVERSION-PLAN-2026-11-20.md §5a; sources/hooga/Hooga_Business_and_Marketing_Brief.md §4 and §6",
+      "conflicts": [
+        "This never replaces giving buyers the facts that could change their mind before they pay (LAW-02). The full picture comes after booking; the decisive facts must be one tap away before it."
+      ],
+      "proposals": [],
+      "added": {
+        "date": "2026-11-20",
+        "by": "ai"
+      }
+    },
+    {
+      "id": "CUS-03",
+      "stream": "CUS",
+      "kind": "standard",
+      "scope": [
+        "core"
+      ],
+      "status": "proposed",
+      "rule": "Ask every customer for a review in the same way, never only the happy ones; don't hide or bury negative reviews; and don't offer anything in return for a review.",
+      "why": "Suppressing negative reviews and concealing incentives are banned (DMCC Act 2024 Schedule 20 para 13; CAP 3.45–3.46). Google bans incentives and selective asking outright, and CMA guidance expects anyone publishing reviews to have a published policy against fake ones.",
+      "check": "Read the review-request process: who is asked, when and with what words. Everyone is asked and nothing is offered. Compare the reviews on the site with the full set on the source platforms: none is hidden for being negative. A short review policy is published.",
+      "metric": null,
+      "evidence": {
+        "rating": "Strong",
+        "reason": "Primary legislation, CMA guidance, the CAP Code and Google's policy, read in the original.",
+        "sources": [
+          {
+            "ref": "DMCC Act 2024, Schedule 20 para 13 (banned: fake reviews, concealed incentivised reviews, publishing reviews in a misleading way including suppressing negative ones); in force 6 Apr 2025 (SI 2025/272)",
+            "type": "legislation",
+            "read": "full",
+            "where": "https://www.legislation.gov.uk/ukpga/2024/13/schedule/20"
+          },
+          {
+            "ref": "CMA208 Fake reviews guidance (4 Apr 2025): paras 4.3–4.4 (no suppressing or cherry-picking negative reviews), 8.1–8.2 and 8.9 (publishers should have published policies prohibiting fake reviews), 8.12 (risk assessments)",
+            "type": "regulator",
+            "read": "full",
+            "where": "https://www.gov.uk/government/publications/fake-reviews-cma208"
+          },
+          {
+            "ref": "CAP Code (UK Code of Non-broadcast Advertising), rule 3.45–3.46: incentivised reviews made clear; no misleading publication of reviews, including suppressing negative ones",
+            "type": "regulator",
+            "read": "full",
+            "where": "https://www.asa.org.uk/type/non_broadcast/code_section/03.html"
+          },
+          {
+            "ref": "Google Maps user-contributed content policy: merchants may not offer incentives for reviews, discourage negative reviews, or selectively solicit positive ones",
+            "type": "platform-docs",
+            "read": "full",
+            "where": "https://support.google.com/contributionpolicy/answer/7400114"
+          }
+        ]
+      },
+      "verdict": "Adopt",
+      "betState": null,
+      "origin": "FRCS Module 04 (collect testimonials aggressively) via Guru Vault; RGC Literature Review summary, finding 1; sources/hooga/CONVERSION-PLAN-2026-11-20.md §0 round 2 (real reviews to replace the samples)",
+      "conflicts": [
+        "Stoffel advises asking when customers are happiest (CUS-04). Choosing the moment is fine; choosing whom to ask by how happy they are is not."
+      ],
+      "proposals": [],
+      "added": {
+        "date": "2026-11-20",
+        "by": "ai"
+      }
+    },
+    {
+      "id": "CUS-04",
+      "stream": "CUS",
+      "kind": "bet",
+      "scope": [
+        "core"
+      ],
+      "status": "proposed",
+      "rule": "Ask for the review at the high point (the end of the stay, or just after the result lands), not days later.",
+      "why": "People review most readily, and most warmly, while the experience is fresh.",
+      "check": "Find when the review request goes out (messaging rules or emails) and confirm it matches the agreed high point.",
+      "metric": {
+        "measure": "Reviews per completed stay or sale",
+        "direction": "up",
+        "guardrail": "Average rating"
+      },
+      "evidence": {
+        "rating": "Weak",
+        "reason": "Stoffel's advice (self-reported); no study held.",
+        "sources": [
+          {
+            "ref": "Sam Stoffel, FRCS Module 04: collect testimonials when customers are happiest (Guru Vault's summary of the course)",
+            "type": "guru",
+            "read": "secondary",
+            "where": "../Guru Vault/data.js"
+          }
+        ]
+      },
+      "verdict": "Test",
+      "betState": "untested",
+      "origin": "FRCS Module 04 via Guru Vault",
+      "conflicts": [],
+      "proposals": [],
+      "added": {
+        "date": "2026-11-20",
+        "by": "ai"
+      }
+    },
+    {
+      "id": "CUS-05",
+      "stream": "CUS",
+      "kind": "bet",
+      "scope": [
+        "booked-experience"
+      ],
+      "status": "proposed",
+      "rule": "Invite occasion guests back shortly before the occasion comes round again (about 10.5 months later), naming the occasion.",
+      "why": "Anniversaries and birthdays repeat. A timely, personal invitation is the cheapest booking there is.",
+      "check": "The booking flow records the occasion and its date with marketing consent, and a reminder is scheduled for each one.",
+      "metric": {
+        "measure": "Repeat bookings from past occasion guests within 13 months",
+        "direction": "up",
+        "guardrail": "Unsubscribes and complaints"
+      },
+      "evidence": {
+        "rating": "Weak",
+        "reason": "Asserted in the AI-written spec; no study held.",
+        "sources": [
+          {
+            "ref": "Hooga 'google optimisation ideas' spec (AI-written, no sources given)",
+            "type": "ai-spec",
+            "read": "full",
+            "where": "sources/hooga/google-optimisation-ideas.txt §5 (First-Party LTV Milestone Capture)"
+          }
+        ]
+      },
+      "verdict": "Test",
+      "betState": "untested",
+      "origin": "sources/hooga/google-optimisation-ideas.txt §5; sources/hooga/CONVERSION-PLAN-2026-11-20.md §4 and §6 Phase 5 (occasion memory)",
+      "conflicts": [
+        "There is no CRM: Pete uses Hospitable and Gmail, so the reminder needs another way to run (spec 03 clash table).",
+        "Needs marketing consent or a valid soft opt-in (LAW-10)."
+      ],
+      "proposals": [],
+      "added": {
+        "date": "2026-11-20",
+        "by": "ai"
+      }
+    },
+    {
+      "id": "CUS-06",
+      "stream": "CUS",
+      "kind": "bet",
+      "scope": [
+        "booked-experience"
+      ],
+      "status": "proposed",
+      "rule": "After a booking or voucher purchase, let the buyer create a shareable surprise reveal (a page or card) for the person they're treating.",
+      "why": "It serves the buyer who is arranging a surprise, and it's the kind of moment people share, which brings new visitors.",
+      "check": "Complete a test purchase: a reveal can be made in under two minutes, opens properly on a phone, and carries quiet branding with a link back.",
+      "metric": {
+        "measure": "Share of buyers who create a reveal; visits and sales arriving from reveal links",
+        "direction": "up",
+        "guardrail": "Support requests about reveals"
+      },
+      "evidence": {
+        "rating": "Weak",
+        "reason": "The Hooga plan's idea; no study held.",
+        "sources": [
+          {
+            "ref": "Hooga V3 conversion plan (AI-written strategy recording Pete's decisions)",
+            "type": "ai-spec",
+            "read": "full",
+            "where": "sources/hooga/CONVERSION-PLAN-2026-11-20.md §1 and §6 Phase 5 (Surprise Reveal)"
+          }
+        ]
+      },
+      "verdict": "Test",
+      "betState": "untested",
+      "origin": "sources/hooga/CONVERSION-PLAN-2026-11-20.md §1, §4 and §6 Phase 5",
+      "conflicts": [],
+      "proposals": [],
+      "added": {
+        "date": "2026-11-20",
+        "by": "ai"
+      }
+    },
+    {
+      "id": "CUS-07",
+      "stream": "CUS",
+      "kind": "bet",
+      "scope": [
+        "booked-experience"
+      ],
+      "status": "proposed",
+      "rule": "Give every booking a practical guide to the stay: what to bring, how things work, food nearby and ideas for the evening.",
+      "why": "It answers questions before they are asked, so there are fewer messages and a smoother stay that reviews well.",
+      "check": "Each booking confirmation links to the guide for that retreat, and the guide covers every guest-operated feature in the facts file.",
+      "metric": {
+        "measure": "Guest messages per booking",
+        "direction": "down",
+        "guardrail": "Review rating"
+      },
+      "evidence": {
+        "rating": "Weak",
+        "reason": "The Hooga plan's idea; no study held.",
+        "sources": [
+          {
+            "ref": "Hooga V3 conversion plan (AI-written strategy recording Pete's decisions)",
+            "type": "ai-spec",
+            "read": "full",
+            "where": "sources/hooga/CONVERSION-PLAN-2026-11-20.md §6 Phase 5 ('Your evening' guide)"
+          }
+        ]
+      },
+      "verdict": "Test",
+      "betState": "untested",
+      "origin": "sources/hooga/CONVERSION-PLAN-2026-11-20.md §6 Phase 5",
+      "conflicts": [],
+      "proposals": [],
+      "added": {
+        "date": "2026-11-20",
+        "by": "ai"
+      }
+    },
+    {
+      "id": "CUS-08",
+      "stream": "CUS",
+      "kind": "bet",
+      "scope": [
+        "core"
+      ],
+      "status": "proposed",
+      "rule": "When a customer is unhappy, fix it or refund quickly, without argument.",
+      "why": "A bad review costs more than the refund.",
+      "check": "The written complaints process says who decides and how fast, and that refunds aren't argued over. Check the last five complaints against it.",
+      "metric": {
+        "measure": "Average review rating",
+        "direction": "up",
+        "guardrail": "Refunds as a share of revenue"
+      },
+      "evidence": {
+        "rating": "Weak",
+        "reason": "Stoffel's advice (self-reported); no study held.",
+        "sources": [
+          {
+            "ref": "Sam Stoffel, FRCS Module 02: overdeliver and handle refunds generously (Guru Vault's summary of the course)",
+            "type": "guru",
+            "read": "secondary",
+            "where": "../Guru Vault/data.js"
+          }
+        ]
+      },
+      "verdict": "Test",
+      "betState": "untested",
+      "origin": "FRCS Module 02 via Guru Vault",
+      "conflicts": [],
+      "proposals": [],
+      "added": {
+        "date": "2026-11-20",
+        "by": "ai"
+      }
+    },
+    {
+      "id": "CUS-09",
+      "stream": "CUS",
+      "kind": "standard",
+      "scope": [
+        "membership",
+        "course"
+      ],
+      "status": "proposed",
+      "rule": "Before launch and once a year, audit the offer for the five harm markers of high-control groups: unaccountable authority, a costly or humiliating exit, control of information, guilt used as a lever, and money or recruiting as the real goal.",
+      "why": "High-identity communities can drift into harm. The RGC review drew these markers from documented cases (OneTaste, NXIVM, Rigpa) as an audit checklist, not as proof that any brand strategy is harmful.",
+      "check": "Go through the join page, the terms, the cancellation flow, member messages and event formats against each marker. Any marker present is a fail until it is fixed.",
+      "metric": null,
+      "evidence": {
+        "rating": "Weak",
+        "reason": "Drawn from documented cases via the RGC summary; only the summary is held.",
+        "sources": [
+          {
+            "ref": "RGC online sales literature review, condensed summary, the 'high-identity end' strand: harm cases in high-control groups (underlying study types as described in the summary)",
+            "type": "observational",
+            "read": "secondary",
+            "where": "../RGC Literature Review/RGC-Online-Sales-Practices-Literature-Review.md"
+          }
+        ]
+      },
+      "verdict": "Adopt",
+      "betState": null,
+      "origin": "RGC Literature Review summary, 'high-identity end' strand",
+      "conflicts": [],
+      "proposals": [],
+      "added": {
+        "date": "2026-11-20",
+        "by": "ai"
+      }
+    },
+    {
+      "id": "CUS-10",
+      "stream": "CUS",
+      "kind": "standard",
+      "scope": [
+        "course"
+      ],
+      "status": "proposed",
+      "rule": "Judge an online course on completion and refunds as well as sales, and track both from the first cohort.",
+      "why": "Unsupported online programmes complete far worse than supported ones: about 6% against 54–66% in relationship-education trials, according to the RGC review. Sales figures alone hide that.",
+      "check": "The project's scorecard has completion-rate and refund-rate targets, and the course platform reports both.",
+      "metric": null,
+      "evidence": {
+        "rating": "Weak",
+        "reason": "The underlying trials are likely strong, but only the RGC summary is held.",
+        "sources": [
+          {
+            "ref": "RGC online sales literature review, condensed summary, finding 2: completion with and without coaching (underlying study types as described in the summary)",
+            "type": "experiment",
+            "read": "secondary",
+            "where": "../RGC Literature Review/RGC-Online-Sales-Practices-Literature-Review.md"
+          }
+        ]
+      },
+      "verdict": "Adopt",
+      "betState": null,
+      "origin": "RGC Literature Review summary, finding 2",
+      "conflicts": [],
+      "proposals": [],
+      "added": {
+        "date": "2026-11-20",
+        "by": "ai"
+      }
+    },
+    {
+      "id": "CUS-11",
+      "stream": "CUS",
+      "kind": "bet",
+      "scope": [
+        "course"
+      ],
+      "status": "proposed",
+      "rule": "Keep human support (coaching calls or tailored emails) in online programmes rather than selling them fully self-serve.",
+      "why": "In relationship-education trials, coaching or tailored emails took completion from about 6% to 54–66% (RGC review).",
+      "check": "The course design names the human touchpoints, when they happen and who delivers them.",
+      "metric": {
+        "measure": "Course completion rate",
+        "direction": "up",
+        "guardrail": "Delivery cost per student"
+      },
+      "evidence": {
+        "rating": "Weak",
+        "reason": "The underlying trials are likely strong, but only the RGC summary is held, and they were relationship-education programmes rather than sales studies.",
+        "sources": [
+          {
+            "ref": "RGC online sales literature review, condensed summary, finding 2: completion with and without coaching (underlying study types as described in the summary)",
+            "type": "experiment",
+            "read": "secondary",
+            "where": "../RGC Literature Review/RGC-Online-Sales-Practices-Literature-Review.md"
+          }
+        ]
+      },
+      "verdict": "Test",
+      "betState": "untested",
+      "origin": "RGC Literature Review summary, finding 2",
+      "conflicts": [],
+      "proposals": [],
+      "added": {
+        "date": "2026-11-20",
+        "by": "ai"
+      }
+    },
+    {
+      "id": "ADS-01",
+      "stream": "ADS",
+      "kind": "standard",
+      "scope": [
+        "core"
+      ],
+      "status": "proposed",
+      "rule": "Every ad's final URL carries UTM tags (source, medium and campaign), with Google Ads auto-tagging also on.",
+      "why": "UTM tags survive where click IDs are dropped, so analytics can still credit the right campaign.",
+      "check": "Export every ad's final URL: each has utm_source, utm_medium and utm_campaign. Auto-tagging is on in the Google Ads account settings.",
+      "metric": null,
+      "evidence": {
+        "rating": "Moderate",
+        "reason": "Platform documentation, read in full, plus the Hooga test showing which parameters Hospitable forwards.",
+        "sources": [
+          {
+            "ref": "Google Ads Help, About auto-tagging: GCLID is added to clicked URLs and must be passed through redirects to the final landing page for conversion tracking",
+            "type": "platform-docs",
+            "read": "full",
+            "where": "https://support.google.com/google-ads/answer/3095550"
+          },
+          {
+            "ref": "Hooga V2/V3 build finding: the Hospitable widget forwards utm_* but drops gclid",
+            "type": "own-data",
+            "read": "full",
+            "where": "sources/hooga/CONVERSION-PLAN-2026-11-20.md §11"
+          }
+        ]
+      },
+      "verdict": "Adopt",
+      "betState": null,
+      "origin": "sources/hooga/CONVERSION-PLAN-2026-11-20.md §11 (what to do about it, step 1)",
+      "conflicts": [],
+      "proposals": [],
+      "added": {
+        "date": "2026-11-20",
+        "by": "ai"
+      }
+    },
+    {
+      "id": "ADS-02",
+      "stream": "ADS",
+      "kind": "standard",
+      "scope": [
+        "core"
+      ],
+      "status": "proposed",
+      "rule": "Each ad platform optimises on a conversion it can actually see. Where the real purchase is invisible to it, use the nearest reliable event (such as the booking hand-off) and record the gap.",
+      "why": "Smart Bidding needs conversion tracking, and some strategies need a minimum history (Target ROAS on Search: at least 15 conversions in 30 days). An invisible purchase teaches it nothing.",
+      "check": "In each ad account, list the primary conversion actions; each fires from a page the platform can see, with test data showing it arriving.",
+      "metric": null,
+      "evidence": {
+        "rating": "Moderate",
+        "reason": "Google's documentation, read in the original; the choice of stand-in event is the Hooga plan's reasoning.",
+        "sources": [
+          {
+            "ref": "Google Ads Help, About Smart Bidding: conversion tracking required; some strategies need a minimum volume of conversion history (Target ROAS on Search: at least 15 conversions in the past 30 days)",
+            "type": "platform-docs",
+            "read": "full",
+            "where": "https://support.google.com/google-ads/answer/7065882"
+          },
+          {
+            "ref": "Hooga V3 conversion plan (AI-written strategy recording Pete's decisions)",
+            "type": "ai-spec",
+            "read": "full",
+            "where": "sources/hooga/CONVERSION-PLAN-2026-11-20.md §11 (what to do about it, steps 2 and 4)"
+          }
+        ]
+      },
+      "verdict": "Adopt",
+      "betState": null,
+      "origin": "sources/hooga/CONVERSION-PLAN-2026-11-20.md §11 (optimise Google on booking_handoff and voucher purchases; Meta on landing-page events)",
+      "conflicts": [
+        "Hospitable's Meta Pixel sends Page View only, and Hospitable drops gclid, so neither platform can credit a stay booking to a click (CONVERSION-PLAN §11).",
+        "A small site may never reach the conversion volume some bidding strategies need; manual or click-based bidding may be the honest start."
+      ],
+      "proposals": [],
+      "added": {
+        "date": "2026-11-20",
+        "by": "ai"
+      }
+    },
+    {
+      "id": "ADS-03",
+      "stream": "ADS",
+      "kind": "standard",
+      "scope": [
+        "core"
+      ],
+      "status": "proposed",
+      "rule": "Paid traffic starts only after TRK-01, TRK-02, TRK-04, TRK-05 and LAW-08 pass, or Pete has accepted their gaps in writing.",
+      "why": "Spending before measurement works buys data you can't read, and Google can't credit conversions it can't track.",
+      "check": "The project's scorecard shows each of those rules as pass, n/a or an accepted gap before the first ad's start date.",
+      "metric": null,
+      "evidence": {
+        "rating": "Moderate",
+        "reason": "Google documents that conversion tracking depends on the click ID; the rest is the Hooga plan's reasoning.",
+        "sources": [
+          {
+            "ref": "Google Ads Help (answer 9744275): the GCLID is required for Google Ads website conversion tracking",
+            "type": "platform-docs",
+            "read": "full",
+            "where": "https://support.google.com/google-ads/answer/9744275"
+          },
+          {
+            "ref": "Hooga V3 conversion plan (AI-written strategy recording Pete's decisions)",
+            "type": "ai-spec",
+            "read": "full",
+            "where": "sources/hooga/CONVERSION-PLAN-2026-11-20.md §1 (spending on ads before Phase 0 buys data you can't read)"
+          }
+        ]
+      },
+      "verdict": "Adopt",
+      "betState": null,
+      "origin": "sources/hooga/CONVERSION-PLAN-2026-11-20.md §1 and §6 Phase 0; sources/hooga/google-optimisation-ideas.txt §8",
+      "conflicts": [],
+      "proposals": [],
+      "added": {
+        "date": "2026-11-20",
+        "by": "ai"
+      }
+    },
+    {
+      "id": "ADS-04",
+      "stream": "ADS",
+      "kind": "bet",
+      "scope": [
+        "booked-experience"
+      ],
+      "status": "proposed",
+      "rule": "Point paid ads at demand the business would not otherwise get (for Hooga, Sunday to Thursday and the quieter seasons), not at peak nights that already sell.",
+      "why": "A booking that would have come anyway is worth only the fee saved; one that fills an empty night is worth the whole margin.",
+      "check": "Campaign schedules, ad copy and landing offers focus on the quiet nights the brief names; peak-night campaigns are off or capped.",
+      "metric": {
+        "measure": "Midweek and off-season occupancy from paid traffic",
+        "direction": "up",
+        "guardrail": "Cost per booking"
+      },
+      "evidence": {
+        "rating": "Weak",
+        "reason": "Reasoning from the business's own position (weekend demand already strong); no study held.",
+        "sources": [
+          {
+            "ref": "Hooga business and marketing brief (Pete's own)",
+            "type": "own-data",
+            "read": "full",
+            "where": "sources/hooga/Hooga_Business_and_Marketing_Brief.md §5 (main commercial objective)"
+          }
+        ]
+      },
+      "verdict": "Test",
+      "betState": "untested",
+      "origin": "PLAN.md §9; sources/hooga/Hooga_Business_and_Marketing_Brief.md §5",
+      "conflicts": [],
+      "proposals": [],
+      "added": {
+        "date": "2026-11-20",
+        "by": "ai"
+      }
+    },
+    {
+      "id": "ADS-05",
+      "stream": "ADS",
+      "kind": "standard",
+      "scope": [
+        "core"
+      ],
+      "status": "proposed",
+      "rule": "Before any ad spend, the project's scorecard states the most it will pay for one sale, worked out from its own margin and from whether those sales are extra.",
+      "why": "Industry benchmarks are mostly vendor marketing. A target from the project's own numbers says when ads pay and when to stop.",
+      "check": "The scorecard's targets include the most a sale can cost, with the working shown, dated before the first ad went live.",
+      "metric": null,
+      "evidence": {
+        "rating": "Weak",
+        "reason": "Arithmetic from the project's own numbers. The view that benchmarks are unreliable comes from the blueprint plan and the RGC summary's note that the available figures are practitioner ones.",
+        "sources": [
+          {
+            "ref": "Hooga V3 conversion plan (AI-written strategy recording Pete's decisions)",
+            "type": "ai-spec",
+            "read": "full",
+            "where": "sources/hooga/CONVERSION-PLAN-2026-11-20.md §7 (illustrative maths)"
+          },
+          {
+            "ref": "RGC online sales literature review, condensed summary, finding 7: planning figures are practitioner estimates (underlying study types as described in the summary)",
+            "type": "practitioner",
+            "read": "secondary",
+            "where": "../RGC Literature Review/RGC-Online-Sales-Practices-Literature-Review.md"
+          }
+        ]
+      },
+      "verdict": "Adopt",
+      "betState": null,
+      "origin": "PLAN.md §9; spec 02 (Targets); sources/hooga/CONVERSION-PLAN-2026-11-20.md §7",
+      "conflicts": [],
+      "proposals": [],
+      "added": {
+        "date": "2026-11-20",
+        "by": "ai"
+      }
+    },
+    {
+      "id": "ADS-06",
+      "stream": "ADS",
+      "kind": "bet",
+      "scope": [
+        "core"
+      ],
+      "status": "proposed",
+      "rule": "Use organic posts that beat the account's own average as the first paid social ads.",
+      "why": "A post that already outperformed with an unpaid audience is a proven creative to start from.",
+      "check": "Each live social ad's creative traces to an organic post, with that post's performance against the account average noted.",
+      "metric": {
+        "measure": "Cost per landing-page view and click-through rate against other creatives",
+        "direction": "up",
+        "guardrail": "Cost per sale"
+      },
+      "evidence": {
+        "rating": "Weak",
+        "reason": "Stoffel's advice (self-reported); no study held.",
+        "sources": [
+          {
+            "ref": "Sam Stoffel, FRCS Module 03: 'Outlier Theory'; repost whatever organically outperforms as a paid ad (Guru Vault's summary of the course)",
+            "type": "guru",
+            "read": "secondary",
+            "where": "../Guru Vault/data.js"
+          }
+        ]
+      },
+      "verdict": "Test",
+      "betState": "untested",
+      "origin": "FRCS Module 03 via Guru Vault",
+      "conflicts": [],
+      "proposals": [],
+      "added": {
+        "date": "2026-11-20",
+        "by": "ai"
+      }
+    },
+    {
+      "id": "ADS-07",
+      "stream": "ADS",
+      "kind": "bet",
+      "scope": [
+        "core"
+      ],
+      "status": "proposed",
+      "rule": "Video ads hook in the first three seconds, with a visual surprise, a spoken line and an on-screen promise, and no slow intro.",
+      "why": "Most viewers decide whether to keep watching in the first moments.",
+      "check": "Watch each video ad's first three seconds with the sound off and then on: the promise is clear both ways.",
+      "metric": {
+        "measure": "Three-second view rate (hook rate)",
+        "direction": "up",
+        "guardrail": "Cost per landing-page view"
+      },
+      "evidence": {
+        "rating": "Weak",
+        "reason": "Stoffel's advice (self-reported); no study held.",
+        "sources": [
+          {
+            "ref": "Sam Stoffel, FRCS Module 03: 'Hook → Hold → Reward → Action'; a three-part hook in the first 3 seconds (Guru Vault's summary of the course)",
+            "type": "guru",
+            "read": "secondary",
+            "where": "../Guru Vault/data.js"
+          }
+        ]
+      },
+      "verdict": "Test",
+      "betState": "untested",
+      "origin": "FRCS Module 03 via Guru Vault",
+      "conflicts": [],
+      "proposals": [],
+      "added": {
+        "date": "2026-11-20",
+        "by": "ai"
+      }
+    },
+    {
+      "id": "ADS-08",
+      "stream": "ADS",
+      "kind": "bet",
+      "scope": [
+        "core"
+      ],
+      "status": "proposed",
+      "rule": "Run a small retargeting budget at visitors who didn't buy (the Google doc suggests about £5 a day over 14 days).",
+      "why": "Many buyers need more than one visit, and a reminder is cheaper than a new visitor.",
+      "check": "A retargeting audience of non-buyers exists with a set budget and window, and excludes people who have already bought.",
+      "metric": {
+        "measure": "Purchases per £ spent on retargeting",
+        "direction": "up",
+        "guardrail": "Ad frequency and negative feedback"
+      },
+      "evidence": {
+        "rating": "Weak",
+        "reason": "Asserted in the AI-written spec; no study held.",
+        "sources": [
+          {
+            "ref": "Hooga 'google optimisation ideas' spec (AI-written, no sources given)",
+            "type": "ai-spec",
+            "read": "full",
+            "where": "sources/hooga/google-optimisation-ideas.txt §7 (Retargeting Pixel Parity: £5/day warm retargeting for 14 days)"
+          }
+        ]
+      },
+      "verdict": "Test",
+      "betState": "untested",
+      "origin": "sources/hooga/google-optimisation-ideas.txt §7; sources/hooga/CONVERSION-PLAN-2026-11-20.md §4 (retargeting ads)",
+      "conflicts": [
+        "Only visitors who accepted advertising cookies can be retargeted (LAW-08), so the audience will be smaller than the traffic."
+      ],
+      "proposals": [],
+      "added": {
+        "date": "2026-11-20",
+        "by": "ai"
+      }
+    },
+    {
+      "id": "ADS-09",
+      "stream": "ADS",
+      "kind": "bet",
+      "scope": [
+        "booked-experience"
+      ],
+      "status": "proposed",
+      "rule": "Run search ads on feature searches ('hot tub stay Kent', 'private cinema stay') as well as occasion searches, each landing on its matching page.",
+      "why": "People search for what they want to do as often as for why. Feature pages match those searches.",
+      "check": "The account has feature ad groups alongside occasion ones, each pointing at its matching page (FUN-01).",
+      "metric": {
+        "measure": "Sales per £ by ad group type (feature against occasion)",
+        "direction": "up",
+        "guardrail": "Total cost per sale"
+      },
+      "evidence": {
+        "rating": "Weak",
+        "reason": "The Hooga plan's reasoning; no study held.",
+        "sources": [
+          {
+            "ref": "Hooga V3 conversion plan (AI-written strategy recording Pete's decisions)",
+            "type": "ai-spec",
+            "read": "full",
+            "where": "sources/hooga/CONVERSION-PLAN-2026-11-20.md §1 and §6 Phase 1 (routes by retreat or feature: 'how people actually search')"
+          }
+        ]
+      },
+      "verdict": "Test",
+      "betState": "untested",
+      "origin": "sources/hooga/CONVERSION-PLAN-2026-11-20.md §1 and §6 Phase 1",
+      "conflicts": [],
+      "proposals": [],
+      "added": {
+        "date": "2026-11-20",
+        "by": "ai"
+      }
+    },
+    {
+      "id": "SEO-01",
+      "stream": "SEO",
+      "kind": "standard",
+      "scope": [
+        "core"
+      ],
+      "status": "proposed",
+      "rule": "Every page has its own descriptive title and its own meta description.",
+      "why": "Google asks for distinct title text and unique descriptions for each page; identical ones help no one in search results.",
+      "check": "Crawl the site (or list the routes) and confirm no two pages share a title or a description.",
+      "metric": null,
+      "evidence": {
+        "rating": "Moderate",
+        "reason": "Google's documentation, read in the original.",
+        "sources": [
+          {
+            "ref": "Google Search Central, Title links (updated 10 Dec 2025): distinct, descriptive <title> text for each page",
+            "type": "platform-docs",
+            "read": "full",
+            "where": "https://developers.google.com/search/docs/appearance/title-link"
+          },
+          {
+            "ref": "Google Search Central, Snippets (updated 20 Apr 2026): create unique meta descriptions for each page",
+            "type": "platform-docs",
+            "read": "full",
+            "where": "https://developers.google.com/search/docs/appearance/snippet"
+          }
+        ]
+      },
+      "verdict": "Adopt",
+      "betState": null,
+      "origin": "sources/hooga/CONVERSION-PLAN-2026-11-20.md §3 #10 and §6 Phase 0 (no meta description in V2)",
+      "conflicts": [],
+      "proposals": [],
+      "added": {
+        "date": "2026-11-20",
+        "by": "ai"
+      }
+    },
+    {
+      "id": "SEO-02",
+      "stream": "SEO",
+      "kind": "standard",
+      "scope": [
+        "core"
+      ],
+      "status": "proposed",
+      "rule": "Every page has Open Graph tags (title, type, image, URL and a description) so links shared in WhatsApp, Instagram DMs and Facebook show a proper preview.",
+      "why": "Shared links are a big part of how gifts and surprises get talked about. A bare link with no picture gets ignored.",
+      "check": "Paste each route into Meta's Sharing Debugger and into a WhatsApp chat: the right title, image and description appear.",
+      "metric": null,
+      "evidence": {
+        "rating": "Moderate",
+        "reason": "The Open Graph specification, read in the original. The benefit to clicks is reasoning.",
+        "sources": [
+          {
+            "ref": "The Open Graph protocol (ogp.me), Basic Metadata: og:title, og:type, og:image and og:url required on every page, in <head>",
+            "type": "platform-docs",
+            "read": "full",
+            "where": "https://ogp.me/"
+          }
+        ]
+      },
+      "verdict": "Adopt",
+      "betState": null,
+      "origin": "sources/hooga/CONVERSION-PLAN-2026-11-20.md §3 #10 and §6 Phase 0 (social share image for every route)",
+      "conflicts": [
+        "Whether Meta's link crawler runs JavaScript couldn't be confirmed from Meta's documentation, so put the tags in the initial HTML (SEO-03)."
+      ],
+      "proposals": [],
+      "added": {
+        "date": "2026-11-20",
+        "by": "ai"
+      }
+    },
+    {
+      "id": "SEO-03",
+      "stream": "SEO",
+      "kind": "standard",
+      "scope": [
+        "core"
+      ],
+      "status": "proposed",
+      "rule": "Key pages serve their content and meta tags in the initial HTML (prerendered or server-rendered), not only after JavaScript runs.",
+      "why": "Google renders JavaScript, but says server-side or pre-rendering is still a great idea because not all bots can run JavaScript, and it's faster for users.",
+      "check": "View the page source of each key route (not the live DOM): the headline, main copy, title, description and Open Graph tags are all there.",
+      "metric": null,
+      "evidence": {
+        "rating": "Moderate",
+        "reason": "Google's documentation, read in the original.",
+        "sources": [
+          {
+            "ref": "Google Search Central, JavaScript SEO basics (updated 4 Mar 2026): 'server-side or pre-rendering is still a great idea… not all bots can run JavaScript'",
+            "type": "platform-docs",
+            "read": "full",
+            "where": "https://developers.google.com/search/docs/crawling-indexing/javascript/javascript-seo-basics"
+          }
+        ]
+      },
+      "verdict": "Adopt",
+      "betState": null,
+      "origin": "sources/hooga/CONVERSION-PLAN-2026-11-20.md §3 #10 and §6 Phase 0 (prerender the routes to static HTML)",
+      "conflicts": [],
+      "proposals": [],
+      "added": {
+        "date": "2026-11-20",
+        "by": "ai"
+      }
+    },
+    {
+      "id": "SEO-04",
+      "stream": "SEO",
+      "kind": "standard",
+      "scope": [
+        "core"
+      ],
+      "status": "proposed",
+      "rule": "Don't add review-star structured data for reviews of the business on its own site, or expect stars from an embedded review widget.",
+      "why": "Google says a business that controls the reviews about itself is ineligible for star review results, including through embedded third-party widgets.",
+      "check": "Search the site's structured data (Rich Results Test) for Review or AggregateRating on the business itself; there is none.",
+      "metric": null,
+      "evidence": {
+        "rating": "Moderate",
+        "reason": "Google's documentation, read in full.",
+        "sources": [
+          {
+            "ref": "Google Search Central, Review snippet structured data (updated 8 Sep 2026): a business controlling reviews about itself is ineligible for star review features, including via embedded third-party widgets",
+            "type": "platform-docs",
+            "read": "full",
+            "where": "https://developers.google.com/search/docs/appearance/structured-data/review-snippet"
+          }
+        ]
+      },
+      "verdict": "Avoid",
+      "betState": null,
+      "origin": "PLAN.md §4 (SEO covers structured data and Google reviews); quick platform check during T2 seeding",
+      "conflicts": [],
+      "proposals": [],
+      "added": {
+        "date": "2026-11-20",
+        "by": "ai"
+      }
+    },
+    {
+      "id": "SEO-05",
+      "stream": "SEO",
+      "kind": "standard",
+      "scope": [
+        "core"
+      ],
+      "status": "proposed",
+      "rule": "Search Google for the business name and each product name: what shows up (listings, reviews, profiles) is accurate and consistent with the site.",
+      "why": "Buyers check before they book. Priestley's line: 'you are who Google says you are'.",
+      "check": "Run the searches in a private window. Note anything wrong, out of date or inconsistent (names, prices, ratings, photos) and list the fixes.",
+      "metric": null,
+      "evidence": {
+        "rating": "Weak",
+        "reason": "Priestley's advice (self-reported); no study held.",
+        "sources": [
+          {
+            "ref": "Daniel Priestley, Key Person of Influence, Profile step: 'you are who Google says you are'; audit what appears when searching your name (Guru Vault's summary of the book)",
+            "type": "guru",
+            "read": "secondary",
+            "where": "../Guru Vault/data.js"
+          }
+        ]
+      },
+      "verdict": "Adopt",
+      "betState": null,
+      "origin": "Key Person of Influence, Profile step, via Guru Vault",
+      "conflicts": [],
+      "proposals": [],
+      "added": {
+        "date": "2026-11-20",
+        "by": "ai"
+      }
+    },
+    {
+      "id": "SEO-06",
+      "stream": "SEO",
+      "kind": "bet",
+      "scope": [
+        "core"
+      ],
+      "status": "proposed",
+      "rule": "Ask customers for Google reviews as well as reviews on booking platforms, to build local search prominence.",
+      "why": "Google says more reviews and positive ratings can help a business's local ranking. Reviews held only on Airbnb don't count towards it.",
+      "check": "The review request (CUS-03) includes a Google review link, and the Business Profile's review count is recorded monthly.",
+      "metric": {
+        "measure": "Google review count, and Business Profile search impressions",
+        "direction": "up",
+        "guardrail": "Reviews on the booking platforms"
+      },
+      "evidence": {
+        "rating": "Moderate",
+        "reason": "Google's own documentation, read in the original, says reviews can help local ranking; the size of the effect isn't stated.",
+        "sources": [
+          {
+            "ref": "Google Business Profile Help, Tips to improve your local ranking: relevance, distance and prominence; 'More reviews and positive ratings can help your business's local ranking'",
+            "type": "platform-docs",
+            "read": "full",
+            "where": "https://support.google.com/business/answer/7091"
+          }
+        ]
+      },
+      "verdict": "Test",
+      "betState": "untested",
+      "origin": "PLAN.md §4 (SEO covers local search and Google reviews); quick platform check during T2 seeding",
+      "conflicts": [
+        "All requests must follow CUS-03: ask everyone, offer nothing."
+      ],
+      "proposals": [],
+      "added": {
+        "date": "2026-11-20",
+        "by": "ai"
+      }
+    },
+    {
+      "id": "SEO-07",
+      "stream": "SEO",
+      "kind": "bet",
+      "scope": [
+        "booked-experience"
+      ],
+      "status": "proposed",
+      "rule": "The intent pages built for ads (by occasion and by feature) also win organic search traffic when they are indexable and specific.",
+      "why": "The same searches people make before clicking an ad ('hot tub stay Kent') happen organically.",
+      "check": "In Search Console, each intent page is indexed and shows impressions for its target searches.",
+      "metric": {
+        "measure": "Organic clicks per intent page (Search Console)",
+        "direction": "up",
+        "guardrail": "Paid landing page conversion rate (no-navigation design kept on paid routes)"
+      },
+      "evidence": {
+        "rating": "Weak",
+        "reason": "The Hooga plan's reasoning; no study held.",
+        "sources": [
+          {
+            "ref": "Hooga V3 conversion plan (AI-written strategy recording Pete's decisions)",
+            "type": "ai-spec",
+            "read": "full",
+            "where": "sources/hooga/CONVERSION-PLAN-2026-11-20.md §1 and §6 Phase 1"
+          }
+        ]
+      },
+      "verdict": "Test",
+      "betState": "untested",
+      "origin": "sources/hooga/CONVERSION-PLAN-2026-11-20.md §1 and §6 Phase 1",
+      "conflicts": [
+        "Paid routes are built without navigation (FUN-02), which suits ads but may not suit organic visitors arriving on the same page."
+      ],
+      "proposals": [],
+      "added": {
+        "date": "2026-11-20",
+        "by": "ai"
+      }
+    }
+  ]
 }
